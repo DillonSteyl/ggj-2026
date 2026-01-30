@@ -1,8 +1,8 @@
 class_name Game
 extends Node2D
 
-@onready var check_button: Button = $CheckButton
-@onready var label: Label = $Label
+@onready var check_button: Button = $%CheckButton
+@onready var label: Label = $%Label
 @onready var mask_base: MaskBase = $MaskBase
 
 

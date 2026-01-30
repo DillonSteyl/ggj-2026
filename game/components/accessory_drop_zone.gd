@@ -2,6 +2,7 @@
 class_name AccessoryDropZone
 extends Area2D
 
+var _accessories_in_area: Dictionary[int, Accessory] = {}
 var _attached_accessories: Dictionary[int, Accessory] = {}
 
 
@@ -17,10 +18,30 @@ func get_attached_accessories() -> Array[Accessory]:
 func _on_area_entered(area: Area2D) -> void:
 	if not area is AccessoryArea:
 		return
-
 	var accessory_area := area as AccessoryArea
-	_attached_accessories[accessory_area.owner.get_instance_id()] = accessory_area.accessory
+
+	var accessory_view := accessory_area.accessory_view
+	_accessories_in_area[accessory_view.get_instance_id()] = accessory_view.accessory
+
+	accessory_view.drag_zone.stopped_drag.connect(_attach_accessory.bind(accessory_view))
 
 
 func _on_area_exited(area: Area2D) -> void:
-	_attached_accessories.erase(area.owner.get_instance_id())
+	if not area is AccessoryArea:
+		return
+	var accessory_area := area as AccessoryArea
+
+	var accessory_view := accessory_area.accessory_view
+	_accessories_in_area.erase(accessory_view.get_instance_id())
+
+	_detatch_accessory(accessory_view)
+
+
+func _attach_accessory(accessory_view: AccessoryView) -> void:
+	_attached_accessories[accessory_view.get_instance_id()] = accessory_view.accessory
+	accessory_view.animation_player.play("attach")
+
+
+func _detatch_accessory(accessory_view: AccessoryView) -> void:
+	_attached_accessories.erase(accessory_view.get_instance_id())
+	accessory_view.drag_zone.stopped_drag.disconnect(_attach_accessory.bind(accessory_view))

@@ -2,9 +2,8 @@
 class_name AccessoryArea
 extends Area2D
 
-var accessory: Accessory
+var accessory_view: AccessoryView
 
 
 func _ready() -> void:
-	var accessory_view = owner as AccessoryView
-	accessory = accessory_view.accessory
+	accessory_view = owner as AccessoryView

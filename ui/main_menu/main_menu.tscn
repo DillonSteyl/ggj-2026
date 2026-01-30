@@ -63,13 +63,13 @@ theme_override_constants/separation = 40
 
 [node name="Title" type="Label" parent="VBoxContainer" unique_id=1153049037]
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 128
 text = "Mask"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Buttons" type="VBoxContainer" parent="VBoxContainer" unique_id=635420940]
-custom_minimum_size = Vector2(200, 0)
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 10

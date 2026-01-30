@@ -12,46 +12,49 @@
 script = ExtResource("1_u5opy")
 
 [node name="MaskBase" parent="." unique_id=1258051407 instance=ExtResource("1_l1rk1")]
-position = Vector2(433, 41)
+position = Vector2(793, 218)
 
 [node name="Accessory" parent="." unique_id=1256709385 instance=ExtResource("2_vasa2")]
-position = Vector2(914, 76)
+position = Vector2(1267, 714)
 accessory = ExtResource("3_h7iqs")
 
 [node name="Accessory2" parent="." unique_id=791800825 instance=ExtResource("2_vasa2")]
-position = Vector2(1007, 227)
+position = Vector2(1269, 545)
 accessory = ExtResource("4_dakft")
 
 [node name="Accessory3" parent="." unique_id=1384374247 instance=ExtResource("2_vasa2")]
-position = Vector2(853, 233)
+position = Vector2(1287, 363)
 accessory = ExtResource("5_u5opy")
 
 [node name="Accessory4" parent="." unique_id=1276859506 instance=ExtResource("2_vasa2")]
-position = Vector2(982, 452)
+position = Vector2(1492, 522)
 accessory = ExtResource("6_y36n6")
 
-[node name="Label" type="Label" parent="." unique_id=1056874572]
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=1432447566]
+
+[node name="Label" type="Label" parent="UILayer" unique_id=1056874572]
+unique_name_in_owner = true
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -354.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+horizontal_alignment = 1
+
+[node name="CheckButton" type="Button" parent="UILayer" unique_id=249239637]
+unique_name_in_owner = true
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 3.0
-offset_top = 376.0
-offset_right = 1145.0
-offset_bottom = 559.0
+offset_left = -37.5
+offset_top = -68.0
+offset_right = 37.5
+offset_bottom = -31.0
 grow_horizontal = 2
 grow_vertical = 0
-horizontal_alignment = 1
-
-[node name="CheckButton" type="Button" parent="." unique_id=249239637]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 558.0
-offset_top = 588.0
-offset_right = 633.0
-offset_bottom = 625.0
-grow_horizontal = 2
-grow_vertical = 2
 text = "Check"

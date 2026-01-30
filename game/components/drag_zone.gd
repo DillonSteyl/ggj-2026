@@ -1,7 +1,11 @@
 class_name DragZone
 extends Control
 
-var _is_dragging: bool = false
+signal started_drag
+signal stopped_drag
+
+var _is_dragging: bool = false:
+	set = _set_is_dragging
 
 
 func _gui_input(event: InputEvent) -> void:
@@ -13,6 +17,10 @@ func _gui_input(event: InputEvent) -> void:
 		owner.global_position += event.relative
 
 
+func get_is_dragging() -> bool:
+	return _is_dragging
+
+
 func _handle_mouse_button_input(event: InputEventMouseButton):
 	if event.button_index == MOUSE_BUTTON_LEFT:
 		if event.is_pressed():
@@ -21,3 +29,13 @@ func _handle_mouse_button_input(event: InputEventMouseButton):
 			owner.move_to_front()
 		else:
 			_is_dragging = false
+
+
+func _set_is_dragging(value: bool) -> void:
+	if _is_dragging != value:
+		if value:
+			started_drag.emit()
+		else:
+			stopped_drag.emit()
+
+	_is_dragging = value

@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://c5ejndwiee0ma" path="res://game/components/accessory_drop_zone.gd" id="2_u64vd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cfqp5"]
-size = Vector2(150, 300)
+size = Vector2(142, 300)
 
 [node name="MaskBase" type="Node2D" unique_id=478821619]
 script = ExtResource("1_o078o")
@@ -19,15 +19,15 @@ collision_layer = 0
 script = ExtResource("2_u64vd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftDropZone" unique_id=83787320]
-position = Vector2(75, 150)
+position = Vector2(71, 150)
 shape = SubResource("RectangleShape2D_cfqp5")
 
 [node name="RightDropZone" type="Area2D" parent="." unique_id=1456605540]
 unique_name_in_owner = true
-position = Vector2(150, 0)
+position = Vector2(158, 0)
 collision_layer = 0
 script = ExtResource("2_u64vd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightDropZone" unique_id=2142478117]
-position = Vector2(75, 150)
+position = Vector2(71, 150)
 shape = SubResource("RectangleShape2D_cfqp5")
