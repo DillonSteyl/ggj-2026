@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://c8fqt4q0jg1r6"]
+
+[ext_resource type="PackedScene" uid="uid://c7g4f111rim71" path="res://game/masks/mask_base.tscn" id="1_l1rk1"]
+[ext_resource type="Script" uid="uid://lrcvssxkdpp5" path="res://game/game.gd" id="1_u5opy"]
+[ext_resource type="PackedScene" uid="uid://e1e3t1v6v2vy" path="res://game/masks/accessory_view.tscn" id="2_vasa2"]
+[ext_resource type="Resource" uid="uid://7yoxn6076x16" path="res://game/masks/accessories/accessory1.tres" id="3_h7iqs"]
+[ext_resource type="Resource" uid="uid://cnmyw4igxfy7m" path="res://game/masks/accessories/accessory2.tres" id="4_dakft"]
+[ext_resource type="Resource" uid="uid://dm4uwauvw1383" path="res://game/masks/accessories/accessory3.tres" id="5_u5opy"]
+[ext_resource type="Resource" uid="uid://b1gdxk1amey2a" path="res://game/masks/accessories/accessory4.tres" id="6_y36n6"]
+
+[node name="Game" type="Node2D" unique_id=1553240865]
+script = ExtResource("1_u5opy")
+
+[node name="MaskBase" parent="." unique_id=1258051407 instance=ExtResource("1_l1rk1")]
+position = Vector2(433, 41)
+
+[node name="Accessory" parent="." unique_id=1256709385 instance=ExtResource("2_vasa2")]
+position = Vector2(914, 76)
+accessory = ExtResource("3_h7iqs")
+
+[node name="Accessory2" parent="." unique_id=791800825 instance=ExtResource("2_vasa2")]
+position = Vector2(1007, 227)
+accessory = ExtResource("4_dakft")
+
+[node name="Accessory3" parent="." unique_id=1384374247 instance=ExtResource("2_vasa2")]
+position = Vector2(853, 233)
+accessory = ExtResource("5_u5opy")
+
+[node name="Accessory4" parent="." unique_id=1276859506 instance=ExtResource("2_vasa2")]
+position = Vector2(982, 452)
+accessory = ExtResource("6_y36n6")
+
+[node name="Label" type="Label" parent="." unique_id=1056874572]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 376.0
+offset_right = 1145.0
+offset_bottom = 559.0
+grow_horizontal = 2
+grow_vertical = 0
+horizontal_alignment = 1
+
+[node name="CheckButton" type="Button" parent="." unique_id=249239637]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 558.0
+offset_top = 588.0
+offset_right = 633.0
+offset_bottom = 625.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Check"

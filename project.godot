@@ -23,6 +23,7 @@ Settings="*uid://sat3b53ifaq5"
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+window/layer_1=""
 
 [dotnet]
 
@@ -31,6 +32,10 @@ project/assembly_name="Mask"
 [gui]
 
 theme/custom="uid://daokerupce7cs"
+
+[layer_names]
+
+2d_physics/layer_1="decorations"
 
 [physics]
 

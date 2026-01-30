@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Accessory" format=3 uid="uid://dm4uwauvw1383"]
+
+[ext_resource type="Script" uid="uid://dn5tlx64qicuq" path="res://game/components/resources/accessory.gd" id="1_4c4jr"]
+[ext_resource type="Texture2D" uid="uid://b7ftwjyk1bcqj" path="res://game/masks/accessories/assets/splat20.png" id="2_4c4jr"]
+
+[resource]
+script = ExtResource("1_4c4jr")
+texture = ExtResource("2_4c4jr")
+color_label = 1
+color = Color(0, 0.56078434, 0.8901961, 1)
+metadata/_custom_type_script = "uid://dn5tlx64qicuq"

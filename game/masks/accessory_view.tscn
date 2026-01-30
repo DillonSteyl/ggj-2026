@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://e1e3t1v6v2vy"]
+
+[ext_resource type="Script" uid="uid://0civgqftgfkk" path="res://game/components/drag_zone.gd" id="1_8xrwp"]
+[ext_resource type="Script" uid="uid://dld30h730c8vf" path="res://game/masks/accessory_view.gd" id="1_bwhjf"]
+[ext_resource type="Texture2D" uid="uid://7rs5oonjpd5n" path="res://icon.svg" id="1_u5oqc"]
+[ext_resource type="Script" uid="uid://bg4e6whvbjhem" path="res://game/components/accessory_area.gd" id="3_f4moc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u5oqc"]
+size = Vector2(84, 82)
+
+[node name="AccessoryView" type="Node2D" unique_id=791800825]
+script = ExtResource("1_bwhjf")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1782774706]
+unique_name_in_owner = true
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 78.0
+offset_bottom = 78.0
+scale = Vector2(0.78125, 0.78125)
+texture = ExtResource("1_u5oqc")
+expand_mode = 1
+
+[node name="AccessoryArea" type="Area2D" parent="." unique_id=968580415]
+script = ExtResource("3_f4moc")
+metadata/_custom_type_script = "uid://bg4e6whvbjhem"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AccessoryArea" unique_id=1305407596]
+shape = SubResource("RectangleShape2D_u5oqc")
+
+[node name="DragZone" type="Control" parent="." unique_id=869113377]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.94574
+offset_top = -58.0
+offset_right = 57.94574
+offset_bottom = 57.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8xrwp")
+metadata/_custom_type_script = "uid://0civgqftgfkk"
