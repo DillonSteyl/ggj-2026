@@ -2,7 +2,7 @@ name: "🚀 Deploy"
 env:
   godot_version: 4.6-stable
   itch_username: dillonsteyl
-  itch_game_id: godot-game-template
+  itch_game_id: ggj-2026
 on:
   workflow_dispatch:
   push:

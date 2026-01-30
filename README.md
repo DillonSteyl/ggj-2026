@@ -1,15 +1,4 @@
-# Godot Game Template
-
-Template repo for quickly spinning up a new Godot game.
-
-## Template Usage
-
-Once a new repo has been created, follow these steps:
-
-- Find & Replace the string 'Godot Game Template' to set the project title
-- Change renderer settings based on target platform - by default, this project will be set to the _Compatibility_ renderer in order to support web-based game jam projects.
-- Update the deployment information (e.g. itchio project id) in `.github/workflows/deploy.yaml`
-- Update the README (set title, add project description, remove template instructions)
+# Mask
 
 ## Getting Started
 

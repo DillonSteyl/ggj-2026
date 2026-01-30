@@ -8,9 +8,13 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
-config/name="Godot Game Template"
+config/name="Mask"
 run/main_scene="uid://boxov74gnd7ku"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
@@ -26,7 +30,7 @@ window/stretch/aspect="expand"
 
 [dotnet]
 
-project/assembly_name="Godot Game Template"
+project/assembly_name="Mask"
 
 [gui]
 
