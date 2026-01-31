@@ -4,16 +4,21 @@ extends Node
 signal character_entered
 signal character_exited
 
+@export var stages: Array[Stage] = []
+
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var character_base: CharacterBase = $CharacterBase
 
+var _current_stage: Stage
+var _current_stage_index: int
+
 
 func _ready() -> void:
+	_current_stage = stages[0]
 	next()
 
 
 func dismiss() -> void:
-	# TODO: check validity of request, handle progression, etc.
 	animation_player.play("exit")
 	await animation_player.animation_finished
 	next()
@@ -21,7 +26,7 @@ func dismiss() -> void:
 
 func next() -> void:
 	# TODO: set random character
-	# TODO: set mask request based on current progression
+	character_base.mask_request = _current_stage.request_generator.generate()
 	animation_player.play("enter")
 
 

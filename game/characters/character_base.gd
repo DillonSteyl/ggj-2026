@@ -3,6 +3,8 @@ extends Node2D
 
 const SEC_PER_CHAR: float = 0.03
 
+@export var mask_request: MaskRequest
+
 @onready var speech_label: RichTextLabel = $%SpeechLabel
 @onready var face_transform: Node2D = $%FaceTransform
 
@@ -34,7 +36,7 @@ func _clear_speech() -> void:
 
 
 func _make_request() -> void:
-	speech_label.text = "Making a request, ya know?\nGive me a mask please. I'm a cute lil buggy guy."
+	speech_label.text = mask_request.to_bug_language()
 	_animate_speech()
 
 

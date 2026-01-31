@@ -9,9 +9,9 @@ func to_bug_language() -> String:
 	return _get_accessory_bug_language()
 
 
-func _get_accessory_bug_language():
+func _get_accessory_bug_language() -> String:
 	if accessory_requests.size() == 0:
-		return null
+		return ""
 
 	var request_phrases = []
 	for req in accessory_requests:

@@ -20,3 +20,17 @@ const PLACEMENT_NAMES = {
 	AccessoryPlacement.Left: "left",
 	AccessoryPlacement.Right: "right",
 }
+
+const VALID_SIZES = [
+	AccessorySize.Small,
+	AccessorySize.Large,
+]
+const VALID_MATERIALS = [
+	AccessoryMaterial.Metal,
+	AccessoryMaterial.Paper,
+	AccessoryMaterial.Wood,
+]
+const VALID_PLACEMENTS = [
+	AccessoryPlacement.Left,
+	AccessoryPlacement.Right,
+]
