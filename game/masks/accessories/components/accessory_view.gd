@@ -1,10 +1,16 @@
 class_name AccessoryView
 extends Node2D
 
+const SPRITE_SCALE = {
+	Types.AccessorySize.Small: 0.15,
+	Types.AccessorySize.Medium: 0.2,
+	Types.AccessorySize.Large: 0.3,
+}
 const ACCESSORY_VIEW_SCENE = preload("uid://e1e3t1v6v2vy")
 
 @export var accessory: Accessory
 
+@onready var visual_parent: Node2D = $%Visuals
 @onready var shadow_sprite: Sprite2D = $%ShadowSprite2D
 @onready var sprite: Sprite2D = $%Sprite2D
 @onready var animation_player: AnimationPlayer = $%AnimationPlayer
@@ -18,6 +24,7 @@ var _over_drop_zones: Dictionary[AccessoryDropZone, bool] = {}
 
 
 func _ready() -> void:
+	visual_parent.scale = Vector2.ONE * SPRITE_SCALE[accessory.size] * accessory.scale_multiplier
 	shadow_sprite.texture = accessory.texture
 	sprite.texture = accessory.texture
 	debug_label.text = accessory.debug_text

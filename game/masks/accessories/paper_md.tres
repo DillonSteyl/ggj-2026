@@ -1,12 +1,13 @@
 [gd_resource type="Resource" script_class="Accessory" format=3 uid="uid://bntlnt60elb5q"]
 
 [ext_resource type="Script" uid="uid://dn5tlx64qicuq" path="res://game/components/resources/accessory.gd" id="1_886ud"]
-[ext_resource type="Texture2D" uid="uid://esmv2rtcstns" path="res://game/masks/accessories/assets/splat12.png" id="2_8nx0x"]
+[ext_resource type="Texture2D" uid="uid://dubf1aolc7thu" path="res://game/masks/assets/accessories/paper_med.png" id="2_886ud"]
 
 [resource]
 script = ExtResource("1_886ud")
-texture = ExtResource("2_8nx0x")
+texture = ExtResource("2_886ud")
 debug_text = "paper"
+scale_multiplier = 1.4
 size = 3
 material = 2
 metadata/_custom_type_script = "uid://dn5tlx64qicuq"

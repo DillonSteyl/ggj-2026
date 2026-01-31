@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cbk5j0wuklma4"]
+
+[ext_resource type="PackedScene" uid="uid://c7qk1burg7skj" path="res://game/masks/components/mask_base.tscn" id="1_yar3t"]
+[ext_resource type="Texture2D" uid="uid://j6wdl08k638h" path="res://game/masks/assets/bases/mask_butterfly.png" id="2_jckoo"]
+
+[node name="ButterflyMask" unique_id=478821619 instance=ExtResource("1_yar3t")]
+
+[node name="Visuals" parent="." index="0" unique_id=1865690899]
+scale = Vector2(0.5, 0.5)
+
+[node name="ShadowSprite2D" parent="Visuals" index="0" unique_id=118419894]
+texture = ExtResource("2_jckoo")
+
+[node name="Sprite2D" parent="Visuals" index="1" unique_id=591623825]
+texture = ExtResource("2_jckoo")
+
+[node name="CollisionPolygon2D" parent="LeftDropZone" parent_id_path=PackedInt32Array(2067922764) index="0" unique_id=571200008]
+polygon = PackedVector2Array(-17, -83, -61, -118, -158, -182, -218, -197, -251, -159, -204, -50, -191, 2, -137, 15, -166, 40, -173, 81, -169, 130, -139, 150, -83, 194, -32, 188, -12, 141, -11, 71, -15, -80, -39, -54, -28, -3, -29, 59, -78, 58, -106, -31, -95, -57, -41, -56)
+
+[node name="CollisionPolygon2D" parent="RightDropZone" parent_id_path=PackedInt32Array(1456605540) index="0" unique_id=657294330]
+position = Vector2(0, 1)
+rotation = 0.0
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(-17, -83, -61, -118, -158, -182, -218, -197, -251, -159, -204, -50, -191, 2, -137, 15, -166, 40, -173, 81, -169, 130, -139, 150, -83, 194, -32, 188, -12, 141, -11, 71, -15, -80, -39, -54, -28, -3, -29, 59, -78, 58, -106, -31, -95, -57, -41, -56)

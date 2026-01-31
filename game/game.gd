@@ -1,7 +1,7 @@
 class_name Game
 extends Node2D
 
-const MASK_SCENE = preload("uid://c7g4f111rim71")
+const MASK_SCENE = preload("uid://cbk5j0wuklma4")
 
 @onready var submit_button: TextureButton = $%SubmitButton
 @onready var accessory_panel: AccessoryPanel = $%AccessoryPanel

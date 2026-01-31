@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="Accessory" format=3 uid="uid://bupk2q0yr87p1"]
 
 [ext_resource type="Script" uid="uid://dn5tlx64qicuq" path="res://game/components/resources/accessory.gd" id="1_jmiq1"]
-[ext_resource type="Texture2D" uid="uid://esmv2rtcstns" path="res://game/masks/accessories/assets/splat12.png" id="2_v825w"]
+[ext_resource type="Texture2D" uid="uid://cb43joqbbyuok" path="res://game/masks/assets/accessories/glass_large.png" id="2_jmiq1"]
 
 [resource]
 script = ExtResource("1_jmiq1")
-texture = ExtResource("2_v825w")
+texture = ExtResource("2_jmiq1")
 debug_text = "large
 wood"
 size = 2

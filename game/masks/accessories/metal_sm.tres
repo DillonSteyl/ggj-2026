@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="Accessory" format=3 uid="uid://b15plsdef4q3x"]
 
 [ext_resource type="Script" uid="uid://dn5tlx64qicuq" path="res://game/components/resources/accessory.gd" id="1_un7sf"]
-[ext_resource type="Texture2D" uid="uid://esmv2rtcstns" path="res://game/masks/accessories/assets/splat12.png" id="2_2jmca"]
+[ext_resource type="Texture2D" uid="uid://bds4f0m2vqk8o" path="res://game/masks/assets/accessories/metal_small.png" id="2_un7sf"]
 
 [resource]
 script = ExtResource("1_un7sf")
-texture = ExtResource("2_2jmca")
+texture = ExtResource("2_un7sf")
 debug_text = "small
 metal"
 size = 1

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://4ayima5qwaa8" path="res://game/ui/accessory_panel/accessory_button.gd" id="1_jo6ra"]
 [ext_resource type="Resource" uid="uid://7yoxn6076x16" path="res://game/masks/accessories/paper_sm.tres" id="2_knn6y"]
-[ext_resource type="Texture2D" uid="uid://esmv2rtcstns" path="res://game/masks/accessories/assets/splat12.png" id="3_knn6y"]
+[ext_resource type="Texture2D" uid="uid://esmv2rtcstns" path="res://game/masks/assets/accessories/splat12.png" id="3_knn6y"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jo6ra"]
 content_margin_left = 4.0
@@ -104,11 +104,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(50, 50)
 texture = ExtResource("3_knn6y")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="DebugLabel" type="Label" parent="." unique_id=374281924]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
