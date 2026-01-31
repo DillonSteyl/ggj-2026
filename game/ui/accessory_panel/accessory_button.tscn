@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://bmc5p0763dbnn"]
+
+[ext_resource type="Script" uid="uid://4ayima5qwaa8" path="res://game/ui/accessory_panel/accessory_button.gd" id="1_jo6ra"]
+[ext_resource type="Resource" uid="uid://b1gdxk1amey2a" path="res://game/masks/accessories/accessory4.tres" id="2_od158"]
+[ext_resource type="Texture2D" uid="uid://esmv2rtcstns" path="res://game/masks/accessories/assets/splat12.png" id="3_knn6y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jo6ra"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_od158"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_knn6y"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bqsau"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwolg"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[node name="AccessoryButton" type="Button" unique_id=1290239176]
+custom_minimum_size = Vector2(100, 100)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jo6ra")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_od158")
+theme_override_styles/hover = SubResource("StyleBoxFlat_knn6y")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_bqsau")
+theme_override_styles/focus = SubResource("StyleBoxFlat_mwolg")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("1_jo6ra")
+accessory = ExtResource("2_od158")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1962539622]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_knn6y")
+expand_mode = 1
+stretch_mode = 5

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://e1e3t1v6v2vy"]
 
 [ext_resource type="Script" uid="uid://0civgqftgfkk" path="res://game/components/drag_zone.gd" id="1_8xrwp"]
-[ext_resource type="Script" uid="uid://dld30h730c8vf" path="res://game/masks/accessory_view.gd" id="1_bwhjf"]
+[ext_resource type="Script" uid="uid://dld30h730c8vf" path="res://game/masks/accessories/components/accessory_view.gd" id="1_bwhjf"]
 [ext_resource type="Texture2D" uid="uid://esmv2rtcstns" path="res://game/masks/accessories/assets/splat12.png" id="2_f4moc"]
 [ext_resource type="Script" uid="uid://bg4e6whvbjhem" path="res://game/components/accessory_area.gd" id="3_f4moc"]
 

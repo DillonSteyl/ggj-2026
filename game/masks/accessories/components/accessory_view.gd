@@ -1,6 +1,8 @@
 class_name AccessoryView
 extends Node2D
 
+const ACCESSORY_VIEW_SCENE = preload("uid://e1e3t1v6v2vy")
+
 @export var accessory: Accessory
 
 @onready var shadow_sprite: Sprite2D = $%ShadowSprite2D
@@ -16,6 +18,12 @@ func _ready() -> void:
 
 	drag_zone.started_drag.connect(_on_started_drag)
 	drag_zone.stopped_drag.connect(animation_player.play.bind("drop"))
+
+
+static func from_accessory(p_accessory: Accessory) -> AccessoryView:
+	var instance: AccessoryView = ACCESSORY_VIEW_SCENE.instantiate()
+	instance.accessory = p_accessory
+	return instance
 
 
 func _on_started_drag() -> void:

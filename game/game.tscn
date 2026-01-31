@@ -2,50 +2,33 @@
 
 [ext_resource type="PackedScene" uid="uid://c7g4f111rim71" path="res://game/masks/mask_base.tscn" id="1_l1rk1"]
 [ext_resource type="Script" uid="uid://lrcvssxkdpp5" path="res://game/game.gd" id="1_u5opy"]
-[ext_resource type="PackedScene" uid="uid://e1e3t1v6v2vy" path="res://game/masks/accessory_view.tscn" id="2_vasa2"]
-[ext_resource type="Resource" uid="uid://7yoxn6076x16" path="res://game/masks/accessories/accessory1.tres" id="3_h7iqs"]
-[ext_resource type="Resource" uid="uid://cnmyw4igxfy7m" path="res://game/masks/accessories/accessory2.tres" id="4_dakft"]
-[ext_resource type="Resource" uid="uid://dm4uwauvw1383" path="res://game/masks/accessories/accessory3.tres" id="5_u5opy"]
-[ext_resource type="Resource" uid="uid://b1gdxk1amey2a" path="res://game/masks/accessories/accessory4.tres" id="6_y36n6"]
+[ext_resource type="Texture2D" uid="uid://3iu52jmg4x1g" path="res://ui/_common/assets/images/checkmark.png" id="8_y36n6"]
+[ext_resource type="PackedScene" uid="uid://cqhep31505fri" path="res://game/ui/accessory_panel/accessory_panel.tscn" id="9_l8g03"]
 
 [node name="Game" type="Node2D" unique_id=1553240865]
 script = ExtResource("1_u5opy")
 
 [node name="MaskBase" parent="." unique_id=1258051407 instance=ExtResource("1_l1rk1")]
-position = Vector2(793, 218)
+position = Vector2(809, 475)
 
-[node name="Accessory" parent="." unique_id=1256709385 instance=ExtResource("2_vasa2")]
-position = Vector2(1267, 714)
-accessory = ExtResource("3_h7iqs")
-
-[node name="Accessory2" parent="." unique_id=791800825 instance=ExtResource("2_vasa2")]
-position = Vector2(1269, 545)
-accessory = ExtResource("4_dakft")
-
-[node name="Accessory3" parent="." unique_id=1384374247 instance=ExtResource("2_vasa2")]
-position = Vector2(1287, 363)
-accessory = ExtResource("5_u5opy")
-
-[node name="Accessory4" parent="." unique_id=1276859506 instance=ExtResource("2_vasa2")]
-position = Vector2(1492, 522)
-accessory = ExtResource("6_y36n6")
+[node name="AccessorySpawnPoint" type="Marker2D" parent="." unique_id=1635910481]
+position = Vector2(1303, 645)
 
 [node name="UILayer" type="CanvasLayer" parent="." unique_id=1432447566]
 
 [node name="Label" type="Label" parent="UILayer" unique_id=1056874572]
 unique_name_in_owner = true
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 10
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -354.0
-offset_bottom = -100.0
+offset_bottom = 305.0
 grow_horizontal = 2
-grow_vertical = 0
+theme_override_font_sizes/font_size = 32
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="CheckButton" type="Button" parent="UILayer" unique_id=249239637]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 100)
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -57,4 +40,15 @@ offset_right = 37.5
 offset_bottom = -31.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "Check"
+theme_override_colors/icon_normal_color = Color(0, 0.87058824, 0.34901962, 1)
+theme_override_colors/icon_focus_color = Color(0, 0.87058824, 0.34901962, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0.87058824, 0.34901962, 1)
+theme_override_colors/icon_hover_color = Color(0, 0.87058824, 0.34901962, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0.87058824, 0.34901962, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0.87058824, 0.34901962, 0.39215687)
+icon = ExtResource("8_y36n6")
+icon_alignment = 1
+expand_icon = true
+
+[node name="AccessoryPanel" parent="UILayer" unique_id=226300384 instance=ExtResource("9_l8g03")]
+unique_name_in_owner = true
