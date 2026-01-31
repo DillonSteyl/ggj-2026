@@ -18,4 +18,4 @@ func _ready() -> void:
 		var button: AccessoryButton = ACCESSORY_BUTTON_SCENE.instantiate()
 		button.accessory = accessory
 		accessory_grid.add_child(button)
-		button.pressed.connect(accessory_selected.emit.bind(accessory))
+		button.button_down.connect(accessory_selected.emit.bind(accessory))

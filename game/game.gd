@@ -5,6 +5,7 @@ extends Node2D
 @onready var label: Label = $%Label
 @onready var mask_base: MaskBase = $MaskBase
 @onready var accessory_panel: AccessoryPanel = $%AccessoryPanel
+@onready var accessories_layer: CanvasLayer = $%AccessoriesLayer
 
 
 func _ready() -> void:
@@ -18,7 +19,5 @@ func _on_check() -> void:
 
 func _spawn_accessory(accessory: Accessory) -> void:
 	var accessory_view = AccessoryView.from_accessory(accessory)
-	accessory_view.global_position = $%AccessorySpawnPoint.global_position
-	accessory_view.global_position.x += randf_range(-150.0, 150.0)
-	accessory_view.global_position.y += randf_range(-150.0, 150.0)
-	add_child(accessory_view)
+	accessories_layer.add_child(accessory_view)
+	accessory_view.global_position = get_viewport().get_mouse_position()

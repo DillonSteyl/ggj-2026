@@ -18,6 +18,7 @@ func _ready() -> void:
 
 	drag_zone.started_drag.connect(_on_started_drag)
 	drag_zone.stopped_drag.connect(animation_player.play.bind("drop"))
+	animation_player.play("pickup")
 
 
 static func from_accessory(p_accessory: Accessory) -> AccessoryView:
