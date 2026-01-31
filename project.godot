@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Settings="*uid://sat3b53ifaq5"
 CursorManager="*uid://b5cnjded3pah0"
+MusicManager="*uid://cqlw3wuccvbyf"
 
 [display]
 

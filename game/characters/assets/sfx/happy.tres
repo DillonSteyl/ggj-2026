@@ -1,0 +1,17 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://cgkwyg2v10jt4"]
+
+[ext_resource type="AudioStream" uid="uid://btoijswk0intg" path="res://game/characters/assets/sfx/SFX_happy_bug-001.wav" id="1_15rff"]
+[ext_resource type="AudioStream" uid="uid://duetjt1wt641" path="res://game/characters/assets/sfx/SFX_happy_bug-002.wav" id="2_dxusx"]
+[ext_resource type="AudioStream" uid="uid://dlxg1i6pagdpe" path="res://game/characters/assets/sfx/SFX_happy_bug-003.wav" id="3_1awnj"]
+[ext_resource type="AudioStream" uid="uid://bou0ne3nhjn5f" path="res://game/characters/assets/sfx/SFX_happy_bug-004.wav" id="4_nrem4"]
+[ext_resource type="AudioStream" uid="uid://cwl615qm5wlr" path="res://game/characters/assets/sfx/SFX_happy_bug-005.wav" id="5_xfygy"]
+[ext_resource type="AudioStream" uid="uid://beaxiopconu03" path="res://game/characters/assets/sfx/SFX_happy_bug-006.wav" id="6_u6ice"]
+
+[resource]
+streams_count = 6
+stream_0/stream = ExtResource("1_15rff")
+stream_1/stream = ExtResource("2_dxusx")
+stream_2/stream = ExtResource("3_1awnj")
+stream_3/stream = ExtResource("4_nrem4")
+stream_4/stream = ExtResource("5_xfygy")
+stream_5/stream = ExtResource("6_u6ice")

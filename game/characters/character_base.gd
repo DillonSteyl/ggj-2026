@@ -7,6 +7,7 @@ const SEC_PER_CHAR: float = 0.03
 
 @onready var speech_label: RichTextLabel = $%SpeechLabel
 @onready var face_transform: Node2D = $%FaceTransform
+@onready var audio_manager: CharacterAudioManager = $%CharacterAudioManager
 
 var _speech_tween: Tween
 
@@ -21,8 +22,14 @@ func hello() -> void:
 	_speech_tween.finished.connect(_make_request)
 
 
-func goodbye() -> void:
+func goodbye_thankyou() -> void:
 	speech_label.text = "Tee!"
+	_animate_speech(0.7, true)
+	_speech_tween.finished.connect(_clear_speech)
+
+
+func goodbye_curse() -> void:
+	speech_label.text = "Ereeeee!"
 	_animate_speech(0.7, true)
 	_speech_tween.finished.connect(_clear_speech)
 

@@ -1,0 +1,14 @@
+[gd_resource type="AudioStreamSynchronized" format=3 uid="uid://by1onn52wx2pq"]
+
+[ext_resource type="AudioStream" uid="uid://bi0hwjvoocisj" path="res://game/assets/music/Buggy-bossa-Amelia_and-mitch-16bit+characters.ogg" id="1_kmkwl"]
+[ext_resource type="AudioStream" uid="uid://crrrj38n2rbtq" path="res://game/assets/music/Buggy-bossa-Amelia_and-mitch-16bit+halftime.ogg" id="2_m0kei"]
+[ext_resource type="AudioStream" uid="uid://cegumbw580asx" path="res://game/assets/music/Buggy-bossa-Amelia_and-mitch-menu.ogg" id="3_jbbmd"]
+
+[resource]
+stream_count = 3
+stream_0/stream = ExtResource("3_jbbmd")
+stream_0/volume = -60.0
+stream_1/stream = ExtResource("1_kmkwl")
+stream_1/volume = -60.0
+stream_2/stream = ExtResource("2_m0kei")
+stream_2/volume = -60.0

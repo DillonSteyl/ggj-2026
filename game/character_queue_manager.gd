@@ -9,16 +9,22 @@ signal character_exited
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var character_base: CharacterBase = $CharacterBase
 
+var current_request: MaskRequest
 var _current_stage: Stage
-var _current_stage_index: int
+var _current_stage_index: int = 0
 
 
 func _ready() -> void:
-	_current_stage = stages[0]
+	_current_stage = stages[_current_stage_index]
 	next()
 
 
-func dismiss() -> void:
+func dismiss(success: bool) -> void:
+	if success:
+		character_base.goodbye_thankyou()
+	else:
+		character_base.goodbye_curse()
+
 	animation_player.play("exit")
 	await animation_player.animation_finished
 	next()
@@ -26,7 +32,8 @@ func dismiss() -> void:
 
 func next() -> void:
 	# TODO: set random character
-	character_base.mask_request = _current_stage.request_generator.generate()
+	current_request = _current_stage.request_generator.generate()
+	character_base.mask_request = current_request
 	animation_player.play("enter")
 
 
