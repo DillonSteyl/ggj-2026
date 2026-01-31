@@ -18,7 +18,7 @@ We strongly recommend using [GodotEnv](https://github.com/chickensoft-games/Godo
 Install the tool using the dotnet CLI. Execute the following command in your terminal (e.g. Powershell for Windows)
 
 ```sh
-dotnet tool install --global Chickensoft.GodotEnv`
+dotnet tool install --global Chickensoft.GodotEnv
 ```
 
 **Useful commands**:
