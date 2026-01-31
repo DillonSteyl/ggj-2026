@@ -13,6 +13,8 @@ var current_request: MaskRequest
 var _current_stage: Stage
 var _current_stage_index: int = 0
 
+var _stage_success_history: Array[bool] = []
+
 
 func _ready() -> void:
 	_current_stage = stages[_current_stage_index]
@@ -20,6 +22,10 @@ func _ready() -> void:
 
 
 func dismiss(success: bool) -> void:
+	_stage_success_history.append(success)
+	if _stage_success_history.size() > _current_stage.from_x_last_attempts:
+		_stage_success_history.pop_front()
+
 	if success:
 		character_base.goodbye_thankyou()
 	else:
@@ -31,10 +37,23 @@ func dismiss(success: bool) -> void:
 
 
 func next() -> void:
+	if _stage_success_history.filter(func(val): return val).size() >= _current_stage.num_successes:
+		_next_stage()
+
 	# TODO: set random character
 	current_request = _current_stage.request_generator.generate()
 	character_base.mask_request = current_request
 	animation_player.play("enter")
+
+
+func _next_stage() -> void:
+	_current_stage_index += 1
+	if _current_stage_index >= stages.size():
+		# TODO: end game!
+		return
+
+	_current_stage = stages[_current_stage_index]
+	_stage_success_history = []
 
 
 func _on_character_entered() -> void:
