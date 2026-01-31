@@ -8,7 +8,7 @@ script = ExtResource("1_hgy5s")
 texture = ExtResource("2_hgy5s")
 debug_text = "large
 metal"
-scale_multiplier = 0.85
+scale_multiplier = 0.8
 size = 2
 material = 1
 metadata/_custom_type_script = "uid://dn5tlx64qicuq"

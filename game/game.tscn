@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://cobmik6m7tjyy" path="res://game/character_queue_manager.gd" id="4_u5opy"]
 [ext_resource type="Script" uid="uid://debqx1ugtjyvo" path="res://game/requests/resources/stage.gd" id="4_y36n6"]
 [ext_resource type="Resource" uid="uid://vratl0j18iwy" path="res://game/requests/stages/stage_material_a.tres" id="5_l8g03"]
-[ext_resource type="PackedScene" uid="uid://dwe17ww3exlwm" path="res://game/characters/character_base.tscn" id="6_dakft"]
+[ext_resource type="PackedScene" uid="uid://dwe17ww3exlwm" path="res://game/characters/components/character_base.tscn" id="6_dakft"]
 [ext_resource type="Resource" uid="uid://dssek2ytadd1w" path="res://game/requests/stages/stage_size_material_a.tres" id="6_j8tme"]
 [ext_resource type="Resource" uid="uid://bjtpmooalf0s6" path="res://game/requests/stages/stage_size_material_b.tres" id="7_3vho3"]
 [ext_resource type="Resource" uid="uid://f15rcpy8s43g" path="res://game/requests/stages/stage_size_material_placement_a.tres" id="8_qf6n1"]
@@ -19,26 +19,26 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CharacterBase:position")
+tracks/0/path = NodePath("CharacterPosition:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-152, 681)]
+"values": [-0.16080233]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CharacterBase:rotation")
+tracks/1/path = NodePath("CharacterPosition:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [-0.16080233]
+"values": [Vector2(-152, 681)]
 }
 
 [sub_resource type="Animation" id="Animation_dakft"]
@@ -47,31 +47,31 @@ length = 0.8
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CharacterBase:position")
+tracks/0/path = NodePath("CharacterPosition:rotation")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.40000004, 0.53333336),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(-152, 681), Vector2(639.00006, 681), Vector2(639.00006, 681)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CharacterBase:rotation")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.20000002, 0.40000004, 0.46666667, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [0.0, -0.3490658503988659, -0.22689280275926285, 0.0, 0.0]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterPosition:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.40000004, 0.53333336),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-152, 681), Vector2(639.00006, 681), Vector2(639.00006, 681)]
+}
 tracks/2/type = "method"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CharacterBase")
+tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -79,7 +79,7 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
-"method": &"hello"
+"method": &"_on_character_entered"
 }]
 }
 tracks/3/type = "method"
@@ -93,7 +93,7 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
-"method": &"_on_character_entered"
+"method": &"hello"
 }]
 }
 
@@ -103,26 +103,26 @@ length = 1.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CharacterBase:position")
+tracks/0/path = NodePath("CharacterPosition:rotation")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.8, 1.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(639, 681), Vector2(1540.0001, 645.00006)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CharacterBase:rotation")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0.8, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, -0.2792526803190927]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterPosition:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.8, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(639, 681), Vector2(1540.0001, 645.00006)]
 }
 tracks/2/type = "method"
 tracks/2/imported = false
@@ -166,9 +166,13 @@ unique_name_in_owner = true
 script = ExtResource("4_u5opy")
 stages = Array[ExtResource("4_y36n6")]([ExtResource("5_l8g03"), ExtResource("6_j8tme"), ExtResource("7_3vho3"), ExtResource("8_qf6n1"), ExtResource("9_vsp63")])
 
-[node name="CharacterBase" parent="CharacterQueueManager" unique_id=1606950594 instance=ExtResource("6_dakft")]
+[node name="CharacterPosition" type="Marker2D" parent="CharacterQueueManager" unique_id=960232246]
+unique_name_in_owner = true
 position = Vector2(-152, 681)
 rotation = -0.16080233
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="CharacterBase" parent="CharacterQueueManager/CharacterPosition" unique_id=1606950594 instance=ExtResource("6_dakft")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterQueueManager" unique_id=912538051]
 libraries/ = SubResource("AnimationLibrary_u5opy")

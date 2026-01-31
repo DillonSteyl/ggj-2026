@@ -1,18 +1,26 @@
 [gd_scene format=3 uid="uid://dwe17ww3exlwm"]
 
-[ext_resource type="Script" uid="uid://opu2e0nsva01" path="res://game/characters/character_base.gd" id="1_8ckbc"]
-[ext_resource type="Texture2D" uid="uid://7rs5oonjpd5n" path="res://icon.svg" id="2_j8wog"]
-[ext_resource type="Script" uid="uid://cya8d0hcw5rh3" path="res://game/characters/character_audio_manager.gd" id="3_j8wog"]
+[ext_resource type="Script" uid="uid://opu2e0nsva01" path="res://game/characters/components/character_base.gd" id="1_8ckbc"]
+[ext_resource type="Texture2D" uid="uid://gklc8yu188ix" path="res://game/characters/assets/images/cricket/cricket_body1.png" id="2_73spr"]
+[ext_resource type="Texture2D" uid="uid://bhbl1fq40wc15" path="res://game/characters/assets/images/cricket/cricket_eye_normal.png" id="3_44ugb"]
+[ext_resource type="Script" uid="uid://cya8d0hcw5rh3" path="res://game/characters/components/character_audio_manager.gd" id="3_j8wog"]
 [ext_resource type="AudioStream" uid="uid://wncomy3bvfvd" path="res://game/characters/assets/sfx/disgruntled.tres" id="4_vv3pr"]
 [ext_resource type="AudioStream" uid="uid://cgkwyg2v10jt4" path="res://game/characters/assets/sfx/happy.tres" id="5_ws0bf"]
 
 [node name="CharacterBase" type="Node2D" unique_id=1606950594]
 script = ExtResource("1_8ckbc")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1889108149]
-position = Vector2(0, -222)
-scale = Vector2(2, 3.5)
-texture = ExtResource("2_j8wog")
+[node name="Visuals" type="Node2D" parent="." unique_id=1375046192]
+scale = Vector2(0.65, 0.65)
+
+[node name="BodySprite" type="Sprite2D" parent="Visuals" unique_id=1889108149]
+position = Vector2(0, -445)
+texture = ExtResource("2_73spr")
+
+[node name="FaceSprite" type="Sprite2D" parent="Visuals" unique_id=1737856947]
+unique_name_in_owner = true
+position = Vector2(-67, -606)
+texture = ExtResource("3_44ugb")
 
 [node name="SpeechLabel" type="RichTextLabel" parent="." unique_id=1137648197]
 unique_name_in_owner = true

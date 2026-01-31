@@ -5,9 +5,16 @@ const SEC_PER_CHAR: float = 0.03
 
 @export var mask_request: MaskRequest
 
+@export_group("Expressions")
+@export var happy: Texture
+@export var sad: Texture
+@export var normal: Texture
+
 @onready var speech_label: RichTextLabel = $%SpeechLabel
 @onready var face_transform: Node2D = $%FaceTransform
 @onready var audio_manager: CharacterAudioManager = $%CharacterAudioManager
+
+@onready var face_sprite: Sprite2D = $%FaceSprite
 
 var _speech_tween: Tween
 
@@ -23,12 +30,14 @@ func hello() -> void:
 
 
 func goodbye_thankyou() -> void:
+	face_sprite.texture = happy
 	speech_label.text = "Tee!"
 	_animate_speech(0.7, true)
 	_speech_tween.finished.connect(_clear_speech)
 
 
 func goodbye_curse() -> void:
+	face_sprite.texture = sad
 	speech_label.text = "Ereeeee!"
 	_animate_speech(0.7, true)
 	_speech_tween.finished.connect(_clear_speech)
