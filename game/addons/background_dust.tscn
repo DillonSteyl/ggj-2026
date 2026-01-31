@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bgnr0t5fcnnpg"]
+
+[ext_resource type="Texture2D" uid="uid://dp4vym6nu20gy" path="res://game/addons/kenney_particle_pack/circle_05.png" id="1_4eji2"]
+
+[sub_resource type="Curve" id="Curve_y36n6"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.4965517, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_l8g03"]
+curve = SubResource("Curve_y36n6")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_j8tme"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(10, 5, 5)
+emission_shape = 1
+emission_sphere_radius = 100.0
+direction = Vector3(0, 0, 0)
+gravity = Vector3(0, 2, 0)
+scale_min = 0.01
+scale_max = 0.02
+alpha_curve = SubResource("CurveTexture_l8g03")
+hue_variation_min = -2.2351742e-08
+hue_variation_max = -2.2351742e-08
+
+[node name="GPUParticles2D" type="GPUParticles2D" unique_id=1720898848]
+emitting = false
+amount = 50
+texture = ExtResource("1_4eji2")
+lifetime = 5.0
+preprocess = 4.0
+process_material = SubResource("ParticleProcessMaterial_j8tme")

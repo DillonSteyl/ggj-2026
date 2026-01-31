@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://cjdot2xpcrbph"]
+
+[ext_resource type="Texture2D" uid="uid://bgnlfdd7asn6n" path="res://game/addons/kenney_particle_pack/smoke_01.png" id="1_5doar"]
+[ext_resource type="Texture2D" uid="uid://du7jjnm7unte0" path="res://game/addons/kenney_particle_pack/circle_04.png" id="2_frq4q"]
+[ext_resource type="Script" uid="uid://djctiia0rkrc6" path="res://game/addons/background_dust.gd" id="3_ln03h"]
+
+[sub_resource type="Curve" id="Curve_3vho3"]
+_data = [Vector2(0, 0), 0.0, 2.6665392, 0, 0, Vector2(0.30689657, 0.48660082), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.347674, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_qf6n1"]
+curve = SubResource("Curve_3vho3")
+
+[sub_resource type="Curve" id="Curve_vsp63"]
+_data = [Vector2(0, 0.44992942), 0.0, 1.5307521, 0, 0, Vector2(0.21034484, 0.86248237), 0.9667908, 0.9667908, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_b686c"]
+curve = SubResource("Curve_vsp63")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hb504"]
+particle_flag_disable_z = true
+angle_min = -720.0
+angle_max = 720.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.13
+scale_max = 0.17
+scale_curve = SubResource("CurveTexture_b686c")
+color = Color(0.91799134, 0.83987, 0.7878598, 1)
+alpha_curve = SubResource("CurveTexture_qf6n1")
+
+[sub_resource type="Curve" id="Curve_frq4q"]
+_limits = [0.0, 0.33991534, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 3.1205504, 0, 0, Vector2(0.14482759, 0.12800759), 0.0, 0.0, 0, 0, Vector2(0.5551724, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_ln03h"]
+curve = SubResource("Curve_frq4q")
+
+[sub_resource type="Curve" id="Curve_ln03h"]
+_data = [Vector2(0, 0), 0.0, 5.685471, 0, 0, Vector2(0.6275862, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_boub1"]
+curve = SubResource("Curve_ln03h")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ydooc"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+scale_min = 0.14999999
+scale_max = 0.19
+scale_curve = SubResource("CurveTexture_boub1")
+alpha_curve = SubResource("CurveTexture_ln03h")
+
+[node name="GPUParticles2D" type="GPUParticles2D" unique_id=652442508]
+amount = 1
+texture = ExtResource("1_5doar")
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_hb504")
+script = ExtResource("3_ln03h")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1245498794]
+amount = 1
+texture = ExtResource("2_frq4q")
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_ydooc")
