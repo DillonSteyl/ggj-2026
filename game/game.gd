@@ -6,6 +6,7 @@ extends Node2D
 @onready var mask_base: MaskBase = $MaskBase
 @onready var accessory_panel: AccessoryPanel = $%AccessoryPanel
 @onready var accessories_layer: CanvasLayer = $%AccessoriesLayer
+@onready var character_queue_manager: CharacterQueueManager = $%CharacterQueueManager
 
 
 func _ready() -> void:
@@ -14,7 +15,8 @@ func _ready() -> void:
 
 
 func _on_check() -> void:
-	label.text = mask_base.get_accessory_description()
+	print(mask_base.get_accessory_description())
+	character_queue_manager.dismiss()
 
 
 func _spawn_accessory(accessory: Accessory) -> void:

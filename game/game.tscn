@@ -3,8 +3,127 @@
 [ext_resource type="PackedScene" uid="uid://c7g4f111rim71" path="res://game/masks/mask_base.tscn" id="1_l1rk1"]
 [ext_resource type="Script" uid="uid://lrcvssxkdpp5" path="res://game/game.gd" id="1_u5opy"]
 [ext_resource type="Texture2D" uid="uid://bfemogq7kxte5" path="res://game/assets/background.jpg" id="2_dxrkv"]
-[ext_resource type="FontFile" uid="uid://dx3q81rhhq3rl" path="res://ui/_common/assets/fonts/SourGummy-Black.ttf" id="4_dxrkv"]
+[ext_resource type="Script" uid="uid://cobmik6m7tjyy" path="res://game/character_queue_manager.gd" id="4_u5opy"]
+[ext_resource type="PackedScene" uid="uid://dwe17ww3exlwm" path="res://game/characters/character_base.tscn" id="6_dakft"]
 [ext_resource type="PackedScene" uid="uid://cqhep31505fri" path="res://game/ui/accessory_panel/accessory_panel.tscn" id="9_l8g03"]
+
+[sub_resource type="Animation" id="Animation_u5opy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBase:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-152, 647)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterBase:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.16080233]
+}
+
+[sub_resource type="Animation" id="Animation_dakft"]
+resource_name = "enter"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBase:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.53333336),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-152, 647), Vector2(639, 647), Vector2(639, 647)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterBase:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.20000002, 0.40000004, 0.46666667, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.3490658503988659, -0.22689280275926285, 0.0, 0.0]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterBase")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.76666665),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"hello"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_y36n6"]
+resource_name = "exit"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBase:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.8, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(639, 647), Vector2(1540.0001, 645.00006)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterBase:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.8, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.2792526803190927]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterBase")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"goodbye"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u5opy"]
+_data = {
+&"RESET": SubResource("Animation_u5opy"),
+&"enter": SubResource("Animation_dakft"),
+&"exit": SubResource("Animation_y36n6")
+}
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4fuuu"]
 
@@ -34,27 +153,22 @@ expand_mode = 1
 [node name="MaskBase" parent="." unique_id=1258051407 instance=ExtResource("1_l1rk1")]
 position = Vector2(416, 820)
 
+[node name="CharacterQueueManager" type="Node" parent="." unique_id=603073880]
+unique_name_in_owner = true
+script = ExtResource("4_u5opy")
+
+[node name="CharacterBase" parent="CharacterQueueManager" unique_id=1606950594 instance=ExtResource("6_dakft")]
+position = Vector2(-152, 647)
+rotation = -0.16080233
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterQueueManager" unique_id=912538051]
+libraries/ = SubResource("AnimationLibrary_u5opy")
+
 [node name="AccessoriesLayer" type="CanvasLayer" parent="." unique_id=1321242908]
 unique_name_in_owner = true
 layer = 2
 
 [node name="UILayer" type="CanvasLayer" parent="." unique_id=1432447566]
-
-[node name="Label" type="Label" parent="UILayer" unique_id=1056874572]
-unique_name_in_owner = true
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 305.0
-grow_horizontal = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.7254902)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 4
-theme_override_constants/shadow_offset_y = 4
-theme_override_constants/outline_size = 14
-theme_override_fonts/font = ExtResource("4_dxrkv")
-theme_override_font_sizes/font_size = 48
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="CheckButton" type="Button" parent="UILayer" unique_id=249239637]
 unique_name_in_owner = true
