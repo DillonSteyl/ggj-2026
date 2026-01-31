@@ -6,5 +6,6 @@
 [resource]
 script = ExtResource("1_6oie1")
 texture = ExtResource("2_taeul")
-color = Color(0.4862745, 0, 0, 1)
+size = 2
+material = 3
 metadata/_custom_type_script = "uid://dn5tlx64qicuq"

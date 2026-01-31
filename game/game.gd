@@ -22,7 +22,8 @@ func _ready() -> void:
 
 
 func _on_check() -> void:
-	print(_current_mask.get_accessory_description())
+	var built_mask = _current_mask.to_definition()
+	print(built_mask.get_description())
 	# TODO: check if mask decorated successfully
 	_on_success()
 

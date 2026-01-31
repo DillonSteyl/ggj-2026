@@ -17,13 +17,10 @@ func get_matches_request(request: AccessoryRequest) -> bool:
 
 
 func _to_string() -> String:
-	return (
-		"A {size}, {material} thing on the {placement}"
-		. format(
-			{
-				"size": Types.SIZE_NAMES[size],
-				"material": Types.MATERIAL_NAMES[material],
-				"placement": Types.PLACEMENT_NAMES[placement],
-			}
-		)
+	return "A {size}, {material} thing on the {placement}".format(
+		{
+			"size": Types.SIZE_NAMES.get(size, "none"),
+			"material": Types.MATERIAL_NAMES.get(material, "none"),
+			"placement": Types.PLACEMENT_NAMES.get(placement, "none")
+		}
 	)
