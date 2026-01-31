@@ -1,0 +1,11 @@
+[gd_resource type="AudioStreamSynchronized" format=3 uid="uid://by1onn52wx2pq"]
+
+[ext_resource type="AudioStream" uid="uid://bi0hwjvoocisj" path="res://game/assets/music/Buggy-bossa-Amelia_and-mitch-16bit+characters.ogg" id="1_w5irv"]
+[ext_resource type="AudioStream" uid="uid://crrrj38n2rbtq" path="res://game/assets/music/Buggy-bossa-Amelia_and-mitch-16bit+halftime.ogg" id="2_rcc4y"]
+
+[resource]
+stream_count = 2
+stream_0/stream = ExtResource("1_w5irv")
+stream_0/volume = 0.0
+stream_1/stream = ExtResource("2_rcc4y")
+stream_1/volume = -60.0

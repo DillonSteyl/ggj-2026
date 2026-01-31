@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://de7m84bqtaib7" path="res://game/assets/background.png" id="2_dakft"]
 [ext_resource type="Script" uid="uid://cobmik6m7tjyy" path="res://game/character_queue_manager.gd" id="4_u5opy"]
 [ext_resource type="PackedScene" uid="uid://dwe17ww3exlwm" path="res://game/characters/character_base.tscn" id="6_dakft"]
+[ext_resource type="AudioStream" uid="uid://by1onn52wx2pq" path="res://game/assets/music/buggy-bossa_audio_stream_synchronized.tres" id="6_u5opy"]
 [ext_resource type="PackedScene" uid="uid://cqhep31505fri" path="res://game/ui/accessory_panel/accessory_panel.tscn" id="9_l8g03"]
 
 [sub_resource type="Animation" id="Animation_u5opy"]
@@ -229,3 +230,7 @@ offset_left = -369.0
 offset_top = 780.0
 offset_right = -47.0
 offset_bottom = -179.0
+
+[node name="BuggyAudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=106094584]
+stream = ExtResource("6_u5opy")
+autoplay = true
