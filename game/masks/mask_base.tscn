@@ -3,31 +3,204 @@
 [ext_resource type="Script" uid="uid://cgj8hj3j41qrk" path="res://game/masks/mask_base.gd" id="1_o078o"]
 [ext_resource type="Script" uid="uid://c5ejndwiee0ma" path="res://game/components/accessory_drop_zone.gd" id="2_u64vd"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cfqp5"]
-size = Vector2(142, 300)
+[sub_resource type="Gradient" id="Gradient_u64vd"]
+offsets = PackedFloat32Array(0, 0.68877554, 0.7091837)
+colors = PackedColorArray(1, 1, 1, 1, 0.39447612, 0.39447618, 0.394476, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_avml8"]
+gradient = SubResource("Gradient_u64vd")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="Animation" id="Animation_avml8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ShadowSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ShadowSprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ShadowSprite2D:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.6666667)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_u64vd"]
+resource_name = "drop_in"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ShadowSprite2D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.33333334, 0.40000004),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 4), Vector2(0, 4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ShadowSprite2D:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.23333335, 0.33333334, 0.40000004),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1.3, 1.3), Vector2(1.3, 1.3), Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.23333333, 0.33333334, 0.40000004),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -79), Vector2(0, -79), Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:scale")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.23333333, 0.33333334, 0.40000004),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1.3, 1.3), Vector2(1.3, 1.3), Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ShadowSprite2D:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.23333332, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.41568628), Color(0, 0, 0, 0.6666667)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_avml8"]
+_data = {
+&"RESET": SubResource("Animation_avml8"),
+&"drop_in": SubResource("Animation_u64vd")
+}
 
 [node name="MaskBase" type="Node2D" unique_id=478821619]
+modulate = Color(1, 1, 1, 0)
 script = ExtResource("1_o078o")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=335656447]
-offset_right = 300.0
-offset_bottom = 300.0
+[node name="ShadowSprite2D" type="Sprite2D" parent="." unique_id=118419894]
+modulate = Color(0, 0, 0, 0.6666667)
+position = Vector2(0, 4)
+texture = SubResource("GradientTexture2D_avml8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=591623825]
+texture = SubResource("GradientTexture2D_avml8")
 
 [node name="LeftDropZone" type="Area2D" parent="." unique_id=2067922764]
 unique_name_in_owner = true
 collision_layer = 0
 script = ExtResource("2_u64vd")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftDropZone" unique_id=83787320]
-position = Vector2(71, 150)
-shape = SubResource("RectangleShape2D_cfqp5")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LeftDropZone" unique_id=571200008]
+polygon = PackedVector2Array(-8, -126, -50, -118, -82, -97, -110, -62, -125, -24, -125, 16, -118, 46, -98, 80, -77, 100, -44, 117, -8, 127, -7.002777, 0.15007019)
 
 [node name="RightDropZone" type="Area2D" parent="." unique_id=1456605540]
 unique_name_in_owner = true
-position = Vector2(158, 0)
 collision_layer = 0
 script = ExtResource("2_u64vd")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RightDropZone" unique_id=2142478117]
-position = Vector2(71, 150)
-shape = SubResource("RectangleShape2D_cfqp5")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RightDropZone" unique_id=657294330]
+rotation = -3.1415927
+polygon = PackedVector2Array(-8, -126, -50, -118, -82, -97, -110, -62, -125, -24, -125, 16, -118, 46, -98, 80, -77, 100, -44, 117, -8, 127, -7.002777, 0.15007019)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1164549]
+libraries/ = SubResource("AnimationLibrary_avml8")

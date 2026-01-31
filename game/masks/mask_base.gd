@@ -1,8 +1,13 @@
 class_name MaskBase
-extends Node
+extends Node2D
 
 @onready var left_drop_zone: AccessoryDropZone = $%LeftDropZone
 @onready var right_drop_zone: AccessoryDropZone = $%RightDropZone
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+
+
+func _ready() -> void:
+	animation_player.play("drop_in")
 
 
 func get_accessory_description() -> String:

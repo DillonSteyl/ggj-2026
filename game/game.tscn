@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://c8fqt4q0jg1r6"]
 
-[ext_resource type="PackedScene" uid="uid://c7g4f111rim71" path="res://game/masks/mask_base.tscn" id="1_l1rk1"]
 [ext_resource type="Script" uid="uid://lrcvssxkdpp5" path="res://game/game.gd" id="1_u5opy"]
 [ext_resource type="Texture2D" uid="uid://de7m84bqtaib7" path="res://game/assets/background.png" id="2_dakft"]
 [ext_resource type="Script" uid="uid://cobmik6m7tjyy" path="res://game/character_queue_manager.gd" id="4_u5opy"]
@@ -68,11 +67,25 @@ tracks/2/path = NodePath("CharacterBase")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.76666665),
+"times": PackedFloat32Array(0.8),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
 "method": &"hello"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_on_character_entered"
 }]
 }
 
@@ -117,6 +130,20 @@ tracks/2/keys = {
 "method": &"goodbye"
 }]
 }
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_on_character_exited"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u5opy"]
 _data = {
@@ -150,10 +177,7 @@ grow_vertical = 2
 texture = ExtResource("2_dakft")
 expand_mode = 1
 
-[node name="MaskBase" parent="." unique_id=1258051407 instance=ExtResource("1_l1rk1")]
-position = Vector2(416, 820)
-
-[node name="CharacterQueueManager" type="Node" parent="." unique_id=603073880]
+[node name="CharacterQueueManager" type="Node2D" parent="." unique_id=1784012763]
 unique_name_in_owner = true
 script = ExtResource("4_u5opy")
 
@@ -163,6 +187,10 @@ rotation = -0.16080233
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterQueueManager" unique_id=912538051]
 libraries/ = SubResource("AnimationLibrary_u5opy")
+
+[node name="MaskSpawnPoint" type="Marker2D" parent="." unique_id=1308977677]
+unique_name_in_owner = true
+position = Vector2(573, 1001)
 
 [node name="AccessoriesLayer" type="CanvasLayer" parent="." unique_id=1321242908]
 unique_name_in_owner = true

@@ -34,6 +34,7 @@ func _on_area_exited(area: Area2D) -> void:
 
 func attach_accessory(accessory_view: AccessoryView) -> void:
 	_attached_accessories[accessory_view.get_instance_id()] = accessory_view.accessory
+	accessory_view.reparent(self)
 
 
 func detatch_accessory(accessory_view: AccessoryView) -> void:

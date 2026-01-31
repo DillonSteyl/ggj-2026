@@ -4,6 +4,7 @@ extends Node2D
 const SEC_PER_CHAR: float = 0.03
 
 @onready var speech_label: RichTextLabel = $%SpeechLabel
+@onready var face_transform: Node2D = $%FaceTransform
 
 var _speech_tween: Tween
 

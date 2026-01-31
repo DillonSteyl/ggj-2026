@@ -24,8 +24,7 @@ CursorManager="*uid://b5cnjded3pah0"
 
 window/size/viewport_width=1280
 window/size/viewport_height=1280
-window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
+window/stretch/mode="viewport"
 mouse_cursor/custom_image="uid://cw3rjd2oavjht"
 mouse_cursor/custom_image_hotspot=Vector2(16, 16)
 window/layer_1=""
