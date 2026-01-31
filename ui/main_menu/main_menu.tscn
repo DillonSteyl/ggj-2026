@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cvpglh42sldgo" path="res://ui/main_menu/main_menu.gd" id="1_uhj5c"]
 [ext_resource type="PackedScene" uid="uid://ci3o7i2gjwc4n" path="res://ui/settings/settings_menu.tscn" id="2_mu8pm"]
+[ext_resource type="FontFile" uid="uid://dx3q81rhhq3rl" path="res://ui/_common/assets/fonts/SourGummy-Black.ttf" id="2_omy8q"]
 
 [sub_resource type="Gradient" id="Gradient_mu8pm"]
 offsets = PackedFloat32Array(0.06887755, 0.75765306, 1)
@@ -80,8 +81,9 @@ theme_override_constants/separation = 40
 
 [node name="Title" type="Label" parent="VBoxContainer" unique_id=1153049037]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_omy8q")
 theme_override_font_sizes/font_size = 128
-text = "a game about bug masks"
+text = "bug mask game"
 horizontal_alignment = 1
 vertical_alignment = 1
 

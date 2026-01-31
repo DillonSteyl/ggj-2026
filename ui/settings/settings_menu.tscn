@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ci3o7i2gjwc4n"]
 
 [ext_resource type="Script" uid="uid://bohndspxuikhs" path="res://ui/settings/settings_menu.gd" id="1_jwxja"]
-[ext_resource type="FontFile" uid="uid://d3utjtsdrdky1" path="res://ui/_common/assets/fonts/Rubik-Medium.ttf" id="2_a66ha"]
+[ext_resource type="FontFile" uid="uid://dx3q81rhhq3rl" path="res://ui/_common/assets/fonts/SourGummy-Black.ttf" id="2_a66ha"]
 
 [sub_resource type="Animation" id="Animation_a66ha"]
 length = 0.001
@@ -67,7 +67,7 @@ theme_override_constants/separation = 5
 [node name="Title" type="Label" parent="VBoxContainer" unique_id=1893482641]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_a66ha")
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 48
 text = "Settings"
 
 [node name="Sep" type="Control" parent="VBoxContainer" unique_id=1111751551]

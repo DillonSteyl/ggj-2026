@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://d23bl71o04dd5"
-path="res://.godot/imported/Rubik-MediumItalic.ttf-6f97cc4a1986196de35fe7b675d54e80.fontdata"
+uid="uid://cywodhdnxmalk"
+path="res://.godot/imported/SourGummy-SemiBold.ttf-d358dc995e9500677f3869d6c0cbdc55.fontdata"
 
 [deps]
 
-source_file="res://ui/_common/assets/fonts/Rubik-MediumItalic.ttf"
-dest_files=["res://.godot/imported/Rubik-MediumItalic.ttf-6f97cc4a1986196de35fe7b675d54e80.fontdata"]
+source_file="res://ui/_common/assets/fonts/SourGummy-SemiBold.ttf"
+dest_files=["res://.godot/imported/SourGummy-SemiBold.ttf-d358dc995e9500677f3869d6c0cbdc55.fontdata"]
 
 [params]
 

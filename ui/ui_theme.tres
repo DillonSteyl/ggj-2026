@@ -1,6 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://daokerupce7cs"]
 
-[ext_resource type="FontFile" uid="uid://bhtyie4uuehqr" path="res://ui/_common/assets/fonts/Rubik-Light.ttf" id="1_udl1o"]
+[ext_resource type="FontFile" uid="uid://cywodhdnxmalk" path="res://ui/_common/assets/fonts/SourGummy-SemiBold.ttf" id="1_udl1o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_udl1o"]
 content_margin_left = 4.0
@@ -85,7 +85,7 @@ corner_detail = 5
 
 [resource]
 default_font = ExtResource("1_udl1o")
-default_font_size = 48
+default_font_size = 32
 Button/styles/disabled = SubResource("StyleBoxFlat_udl1o")
 Button/styles/focus = SubResource("StyleBoxFlat_4mq11")
 Button/styles/hover = SubResource("StyleBoxFlat_vuqvt")
