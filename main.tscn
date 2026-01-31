@@ -1,9 +1,15 @@
 [gd_scene format=3 uid="uid://boxov74gnd7ku"]
 
 [ext_resource type="Script" uid="uid://sw2my2ykagyf" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="AudioStream" uid="uid://cegumbw580asx" path="res://game/assets/music/Buggy-bossa-Amelia_and-mitch-menu.ogg" id="2_0xm2m"]
 
 [node name="Main" type="Node" unique_id=794150756]
 script = ExtResource("1_ig7tw")
+
+[node name="MenuAudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=264211031]
+stream = ExtResource("2_0xm2m")
+volume_db = -80.0
+autoplay = true
 
 [node name="GameRoot" type="Node2D" parent="." unique_id=1953530035]
 
