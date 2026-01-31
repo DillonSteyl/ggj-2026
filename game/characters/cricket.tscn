@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://drvvcpe0u3cw6"]
 
 [ext_resource type="PackedScene" uid="uid://dwe17ww3exlwm" path="res://game/characters/components/character_base.tscn" id="1_g31ni"]
+[ext_resource type="Texture2D" uid="uid://gklc8yu188ix" path="res://game/characters/assets/images/cricket/cricket_body1.png" id="2_rah1b"]
 [ext_resource type="Texture2D" uid="uid://exkpwc88twd3" path="res://game/characters/assets/images/cricket/cricket_eye_happy.png" id="2_ro2yi"]
+[ext_resource type="Texture2D" uid="uid://buqc8o203ypsp" path="res://game/characters/assets/images/cricket/cricket_body2.png" id="3_akkj7"]
 [ext_resource type="Texture2D" uid="uid://bjk5qlwedxbg4" path="res://game/characters/assets/images/cricket/cricket_eye_sad.png" id="3_hmx5i"]
+[ext_resource type="Texture2D" uid="uid://cixfdlnpltt3e" path="res://game/characters/assets/images/cricket/cricket_body3.png" id="4_ecs5t"]
 [ext_resource type="Texture2D" uid="uid://bhbl1fq40wc15" path="res://game/characters/assets/images/cricket/cricket_eye_normal.png" id="4_hetw7"]
 
 [node name="Cricket" unique_id=1606950594 instance=ExtResource("1_g31ni")]
+body_textures = Array[Texture]([ExtResource("2_rah1b"), ExtResource("3_akkj7"), ExtResource("4_ecs5t")])
 happy = ExtResource("2_ro2yi")
 sad = ExtResource("3_hmx5i")
 normal = ExtResource("4_hetw7")

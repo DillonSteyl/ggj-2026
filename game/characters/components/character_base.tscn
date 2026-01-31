@@ -14,6 +14,7 @@ script = ExtResource("1_8ckbc")
 scale = Vector2(0.65, 0.65)
 
 [node name="BodySprite" type="Sprite2D" parent="Visuals" unique_id=1889108149]
+unique_name_in_owner = true
 position = Vector2(0, -445)
 texture = ExtResource("2_73spr")
 

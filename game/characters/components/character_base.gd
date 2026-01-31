@@ -4,6 +4,7 @@ extends Node2D
 const SEC_PER_CHAR: float = 0.03
 
 @export var mask_request: MaskRequest
+@export var body_textures: Array[Texture]
 
 @export_group("Expressions")
 @export var happy: Texture
@@ -14,12 +15,14 @@ const SEC_PER_CHAR: float = 0.03
 @onready var face_transform: Node2D = $%FaceTransform
 @onready var audio_manager: CharacterAudioManager = $%CharacterAudioManager
 
+@onready var body_sprite: Sprite2D = $%BodySprite
 @onready var face_sprite: Sprite2D = $%FaceSprite
 
 var _speech_tween: Tween
 
 
 func _ready() -> void:
+	body_sprite.texture = body_textures.pick_random()
 	speech_label.visible_ratio = 0.0
 
 
