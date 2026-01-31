@@ -1,11 +1,14 @@
 class_name Types
 
-enum AccessorySize { None, Small, Large }
+# Medium is never requested by bugs
+enum AccessorySize { None, Small, Large, Medium }
+
 enum AccessoryMaterial { None, Metal, Paper, Wood }
 enum AccessoryPlacement { None, Left, Right }
 
 const SIZE_NAMES = {
 	AccessorySize.Small: "small",
+	AccessorySize.Medium: "medium",
 	AccessorySize.Large: "large",
 }
 const MATERIAL_NAMES = {

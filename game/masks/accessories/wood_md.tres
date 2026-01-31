@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Accessory" format=3 uid="uid://bk5oq1c1rowir"]
+
+[ext_resource type="Script" uid="uid://dn5tlx64qicuq" path="res://game/components/resources/accessory.gd" id="1_j0wv2"]
+[ext_resource type="Texture2D" uid="uid://esmv2rtcstns" path="res://game/masks/accessories/assets/splat12.png" id="2_jdrjf"]
+
+[resource]
+script = ExtResource("1_j0wv2")
+texture = ExtResource("2_jdrjf")
+debug_text = "wood"
+size = 3
+material = 3
+metadata/_custom_type_script = "uid://dn5tlx64qicuq"
