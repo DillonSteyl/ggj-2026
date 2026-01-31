@@ -5,11 +5,30 @@
 [ext_resource type="Texture2D" uid="uid://3iu52jmg4x1g" path="res://ui/_common/assets/images/checkmark.png" id="8_y36n6"]
 [ext_resource type="PackedScene" uid="uid://cqhep31505fri" path="res://game/ui/accessory_panel/accessory_panel.tscn" id="9_l8g03"]
 
+[sub_resource type="Gradient" id="Gradient_mu8pm"]
+offsets = PackedFloat32Array(0.06887755, 0.75765306, 1)
+colors = PackedColorArray(0.46666667, 0.53333336, 0.4509804, 1, 0.6313726, 0.7372549, 0.59607846, 1, 0.8235294, 0.8627451, 0.7137255, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4fuuu"]
+gradient = SubResource("Gradient_mu8pm")
+fill_from = Vector2(0, 1)
+
 [node name="Game" type="Node2D" unique_id=1553240865]
 script = ExtResource("1_u5opy")
 
+[node name="BG" type="CanvasLayer" parent="." unique_id=78054403]
+layer = -10
+
+[node name="TextureRect" type="TextureRect" parent="BG" unique_id=1812517200]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_4fuuu")
+
 [node name="MaskBase" parent="." unique_id=1258051407 instance=ExtResource("1_l1rk1")]
-position = Vector2(809, 475)
+position = Vector2(809, 584)
 
 [node name="AccessoriesLayer" type="CanvasLayer" parent="." unique_id=1321242908]
 unique_name_in_owner = true
@@ -53,3 +72,5 @@ expand_icon = true
 
 [node name="AccessoryPanel" parent="UILayer" unique_id=226300384 instance=ExtResource("9_l8g03")]
 unique_name_in_owner = true
+offset_top = 507.0
+offset_bottom = -24.0
