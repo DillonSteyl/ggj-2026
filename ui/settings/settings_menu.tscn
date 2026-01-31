@@ -67,7 +67,7 @@ theme_override_constants/separation = 5
 [node name="Title" type="Label" parent="VBoxContainer" unique_id=1893482641]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_a66ha")
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 96
 text = "Settings"
 
 [node name="Sep" type="Control" parent="VBoxContainer" unique_id=1111751551]
