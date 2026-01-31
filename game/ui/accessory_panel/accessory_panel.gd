@@ -1,5 +1,5 @@
 class_name AccessoryPanel
-extends PanelContainer
+extends Control
 
 signal accessory_selected
 

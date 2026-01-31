@@ -2,16 +2,19 @@
 
 [ext_resource type="PackedScene" uid="uid://c7g4f111rim71" path="res://game/masks/mask_base.tscn" id="1_l1rk1"]
 [ext_resource type="Script" uid="uid://lrcvssxkdpp5" path="res://game/game.gd" id="1_u5opy"]
-[ext_resource type="Texture2D" uid="uid://3iu52jmg4x1g" path="res://ui/_common/assets/images/checkmark.png" id="8_y36n6"]
+[ext_resource type="Texture2D" uid="uid://bfemogq7kxte5" path="res://game/assets/background.jpg" id="2_dxrkv"]
+[ext_resource type="FontFile" uid="uid://dx3q81rhhq3rl" path="res://ui/_common/assets/fonts/SourGummy-Black.ttf" id="4_dxrkv"]
 [ext_resource type="PackedScene" uid="uid://cqhep31505fri" path="res://game/ui/accessory_panel/accessory_panel.tscn" id="9_l8g03"]
 
-[sub_resource type="Gradient" id="Gradient_mu8pm"]
-offsets = PackedFloat32Array(0.06887755, 0.75765306, 1)
-colors = PackedColorArray(0.46666667, 0.53333336, 0.4509804, 1, 0.6313726, 0.7372549, 0.59607846, 1, 0.8235294, 0.8627451, 0.7137255, 1)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4fuuu"]
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_4fuuu"]
-gradient = SubResource("Gradient_mu8pm")
-fill_from = Vector2(0, 1)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dxrkv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dakft"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u5opy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y36n6"]
 
 [node name="Game" type="Node2D" unique_id=1553240865]
 script = ExtResource("1_u5opy")
@@ -25,10 +28,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("GradientTexture2D_4fuuu")
+texture = ExtResource("2_dxrkv")
+expand_mode = 1
 
 [node name="MaskBase" parent="." unique_id=1258051407 instance=ExtResource("1_l1rk1")]
-position = Vector2(809, 584)
+position = Vector2(416, 820)
 
 [node name="AccessoriesLayer" type="CanvasLayer" parent="." unique_id=1321242908]
 unique_name_in_owner = true
@@ -42,22 +46,27 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 305.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 32
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.7254902)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = ExtResource("4_dxrkv")
+theme_override_font_sizes/font_size = 48
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CheckButton" type="Button" parent="UILayer" unique_id=249239637]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(200, 100)
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -37.5
-offset_top = -68.0
-offset_right = 37.5
-offset_bottom = -31.0
+offset_left = 257.0
+offset_top = -160.0
+offset_right = 593.0
+offset_bottom = -42.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/icon_normal_color = Color(0, 0.87058824, 0.34901962, 1)
@@ -66,11 +75,15 @@ theme_override_colors/icon_pressed_color = Color(0, 0.87058824, 0.34901962, 1)
 theme_override_colors/icon_hover_color = Color(0, 0.87058824, 0.34901962, 1)
 theme_override_colors/icon_hover_pressed_color = Color(0, 0.87058824, 0.34901962, 1)
 theme_override_colors/icon_disabled_color = Color(0, 0.87058824, 0.34901962, 0.39215687)
-icon = ExtResource("8_y36n6")
-icon_alignment = 1
-expand_icon = true
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4fuuu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_dxrkv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_dakft")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_u5opy")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_y36n6")
 
 [node name="AccessoryPanel" parent="UILayer" unique_id=226300384 instance=ExtResource("9_l8g03")]
 unique_name_in_owner = true
-offset_top = 507.0
-offset_bottom = -24.0
+offset_left = -369.0
+offset_top = 780.0
+offset_right = -47.0
+offset_bottom = -179.0
