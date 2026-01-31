@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c7g4f111rim71" path="res://game/masks/mask_base.tscn" id="1_l1rk1"]
 [ext_resource type="Script" uid="uid://lrcvssxkdpp5" path="res://game/game.gd" id="1_u5opy"]
-[ext_resource type="Texture2D" uid="uid://bfemogq7kxte5" path="res://game/assets/background.jpg" id="2_dxrkv"]
+[ext_resource type="Texture2D" uid="uid://de7m84bqtaib7" path="res://game/assets/background.png" id="2_dakft"]
 [ext_resource type="Script" uid="uid://cobmik6m7tjyy" path="res://game/character_queue_manager.gd" id="4_u5opy"]
 [ext_resource type="PackedScene" uid="uid://dwe17ww3exlwm" path="res://game/characters/character_base.tscn" id="6_dakft"]
 [ext_resource type="PackedScene" uid="uid://cqhep31505fri" path="res://game/ui/accessory_panel/accessory_panel.tscn" id="9_l8g03"]
@@ -147,7 +147,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_dxrkv")
+texture = ExtResource("2_dakft")
 expand_mode = 1
 
 [node name="MaskBase" parent="." unique_id=1258051407 instance=ExtResource("1_l1rk1")]
