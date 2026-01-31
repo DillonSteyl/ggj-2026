@@ -4,8 +4,15 @@ extends Control
 signal started_drag
 signal stopped_drag
 
-@onready var _is_dragging: bool = true:
+@onready var _is_dragging: bool:
 	set = _set_is_dragging
+
+
+func _ready() -> void:
+	_is_dragging = true
+
+	mouse_entered.connect(CursorManager.set_hovering.bind(true))
+	mouse_exited.connect(CursorManager.set_hovering.bind(false))
 
 
 func _input(event: InputEvent) -> void:
@@ -37,3 +44,4 @@ func _set_is_dragging(value: bool) -> void:
 			stopped_drag.emit()
 
 	_is_dragging = value
+	CursorManager.set_holding(_is_dragging)
