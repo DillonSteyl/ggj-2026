@@ -1,12 +1,11 @@
 class_name CharacterQueueManager
 extends Node
 
-const CRICKET: PackedScene = preload("uid://drvvcpe0u3cw6")
-
 signal character_entered
 signal character_exited
 
 @export var stages: Array[Stage] = []
+@export var character_types: Array[PackedScene]
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var character_position: Node2D = $%CharacterPosition
@@ -47,8 +46,8 @@ func next() -> void:
 	for child in character_position.get_children():
 		child.queue_free()
 
-	# TODO: choose a random character :)
-	character_base = CRICKET.instantiate()
+	var character_scene = character_types.pick_random()
+	character_base = character_scene.instantiate()
 	character_position.add_child(character_base)
 
 	if _stage_success_history.filter(func(val): return val).size() >= _current_stage.num_successes:

@@ -11,6 +11,8 @@
 [ext_resource type="Resource" uid="uid://f15rcpy8s43g" path="res://game/requests/stages/stage_size_material_placement_a.tres" id="8_qf6n1"]
 [ext_resource type="PackedScene" uid="uid://cqhep31505fri" path="res://game/ui/accessory_panel/accessory_panel.tscn" id="9_l8g03"]
 [ext_resource type="Resource" uid="uid://cs7sm4burp0g3" path="res://game/requests/stages/stage_size_material_placement_b.tres" id="9_vsp63"]
+[ext_resource type="PackedScene" uid="uid://drvvcpe0u3cw6" path="res://game/characters/cricket.tscn" id="10_vsp63"]
+[ext_resource type="PackedScene" uid="uid://bd6idmkspm6x8" path="res://game/characters/snail.tscn" id="11_hb504"]
 [ext_resource type="Texture2D" uid="uid://lhiqfqs36tk5" path="res://ui/_common/assets/images/buttons/Button_SubmitMask.png" id="11_vsp63"]
 [ext_resource type="Texture2D" uid="uid://dx6o8bj3i1ng2" path="res://ui/_common/assets/images/buttons/Button_SubmitMask_Pressed.png" id="12_b686c"]
 
@@ -165,6 +167,7 @@ expand_mode = 1
 unique_name_in_owner = true
 script = ExtResource("4_u5opy")
 stages = Array[ExtResource("4_y36n6")]([ExtResource("5_l8g03"), ExtResource("6_j8tme"), ExtResource("7_3vho3"), ExtResource("8_qf6n1"), ExtResource("9_vsp63")])
+character_types = Array[PackedScene]([ExtResource("10_vsp63"), ExtResource("11_hb504")])
 
 [node name="CharacterPosition" type="Marker2D" parent="CharacterQueueManager" unique_id=960232246]
 unique_name_in_owner = true

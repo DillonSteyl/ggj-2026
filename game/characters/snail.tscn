@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bd6idmkspm6x8"]
+
+[ext_resource type="PackedScene" uid="uid://dwe17ww3exlwm" path="res://game/characters/components/character_base.tscn" id="1_ini6n"]
+[ext_resource type="Texture2D" uid="uid://d0ihwty23i0x8" path="res://game/characters/assets/images/snail/snail_body1.png" id="2_khuxi"]
+[ext_resource type="Texture2D" uid="uid://c5q4p1y1ntpg3" path="res://game/characters/assets/images/snail/snail_eye_normal.png" id="3_8i1fu"]
+[ext_resource type="Texture2D" uid="uid://iax2i7445in3" path="res://game/characters/assets/images/snail/snail_body2.png" id="3_nrhnh"]
+[ext_resource type="Texture2D" uid="uid://b36exwup7n3xd" path="res://game/characters/assets/images/snail/snail_eye_happy.png" id="4_ps2gu"]
+[ext_resource type="Texture2D" uid="uid://dhau74hbx0i40" path="res://game/characters/assets/images/snail/snail_eye_sad.png" id="5_imqfl"]
+
+[node name="Snail" unique_id=1606950594 instance=ExtResource("1_ini6n")]
+body_textures = Array[Texture]([ExtResource("2_khuxi"), ExtResource("3_nrhnh")])
+happy = ExtResource("4_ps2gu")
+sad = ExtResource("5_imqfl")
+normal = ExtResource("3_8i1fu")
+
+[node name="Visuals" parent="." index="0" unique_id=1375046192]
+scale = Vector2(0.5, 0.5)
+
+[node name="BodySprite" parent="Visuals" index="0" unique_id=1889108149]
+texture = ExtResource("2_khuxi")
+
+[node name="FaceSprite" parent="Visuals" index="1" unique_id=1737856947]
+position = Vector2(-2.3841858e-07, -910.4167)
+texture = ExtResource("3_8i1fu")
+
+[node name="FaceTransform" parent="." index="2" unique_id=419019751]
+position = Vector2(-0.9999952, -448.00003)
+rotation = 0.34470063
+scale = Vector2(0.245, 0.245)
