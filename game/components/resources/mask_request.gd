@@ -25,17 +25,35 @@ func is_satisfied_by(mask: BuiltMask) -> bool:
 
 	# If customer requests accessories, they must all be met
 	var all_accessory_requests_met: bool = true
-	for req in accessory_requests:
-		if not _check_request_met(mask, req):
-			all_accessory_requests_met = false
-			break
-	return all_accessory_requests_met
 
-
-func _check_request_met(mask: BuiltMask, request: AccessoryRequest) -> bool:
-	# TODO: do we need to mark certain accessories as 'used'?
+	var accessories_used: Dictionary[AttachedAccessory, bool] = {}
 	for accessory in mask.attached_accessories:
-		if accessory.get_matches_request(request):
-			return true
+		accessories_used[accessory] = false
 
-	return false
+	for req in accessory_requests:
+		if not _check_request_met(mask, req, accessories_used):
+			return false
+
+	var unused_accessories = accessories_used.keys().filter(
+		func(k): return not accessories_used.get(k)
+	)
+	if unused_accessories.size() > 0:
+		return false
+
+	return true
+
+
+func _check_request_met(
+	mask: BuiltMask,
+	request: AccessoryRequest,
+	accessories_used: Dictionary[AttachedAccessory, bool],
+) -> bool:
+	# TODO: do we need to mark certain accessories as 'used'?
+	var any_used = false
+	for accessory in mask.attached_accessories:
+		var matches_request = accessory.get_matches_request(request)
+		accessories_used[accessory] = matches_request
+		if matches_request:
+			any_used = true
+
+	return any_used
