@@ -11,9 +11,6 @@ script = ExtResource("1_u5opy")
 [node name="MaskBase" parent="." unique_id=1258051407 instance=ExtResource("1_l1rk1")]
 position = Vector2(809, 475)
 
-[node name="AccessorySpawnPoint" type="Marker2D" parent="." unique_id=1635910481]
-position = Vector2(1303, 645)
-
 [node name="UILayer" type="CanvasLayer" parent="." unique_id=1432447566]
 
 [node name="Label" type="Label" parent="UILayer" unique_id=1056874572]
@@ -52,3 +49,9 @@ expand_icon = true
 
 [node name="AccessoryPanel" parent="UILayer" unique_id=226300384 instance=ExtResource("9_l8g03")]
 unique_name_in_owner = true
+
+[node name="AccessoriesLayer" type="CanvasLayer" parent="." unique_id=1321242908]
+
+[node name="AccessorySpawnPoint" type="Marker2D" parent="AccessoriesLayer" unique_id=966759752]
+unique_name_in_owner = true
+position = Vector2(1282, 629)

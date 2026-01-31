@@ -9,3 +9,4 @@ extends Button
 func _ready() -> void:
 	texture_rect.texture = accessory.texture
 	texture_rect.modulate = accessory.color
+	mouse_entered.connect(CursorManager.set_cursor.bind(CursorManager.CursorStyle.Empty))
