@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Accessory" format=3 uid="uid://7yoxn6076x16"]
+
+[ext_resource type="Script" uid="uid://dn5tlx64qicuq" path="res://game/components/resources/accessory.gd" id="1_0hxvv"]
+[ext_resource type="Texture2D" uid="uid://esmv2rtcstns" path="res://game/masks/accessories/assets/splat12.png" id="2_3eo2q"]
+
+[resource]
+script = ExtResource("1_0hxvv")
+texture = ExtResource("2_3eo2q")
+debug_text = "small
+paper"
+size = 1
+material = 2
+metadata/_custom_type_script = "uid://dn5tlx64qicuq"

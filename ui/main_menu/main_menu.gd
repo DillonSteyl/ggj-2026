@@ -13,6 +13,7 @@ extends Control
 
 func _ready() -> void:
 	animation_player.play("fade_in")
+	MusicManager.play_music(MusicManager.StreamIndex.MENU)
 
 	if OS.has_feature("web"):
 		exit_button.queue_free()

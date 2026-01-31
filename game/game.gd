@@ -3,7 +3,7 @@ extends Node2D
 
 const MASK_SCENE = preload("uid://c7g4f111rim71")
 
-@onready var check_button: Button = $%CheckButton
+@onready var submit_button: Button = $%SubmitButton
 @onready var accessory_panel: AccessoryPanel = $%AccessoryPanel
 @onready var accessories_layer: CanvasLayer = $%AccessoriesLayer
 @onready var character_queue_manager: CharacterQueueManager = $%CharacterQueueManager
@@ -14,22 +14,32 @@ var _current_mask: MaskBase
 
 
 func _ready() -> void:
-	check_button.pressed.connect(_on_check)
+	MusicManager.play_music(MusicManager.StreamIndex.CHARACTERS)
+	submit_button.pressed.connect(_on_submit)
 	accessory_panel.accessory_selected.connect(_spawn_accessory)
 
 	character_queue_manager.character_entered.connect(_on_character_entered)
 	character_queue_manager.character_exited.connect(_on_character_exited)
 
 
-func _on_check() -> void:
-	print(_current_mask.get_accessory_description())
-	# TODO: check if mask decorated successfully
-	_on_success()
+func _on_submit() -> void:
+	var built_mask = _current_mask.to_definition()
+	if character_queue_manager.current_request.is_satisfied_by(built_mask):
+		_on_success()
+	else:
+		_on_failure()
 
 
 func _on_success() -> void:
 	_wear_mask()
-	character_queue_manager.dismiss()
+	character_queue_manager.character_base.audio_manager.happy()
+	character_queue_manager.dismiss(true)
+
+
+func _on_failure() -> void:
+	_current_mask.animation_player.play("destroy")
+	character_queue_manager.character_base.audio_manager.disgruntled()
+	character_queue_manager.dismiss(false)
 
 
 func _on_character_entered() -> void:

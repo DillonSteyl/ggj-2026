@@ -9,6 +9,7 @@ const ACCESSORY_VIEW_SCENE = preload("uid://e1e3t1v6v2vy")
 @onready var sprite: Sprite2D = $%Sprite2D
 @onready var animation_player: AnimationPlayer = $%AnimationPlayer
 @onready var drag_zone: DragZone = $%DragZone
+@onready var debug_label: Label = $%DebugLabel
 
 var attached_drop_zone: AccessoryDropZone
 
@@ -18,6 +19,7 @@ var _over_drop_zones: Dictionary[AccessoryDropZone, bool] = {}
 func _ready() -> void:
 	shadow_sprite.texture = accessory.texture
 	sprite.texture = accessory.texture
+	debug_label.text = accessory.debug_text
 
 	drag_zone.started_drag.connect(_on_started_drag)
 	drag_zone.stopped_drag.connect(_on_stopped_drag)

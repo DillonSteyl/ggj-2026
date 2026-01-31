@@ -1,0 +1,15 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://wncomy3bvfvd"]
+
+[ext_resource type="AudioStream" uid="uid://tpekclq843a7" path="res://game/characters/assets/sfx/SFX_disgruntled_bug-001.wav" id="1_2o1iy"]
+[ext_resource type="AudioStream" uid="uid://bc807gt10lkey" path="res://game/characters/assets/sfx/SFX_disgruntled_bug-002.wav" id="2_7nroc"]
+[ext_resource type="AudioStream" uid="uid://b5xuii6opi2xm" path="res://game/characters/assets/sfx/SFX_disgruntled_bug-003.wav" id="3_occ7y"]
+[ext_resource type="AudioStream" uid="uid://si07tqanaeqs" path="res://game/characters/assets/sfx/SFX_disgruntled_bug-004.wav" id="4_ra320"]
+[ext_resource type="AudioStream" uid="uid://dudad6ybhfryo" path="res://game/characters/assets/sfx/SFX_disgruntled_bug-005.wav" id="5_iwnif"]
+
+[resource]
+streams_count = 5
+stream_0/stream = ExtResource("1_2o1iy")
+stream_1/stream = ExtResource("2_7nroc")
+stream_2/stream = ExtResource("3_occ7y")
+stream_3/stream = ExtResource("4_ra320")
+stream_4/stream = ExtResource("5_iwnif")

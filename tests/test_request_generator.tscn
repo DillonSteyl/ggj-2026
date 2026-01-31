@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dnlhv65mgrtt2"]
+
+[ext_resource type="Script" uid="uid://evdnjk2vfge1" path="res://tests/test_request_generator.gd" id="1_082tk"]
+[ext_resource type="Script" uid="uid://s6rkisicbu5x" path="res://game/requests/resources/request_generator.gd" id="2_llsfs"]
+
+[sub_resource type="Resource" id="Resource_a7dvp"]
+script = ExtResource("2_llsfs")
+min_accessory_requests = 1
+max_accessory_requests = 1
+allow_size = true
+allow_material = true
+allow_placement = true
+metadata/_custom_type_script = "uid://s6rkisicbu5x"
+
+[node name="TestRequestGenerator" type="Control" unique_id=1875549508]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_082tk")
+request_generator = SubResource("Resource_a7dvp")
+
+[node name="Label" type="Label" parent="." unique_id=1243823866]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 401.0
+offset_bottom = -401.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1350463675]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.0
+offset_top = 367.0
+offset_right = 110.0
+offset_bottom = 438.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Generate!"
