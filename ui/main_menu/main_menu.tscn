@@ -83,9 +83,9 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.39215687)
 theme_override_constants/shadow_offset_x = 8
 theme_override_constants/shadow_offset_y = 8
 theme_override_constants/outline_size = 14
-theme_override_font_sizes/normal_font_size = 256
+theme_override_font_sizes/normal_font_size = 200
 bbcode_enabled = true
-text = "[wave amp=50.0 freq=4.0 connected=1]M A K U[/wave]"
+text = "[wave amp=40.0 freq=4.0 connected=0]Maku Poku[/wave]"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
