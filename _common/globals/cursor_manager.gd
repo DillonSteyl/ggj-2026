@@ -18,5 +18,5 @@ func _ready() -> void:
 
 
 func set_cursor(style: CursorStyle = CursorStyle.Point) -> void:
-	Input.set_custom_mouse_cursor(STYLE_TEXTURES[style], Input.CURSOR_ARROW, Vector2(32, 32))
+	Input.set_custom_mouse_cursor(STYLE_TEXTURES[style], Input.CURSOR_ARROW, Vector2(16, 16))
 	return
