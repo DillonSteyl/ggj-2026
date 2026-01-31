@@ -384,3 +384,6 @@ metadata/_custom_type_script = "uid://0civgqftgfkk"
 unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_v3bh0")
 playback_default_blend_time = 0.1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1429642303]
+unique_name_in_owner = true
