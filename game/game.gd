@@ -3,7 +3,7 @@ extends Node2D
 
 const MASK_SCENE = preload("uid://c7g4f111rim71")
 
-@onready var submit_button: Button = $%SubmitButton
+@onready var submit_button: TextureButton = $%SubmitButton
 @onready var accessory_panel: AccessoryPanel = $%AccessoryPanel
 @onready var accessories_layer: CanvasLayer = $%AccessoriesLayer
 @onready var character_queue_manager: CharacterQueueManager = $%CharacterQueueManager
@@ -23,6 +23,7 @@ func _ready() -> void:
 
 
 func _on_submit() -> void:
+	submit_button.disabled = true
 	var built_mask = _current_mask.to_definition()
 	if character_queue_manager.current_request.is_satisfied_by(built_mask):
 		_on_success()
@@ -43,6 +44,7 @@ func _on_failure() -> void:
 
 
 func _on_character_entered() -> void:
+	submit_button.disabled = false
 	_current_mask = MASK_SCENE.instantiate()
 	mask_spawn_point.add_child(_current_mask)
 
