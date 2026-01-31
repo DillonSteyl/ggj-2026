@@ -1,35 +1,32 @@
 class_name Accessory
 extends Resource
 
-enum Style { Funky, Rounded }
-enum ColorLabel { Red, Blue, Green, Yellow }
-const STYLE_NAMES = {
-	Style.Funky: "funky",
-	Style.Rounded: "rounded",
+enum AccessorySize { Small, Large }
+enum AccessoryMaterial { Metal, Paper, Wood }
+
+const SIZE_NAMES = {
+	AccessorySize.Small: "small",
+	AccessorySize.Large: "large",
 }
-const COLOR_NAMES = {
-	ColorLabel.Red: "red",
-	ColorLabel.Blue: "blue",
-	ColorLabel.Green: "green",
-	ColorLabel.Yellow: "yellow",
+const MATERIAL_NAMES = {
+	AccessoryMaterial.Metal: "metal",
+	AccessoryMaterial.Paper: "paper",
+	AccessoryMaterial.Wood: "wood"
 }
 
 @export var texture: Texture2D
 # Attributes
-@export var style: Style
-@export var color_label: ColorLabel
-
-# Visual Modifiers
-@export var color: Color
+@export var size: AccessorySize
+@export var material: AccessoryMaterial
 
 
 func _to_string() -> String:
 	return (
-		"A {color}, {style} thing"
+		"A {size}, {material} thing"
 		. format(
 			{
-				"color": COLOR_NAMES[color_label],
-				"style": STYLE_NAMES[style],
+				"size": SIZE_NAMES[size],
+				"material": MATERIAL_NAMES[material],
 			}
 		)
 	)

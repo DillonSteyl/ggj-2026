@@ -10,13 +10,14 @@ const ACCESSORY_VIEW_SCENE = preload("uid://e1e3t1v6v2vy")
 @onready var animation_player: AnimationPlayer = $%AnimationPlayer
 @onready var drag_zone: DragZone = $%DragZone
 
+var attached_drop_zone: AccessoryDropZone
+
 var _over_drop_zones: Dictionary[AccessoryDropZone, bool] = {}
 
 
 func _ready() -> void:
 	shadow_sprite.texture = accessory.texture
 	sprite.texture = accessory.texture
-	sprite.modulate = accessory.color
 
 	drag_zone.started_drag.connect(_on_started_drag)
 	drag_zone.stopped_drag.connect(_on_stopped_drag)
@@ -37,7 +38,6 @@ func add_drop_zone(drop_zone: AccessoryDropZone) -> void:
 func remove_drop_zone(drop_zone: AccessoryDropZone) -> void:
 	_over_drop_zones.erase(drop_zone)
 	drag_zone.stopped_drag.disconnect(drop_zone.attach_accessory.bind(self))
-	drop_zone.detatch_accessory(self)
 
 
 func _can_attach() -> bool:
@@ -45,6 +45,8 @@ func _can_attach() -> bool:
 
 
 func _on_started_drag() -> void:
+	if attached_drop_zone:
+		attached_drop_zone.detatch_accessory(self)
 	animation_player.play("pickup")
 
 
