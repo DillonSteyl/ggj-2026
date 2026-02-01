@@ -14,7 +14,6 @@ var painted_color: BottleColor:
 
 func _ready() -> void:
 	animation_player.play("drop_in")
-	paint_button.pressed.connect(func(): print("MASK CLICKED"))
 
 
 func to_definition() -> BuiltMask:
