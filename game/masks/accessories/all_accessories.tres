@@ -7,9 +7,9 @@
 [ext_resource type="Resource" uid="uid://b15plsdef4q3x" path="res://game/masks/accessories/metal_sm.tres" id="3_ys8mj"]
 [ext_resource type="Resource" uid="uid://byjboa0omjwoy" path="res://game/masks/accessories/paper_lg.tres" id="4_0ei37"]
 [ext_resource type="Resource" uid="uid://rwkmsy1qfcr3" path="res://game/masks/accessories/metal_md.tres" id="5_ys8mj"]
-[ext_resource type="Resource" uid="uid://bupk2q0yr87p1" path="res://game/masks/accessories/wood_lg.tres" id="6_3q7e2"]
-[ext_resource type="Resource" uid="uid://wunlglbyfa5p" path="res://game/masks/accessories/wood_sm.tres" id="7_j2rji"]
-[ext_resource type="Resource" uid="uid://bk5oq1c1rowir" path="res://game/masks/accessories/wood_md.tres" id="8_0ei37"]
+[ext_resource type="Resource" uid="uid://bupk2q0yr87p1" path="res://game/masks/accessories/glass_lg.tres" id="6_3q7e2"]
+[ext_resource type="Resource" uid="uid://wunlglbyfa5p" path="res://game/masks/accessories/glass_sm.tres" id="7_j2rji"]
+[ext_resource type="Resource" uid="uid://bk5oq1c1rowir" path="res://game/masks/accessories/glass_md.tres" id="8_0ei37"]
 [ext_resource type="Resource" uid="uid://7yoxn6076x16" path="res://game/masks/accessories/paper_sm.tres" id="10_aoky7"]
 
 [resource]

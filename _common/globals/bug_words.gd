@@ -10,7 +10,7 @@ const SIZE = {
 const MATERIAL = {
 	Types.AccessoryMaterial.Metal: "Tink'kin",
 	Types.AccessoryMaterial.Paper: "Paf'fu",
-	Types.AccessoryMaterial.Wood: "Tok'ko",
+	Types.AccessoryMaterial.Glass: "Tok'ko",
 }
 const PLACEMENT = {
 	Types.AccessoryPlacement.Left: "a Weee~",

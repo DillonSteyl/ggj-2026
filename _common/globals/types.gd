@@ -3,7 +3,7 @@ class_name Types
 # Medium is never requested by bugs
 enum AccessorySize { None, Small, Large, Medium }
 
-enum AccessoryMaterial { None, Metal, Paper, Wood }
+enum AccessoryMaterial { None, Metal, Paper, Glass }
 enum AccessoryPlacement { None, Left, Right }
 
 const SIZE_NAMES = {
@@ -14,7 +14,7 @@ const SIZE_NAMES = {
 const MATERIAL_NAMES = {
 	AccessoryMaterial.Metal: "metal",
 	AccessoryMaterial.Paper: "paper",
-	AccessoryMaterial.Wood: "wood"
+	AccessoryMaterial.Glass: "glass"
 }
 const PLACEMENT_NAMES = {
 	AccessoryPlacement.Left: "left",
@@ -28,7 +28,7 @@ const VALID_SIZES = [
 const VALID_MATERIALS = [
 	AccessoryMaterial.Metal,
 	AccessoryMaterial.Paper,
-	AccessoryMaterial.Wood,
+	AccessoryMaterial.Glass,
 ]
 const VALID_PLACEMENTS = [
 	AccessoryPlacement.Left,
