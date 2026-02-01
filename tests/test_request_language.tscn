@@ -6,15 +6,39 @@
 [ext_resource type="Script" uid="uid://dt14vbnn57m7w" path="res://game/masks/components/attached_accessories.gd" id="4_tmysq"]
 [ext_resource type="Script" uid="uid://dm052aecg006q" path="res://game/masks/components/built_mask.gd" id="5_vsqif"]
 
+[sub_resource type="Resource" id="Resource_tmysq"]
+script = ExtResource("2_e5nie")
+material = 1
+placement = 1
+metadata/_custom_type_script = "uid://betq00ww48y5d"
+
+[sub_resource type="Resource" id="Resource_vsqif"]
+script = ExtResource("2_e5nie")
+material = 2
+metadata/_custom_type_script = "uid://betq00ww48y5d"
+
 [sub_resource type="Resource" id="Resource_drttw"]
 script = ExtResource("3_drttw")
-brightness = 2
+accessory_requests = Array[ExtResource("2_e5nie")]([SubResource("Resource_tmysq"), SubResource("Resource_vsqif")])
 metadata/_custom_type_script = "uid://b8848dj2garnv"
+
+[sub_resource type="Resource" id="Resource_ye5hw"]
+script = ExtResource("4_tmysq")
+size = 1
+material = 1
+placement = 1
+metadata/_custom_type_script = "uid://dt14vbnn57m7w"
+
+[sub_resource type="Resource" id="Resource_vfn28"]
+script = ExtResource("4_tmysq")
+size = 2
+material = 2
+placement = 2
+metadata/_custom_type_script = "uid://dt14vbnn57m7w"
 
 [sub_resource type="Resource" id="Resource_amqjs"]
 script = ExtResource("5_vsqif")
-color = 3
-brightness = 2
+attached_accessories = Array[ExtResource("4_tmysq")]([SubResource("Resource_ye5hw"), SubResource("Resource_vfn28")])
 metadata/_custom_type_script = "uid://dm052aecg006q"
 
 [node name="TestRequestLanguage" type="Control" unique_id=385555687]

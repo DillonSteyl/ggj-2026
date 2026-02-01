@@ -16,3 +16,16 @@ func get_bug_phrase() -> String:
 		words.append(BugWords.PLACEMENT[placement])
 
 	return " ".join(words)
+
+
+func _to_string() -> String:
+	return (
+		"Request({s}, {m}, {p})"
+		. format(
+			{
+				"s": Types.SIZE_NAMES.get(size),
+				"m": Types.MATERIAL_NAMES.get(material),
+				"p": Types.PLACEMENT_NAMES.get(placement),
+			}
+		)
+	)

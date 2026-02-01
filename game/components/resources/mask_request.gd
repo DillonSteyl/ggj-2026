@@ -49,9 +49,11 @@ func is_satisfied_by(mask: BuiltMask) -> bool:
 		if not _check_request_met(mask, req, accessories_used):
 			return false
 
+	print_debug("accessories used", accessories_used)
 	var unused_accessories = accessories_used.keys().filter(
 		func(k): return not accessories_used.get(k)
 	)
+	print_debug("unused accessories", unused_accessories)
 	if unused_accessories.size() > 0:
 		return false
 
@@ -66,9 +68,13 @@ func _check_request_met(
 	# TODO: do we need to mark certain accessories as 'used'?
 	var any_used = false
 	for accessory in mask.attached_accessories:
+		print_debug(accessory, " compared with ", request)
 		var matches_request = accessory.get_matches_request(request)
-		accessories_used[accessory] = matches_request
+		print_debug(matches_request)
+		accessories_used[accessory] = accessories_used[accessory] or matches_request
+		print_debug(accessories_used)
 		if matches_request:
 			any_used = true
+		print_debug("-------")
 
 	return any_used
