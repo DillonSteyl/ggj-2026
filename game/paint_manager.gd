@@ -21,5 +21,5 @@ func paint_mask(mask: MaskBase):
 	if not is_painting:
 		return
 
-	mask.visuals.modulate = paint_color.mask_modulate
+	mask.painted_color = paint_color
 	disable()

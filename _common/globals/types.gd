@@ -2,8 +2,8 @@ class_name Types
 
 # Medium is never requested by bugs
 enum AccessorySize { None, Small, Large, Medium }
-enum AccessoryColor { None, Red, Gold, Green }
-enum AccessoryColorBrightness { None, Bright, Dark }
+enum MaskColor { None, Red, Gold, Green }
+enum MaskBrightness { None, Bright, Dark }
 enum AccessoryMaterial { None, Metal, Paper, Glass }
 enum AccessoryPlacement { None, Left, Right }
 
@@ -17,6 +17,15 @@ const MATERIAL_NAMES = {
 	AccessoryMaterial.Paper: "paper",
 	AccessoryMaterial.Glass: "glass"
 }
+const COLOR_NAMES = {
+	MaskColor.Red: "red",
+	MaskColor.Gold: "yellow",
+	MaskColor.Green: "green",
+}
+const BRIGHTNESS_NAMES = {
+	MaskBrightness.Bright: "bright",
+	MaskBrightness.Dark: "dark",
+}
 const PLACEMENT_NAMES = {
 	AccessoryPlacement.Left: "left",
 	AccessoryPlacement.Right: "right",
@@ -27,13 +36,13 @@ const VALID_SIZES = [
 	AccessorySize.Large,
 ]
 const VALID_COLORS = [
-	AccessoryColor.Red,
-	AccessoryColor.Gold,
-	AccessoryColor.Green,
+	MaskColor.Red,
+	MaskColor.Gold,
+	MaskColor.Green,
 ]
 const VALID_BRIGHTNESS_CHOICES = [
-	AccessoryColorBrightness.Bright,
-	AccessoryColorBrightness.Dark,
+	MaskBrightness.Bright,
+	MaskBrightness.Dark,
 ]
 const VALID_MATERIALS = [
 	AccessoryMaterial.Metal,

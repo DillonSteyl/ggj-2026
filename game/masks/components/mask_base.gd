@@ -4,8 +4,12 @@ extends Node2D
 @onready var left_drop_zone: AccessoryDropZone = $%LeftDropZone
 @onready var right_drop_zone: AccessoryDropZone = $%RightDropZone
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+
 @onready var visuals: Node2D = $%Visuals
 @onready var paint_button: Button = $%PaintButton
+
+var painted_color: BottleColor:
+	set = _set_painted_color
 
 
 func _ready() -> void:
@@ -15,6 +19,10 @@ func _ready() -> void:
 
 func to_definition() -> BuiltMask:
 	var mask = BuiltMask.new()
+
+	if painted_color:
+		mask.color = painted_color.color
+		mask.brightness = painted_color.brightness
 
 	for accessory in left_drop_zone.get_attached_accessories():
 		var attached = AttachedAccessory.new()
@@ -30,3 +38,8 @@ func to_definition() -> BuiltMask:
 		mask.attached_accessories.append(attached)
 
 	return mask
+
+
+func _set_painted_color(value: BottleColor) -> void:
+	painted_color = value
+	visuals.modulate = value.mask_modulate

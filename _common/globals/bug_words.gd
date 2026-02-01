@@ -14,13 +14,13 @@ const MATERIAL = {
 	Types.AccessoryMaterial.Glass: "Tok'ko",
 }
 const COLOR = {
-	Types.AccessoryColor.Red: "Za-za",
-	Types.AccessoryColor.Green: "Mi-mi",
-	Types.AccessoryColor.Gold: "Zee-zee",
+	Types.MaskColor.Red: "Za-za",
+	Types.MaskColor.Green: "Mi-mi",
+	Types.MaskColor.Gold: "Zee-zee",
 }
 const BRIGHTNESS = {
-	Types.AccessoryColorBrightness.Bright: "Be-be",
-	Types.AccessoryColorBrightness.Dark: "Do-do",
+	Types.MaskBrightness.Bright: "Be-be",
+	Types.MaskBrightness.Dark: "Do-do",
 }
 const PLACEMENT = {
 	Types.AccessoryPlacement.Left: "a Weee~",

@@ -1,8 +1,8 @@
 class_name MaskRequest
 extends Resource
 
-@export var color: Types.AccessoryColor
-@export var brightness: Types.AccessoryColorBrightness
+@export var color: Types.MaskColor = Types.MaskColor.None
+@export var brightness: Types.MaskBrightness = Types.MaskBrightness.None
 @export var accessory_requests: Array[AccessoryRequest] = []
 
 
@@ -36,10 +36,10 @@ func _get_accessory_bug_language() -> String:
 
 
 func is_satisfied_by(mask: BuiltMask) -> bool:
-	# TODO: check base mask attribute
-
-	# If customer requests accessories, they must all be met
-	var all_accessory_requests_met: bool = true
+	if (color != Types.MaskColor.None) and (mask.color != color):
+		return false
+	if (brightness != Types.MaskBrightness.None) and (mask.brightness != brightness):
+		return false
 
 	var accessories_used: Dictionary[AttachedAccessory, bool] = {}
 	for accessory in mask.attached_accessories:

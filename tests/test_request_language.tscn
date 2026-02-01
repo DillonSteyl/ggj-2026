@@ -3,43 +3,18 @@
 [ext_resource type="Script" uid="uid://qhva8c84li8x" path="res://tests/test_request_language.gd" id="1_on1y7"]
 [ext_resource type="Script" uid="uid://betq00ww48y5d" path="res://game/components/resources/accessory_request.gd" id="2_e5nie"]
 [ext_resource type="Script" uid="uid://b8848dj2garnv" path="res://game/components/resources/mask_request.gd" id="3_drttw"]
-[ext_resource type="Script" uid="uid://dt14vbnn57m7w" path="res://game/masks/attached_accessories.gd" id="4_tmysq"]
-[ext_resource type="Script" uid="uid://dm052aecg006q" path="res://game/masks/built_mask.gd" id="5_vsqif"]
-
-[sub_resource type="Resource" id="Resource_e5nie"]
-script = ExtResource("2_e5nie")
-size = 1
-placement = 2
-metadata/_custom_type_script = "uid://betq00ww48y5d"
-
-[sub_resource type="Resource" id="Resource_vsqif"]
-script = ExtResource("2_e5nie")
-size = 2
-placement = 2
-metadata/_custom_type_script = "uid://betq00ww48y5d"
+[ext_resource type="Script" uid="uid://dt14vbnn57m7w" path="res://game/masks/components/attached_accessories.gd" id="4_tmysq"]
+[ext_resource type="Script" uid="uid://dm052aecg006q" path="res://game/masks/components/built_mask.gd" id="5_vsqif"]
 
 [sub_resource type="Resource" id="Resource_drttw"]
 script = ExtResource("3_drttw")
-accessory_requests = Array[ExtResource("2_e5nie")]([SubResource("Resource_e5nie"), SubResource("Resource_vsqif")])
+brightness = 2
 metadata/_custom_type_script = "uid://b8848dj2garnv"
-
-[sub_resource type="Resource" id="Resource_tmysq"]
-script = ExtResource("4_tmysq")
-size = 1
-material = 3
-placement = 2
-metadata/_custom_type_script = "uid://dt14vbnn57m7w"
-
-[sub_resource type="Resource" id="Resource_ye5hw"]
-script = ExtResource("4_tmysq")
-size = 2
-material = 1
-placement = 2
-metadata/_custom_type_script = "uid://dt14vbnn57m7w"
 
 [sub_resource type="Resource" id="Resource_amqjs"]
 script = ExtResource("5_vsqif")
-attached_accessories = Array[ExtResource("4_tmysq")]([SubResource("Resource_tmysq"), SubResource("Resource_ye5hw")])
+color = 3
+brightness = 2
 metadata/_custom_type_script = "uid://dm052aecg006q"
 
 [node name="TestRequestLanguage" type="Control" unique_id=385555687]
