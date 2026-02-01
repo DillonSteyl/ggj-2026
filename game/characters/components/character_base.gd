@@ -5,6 +5,7 @@ const SEC_PER_CHAR: float = 0.03
 
 @export var mask_request: MaskRequest
 @export var body_textures: Array[Texture]
+@export var restricted_mask_scene: PackedScene
 
 @export_group("Expressions")
 @export var happy: Texture

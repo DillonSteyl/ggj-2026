@@ -78,6 +78,9 @@ func _on_character_entered() -> void:
 
 func _add_mask() -> void:
 	_current_mask = mask_scenes.pick_random().instantiate()
+	if character_queue_manager.character_base.restricted_mask_scene:
+		_current_mask = character_queue_manager.character_base.restricted_mask_scene.instantiate()
+
 	mask_spawn_point.add_child(_current_mask)
 	_current_mask.mouse_released.connect(paint_manager.paint_mask.bind(_current_mask))
 

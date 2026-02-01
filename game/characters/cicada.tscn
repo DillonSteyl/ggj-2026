@@ -5,11 +5,13 @@
 [ext_resource type="Texture2D" uid="uid://lh8secyp4hxq" path="res://game/characters/assets/images/cicada/cicada_body2.png" id="3_v5kwk"]
 [ext_resource type="Texture2D" uid="uid://b4g1tor41ksim" path="res://game/characters/assets/images/cicada/cicada_body3.png" id="4_lxw75"]
 [ext_resource type="Texture2D" uid="uid://dnpsnseky4hs1" path="res://game/characters/assets/images/cicada/cicada_eyes_happy.png" id="5_0a7tg"]
+[ext_resource type="PackedScene" uid="uid://cq1qyawbo2xkw" path="res://game/masks/character_specific/mask_wide_fox.tscn" id="5_v5kwk"]
 [ext_resource type="Texture2D" uid="uid://ctdoxw5s3gqnf" path="res://game/characters/assets/images/cicada/cicada_eyes_normal.png" id="6_hjlxx"]
 [ext_resource type="Texture2D" uid="uid://qm2awfwiff1v" path="res://game/characters/assets/images/cicada/cicada_eyes_sad.png" id="7_87c8r"]
 
 [node name="Cicada" unique_id=1606950594 instance=ExtResource("1_5eo7j")]
 body_textures = Array[Texture]([ExtResource("2_ubje2"), ExtResource("3_v5kwk"), ExtResource("4_lxw75")])
+restricted_mask_scene = ExtResource("5_v5kwk")
 happy = ExtResource("5_0a7tg")
 sad = ExtResource("7_87c8r")
 normal = ExtResource("6_hjlxx")
@@ -25,5 +27,5 @@ position = Vector2(-4.6153793, -903.07697)
 texture = ExtResource("6_hjlxx")
 
 [node name="FaceTransform" parent="." index="2" unique_id=419019751]
-position = Vector2(-8, -474)
-scale = Vector2(0.75, 0.335)
+position = Vector2(0, -464)
+scale = Vector2(0.395, 0.395)
