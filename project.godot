@@ -36,6 +36,7 @@ project/assembly_name="Mask"
 
 [gui]
 
+theme/default_font_generate_mipmaps=true
 theme/custom="uid://daokerupce7cs"
 
 [layer_names]
@@ -48,6 +49,8 @@ theme/custom="uid://daokerupce7cs"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=2
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/default_filters/anisotropic_filtering_level=0

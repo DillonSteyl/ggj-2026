@@ -3,6 +3,123 @@
 [ext_resource type="Script" uid="uid://7e6snyic48n2" path="res://game/ui/accessory_panel/accessory_panel.gd" id="1_2dibd"]
 [ext_resource type="Resource" uid="uid://cnmsgdfjls7an" path="res://game/masks/accessories/all_accessories.tres" id="2_a0cg5"]
 [ext_resource type="PackedScene" uid="uid://bmc5p0763dbnn" path="res://game/ui/accessory_panel/accessory_button.tscn" id="2_mltrx"]
+[ext_resource type="Texture2D" uid="uid://jelg4pywywsa" path="res://ui/_common/assets/images/locked.png" id="4_rrawi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a0cg5"]
+bg_color = Color(0, 0, 0, 0.627451)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Animation" id="Animation_xo3k6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/Control/TextureRect:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/Control/TextureRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_rrawi"]
+resource_name = "unlock"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/Control/TextureRect:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(2, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/Control/TextureRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xo3k6"]
+_data = {
+&"RESET": SubResource("Animation_xo3k6"),
+&"unlock": SubResource("Animation_rrawi")
+}
 
 [node name="AccessoryPanel" type="Control" unique_id=1142112013]
 layout_mode = 3
@@ -19,37 +136,82 @@ grow_vertical = 2
 script = ExtResource("1_2dibd")
 accessory_list = ExtResource("2_a0cg5")
 
-[node name="AccessoryGrid" type="GridContainer" parent="." unique_id=1769214630]
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1206645031]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AccessoryGrid" type="GridContainer" parent="CenterContainer" unique_id=1769214630]
 unique_name_in_owner = true
-layout_mode = 0
-offset_right = 310.0
-offset_bottom = 308.0
+layout_mode = 2
 theme_override_constants/h_separation = 5
 columns = 3
 
-[node name="AccessoryButton" parent="AccessoryGrid" unique_id=1290239176 instance=ExtResource("2_mltrx")]
+[node name="AccessoryButton" parent="CenterContainer/AccessoryGrid" unique_id=1290239176 instance=ExtResource("2_mltrx")]
 layout_mode = 2
 
-[node name="AccessoryButton2" parent="AccessoryGrid" unique_id=1695776378 instance=ExtResource("2_mltrx")]
+[node name="AccessoryButton2" parent="CenterContainer/AccessoryGrid" unique_id=1695776378 instance=ExtResource("2_mltrx")]
 layout_mode = 2
 
-[node name="AccessoryButton3" parent="AccessoryGrid" unique_id=23831212 instance=ExtResource("2_mltrx")]
+[node name="AccessoryButton3" parent="CenterContainer/AccessoryGrid" unique_id=23831212 instance=ExtResource("2_mltrx")]
 layout_mode = 2
 
-[node name="AccessoryButton4" parent="AccessoryGrid" unique_id=455152724 instance=ExtResource("2_mltrx")]
+[node name="AccessoryButton4" parent="CenterContainer/AccessoryGrid" unique_id=455152724 instance=ExtResource("2_mltrx")]
 layout_mode = 2
 
-[node name="AccessoryButton5" parent="AccessoryGrid" unique_id=1234098708 instance=ExtResource("2_mltrx")]
+[node name="AccessoryButton5" parent="CenterContainer/AccessoryGrid" unique_id=1234098708 instance=ExtResource("2_mltrx")]
 layout_mode = 2
 
-[node name="AccessoryButton6" parent="AccessoryGrid" unique_id=1016330210 instance=ExtResource("2_mltrx")]
+[node name="AccessoryButton6" parent="CenterContainer/AccessoryGrid" unique_id=1016330210 instance=ExtResource("2_mltrx")]
 layout_mode = 2
 
-[node name="AccessoryButton7" parent="AccessoryGrid" unique_id=1973883922 instance=ExtResource("2_mltrx")]
+[node name="AccessoryButton7" parent="CenterContainer/AccessoryGrid" unique_id=1973883922 instance=ExtResource("2_mltrx")]
 layout_mode = 2
 
-[node name="AccessoryButton8" parent="AccessoryGrid" unique_id=239450739 instance=ExtResource("2_mltrx")]
+[node name="AccessoryButton8" parent="CenterContainer/AccessoryGrid" unique_id=239450739 instance=ExtResource("2_mltrx")]
 layout_mode = 2
 
-[node name="AccessoryButton9" parent="AccessoryGrid" unique_id=1875337439 instance=ExtResource("2_mltrx")]
+[node name="AccessoryButton9" parent="CenterContainer/AccessoryGrid" unique_id=1875337439 instance=ExtResource("2_mltrx")]
 layout_mode = 2
+
+[node name="Locked" type="Panel" parent="." unique_id=400653097]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_a0cg5")
+
+[node name="MarginContainer" type="MarginContainer" parent="Locked" unique_id=215188059]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="Control" type="Control" parent="Locked/MarginContainer" unique_id=1978989236]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Locked/MarginContainer/Control" unique_id=2127645837]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(95, 368)
+texture = ExtResource("4_rrawi")
+stretch_mode = 5
+
+[node name="LockAnimationPlayer" type="AnimationPlayer" parent="Locked" unique_id=1615602336]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_xo3k6")

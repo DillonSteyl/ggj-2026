@@ -6,6 +6,7 @@
 script = ExtResource("1_ig7tw")
 
 [node name="GameRoot" type="Node2D" parent="." unique_id=1953530035]
+texture_filter = 4
 
 [node name="Menu" type="Control" parent="." unique_id=639630882]
 layout_mode = 3

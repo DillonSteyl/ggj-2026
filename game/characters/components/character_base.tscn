@@ -26,9 +26,9 @@ texture = ExtResource("3_44ugb")
 [node name="SpeechLabel" type="RichTextLabel" parent="." unique_id=1137648197]
 unique_name_in_owner = true
 offset_left = -478.0
-offset_top = -654.0
+offset_top = -689.0
 offset_right = 478.0
-offset_bottom = -456.0
+offset_bottom = -530.0
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)

@@ -1,6 +1,8 @@
 class_name CharacterQueueManager
 extends Node
 
+signal stage_progressed(stage: Stage)
+
 signal character_entered
 signal character_exited
 
@@ -67,6 +69,7 @@ func _next_stage() -> void:
 
 	_current_stage = stages[_current_stage_index]
 	_stage_success_history = []
+	stage_progressed.emit(_current_stage)
 
 
 func _on_character_entered() -> void:

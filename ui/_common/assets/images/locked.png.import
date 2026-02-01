@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://j6wdl08k638h"
-path="res://.godot/imported/mask_butterfly.png-d183f2598efbfe19ce19eed5869e0a0c.ctex"
+uid="uid://jelg4pywywsa"
+path="res://.godot/imported/locked.png-b3f91c215828db5e3d208e9995e944a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/masks/assets/bases/mask_butterfly.png"
-dest_files=["res://.godot/imported/mask_butterfly.png-d183f2598efbfe19ce19eed5869e0a0c.ctex"]
+source_file="res://ui/_common/assets/images/locked.png"
+dest_files=["res://.godot/imported/locked.png-b3f91c215828db5e3d208e9995e944a1.ctex"]
 
 [params]
 

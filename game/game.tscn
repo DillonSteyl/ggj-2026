@@ -263,8 +263,8 @@ stretch_mode = 5
 
 [node name="AccessoryPanel" parent="UILayer" unique_id=226300384 instance=ExtResource("9_l8g03")]
 unique_name_in_owner = true
-offset_left = -369.0
-offset_top = 780.0
+offset_left = -382.0
+offset_top = 765.0
 offset_right = -47.0
 offset_bottom = -179.0
 
