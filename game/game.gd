@@ -94,3 +94,9 @@ func _spawn_accessory(accessory: Accessory) -> void:
 func _on_next_stage(stage: Stage) -> void:
 	if accessory_panel.is_locked() and stage.request_generator.min_accessory_requests > 0:
 		accessory_panel.unlock()
+
+	if (
+		character_queue_manager._current_stage_index
+		>= floor(character_queue_manager.stages.size() / 2.0)
+	):
+		MusicManager.play_music(MusicManager.StreamIndex.HALFTIME)
