@@ -19,7 +19,7 @@ const COLOR = {
 }
 const BRIGHTNESS = {
 	Types.MaskBrightness.Bright: "Be-be",
-	Types.MaskBrightness.Dark: "Doo-doo",
+	Types.MaskBrightness.Dark: "Du-du",
 }
 const PLACEMENT = {
 	Types.AccessoryPlacement.Left: "a Laaa~",
