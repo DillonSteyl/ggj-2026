@@ -1,12 +1,27 @@
 class_name MaskRequest
 extends Resource
 
+@export var color: Types.AccessoryColor
+@export var brightness: Types.AccessoryColorBrightness
 @export var accessory_requests: Array[AccessoryRequest] = []
 
 
 func to_bug_language() -> String:
 	# TODO: mask colors
-	return _get_accessory_bug_language()
+	var mask_request_str = _get_mask_request_bug_language()
+	var accessory_request_str = _get_accessory_bug_language()
+
+	return mask_request_str + "\n" + accessory_request_str
+
+
+func _get_mask_request_bug_language() -> String:
+	var req = BugWords.MASK
+	if color:
+		req += " {color_word}".format({"color_word": BugWords.COLOR[color]})
+	if brightness:
+		req += " {brightness_word}".format({"brightness_word": BugWords.BRIGHTNESS[brightness]})
+
+	return req + "."
 
 
 func _get_accessory_bug_language() -> String:
@@ -17,7 +32,7 @@ func _get_accessory_bug_language() -> String:
 	for req in accessory_requests:
 		request_phrases.append(req.get_bug_phrase())
 	var combined_accessory_request = BugWords.AND.join(request_phrases)
-	return BugWords.ACCESSORY + " " + combined_accessory_request
+	return BugWords.ACCESSORY + " " + combined_accessory_request + "."
 
 
 func is_satisfied_by(mask: BuiltMask) -> bool:

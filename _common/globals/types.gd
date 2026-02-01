@@ -2,7 +2,8 @@ class_name Types
 
 # Medium is never requested by bugs
 enum AccessorySize { None, Small, Large, Medium }
-
+enum AccessoryColor { None, Red, Gold, Green }
+enum AccessoryColorBrightness { None, Bright, Dark }
 enum AccessoryMaterial { None, Metal, Paper, Glass }
 enum AccessoryPlacement { None, Left, Right }
 
@@ -24,6 +25,15 @@ const PLACEMENT_NAMES = {
 const VALID_SIZES = [
 	AccessorySize.Small,
 	AccessorySize.Large,
+]
+const VALID_COLORS = [
+	AccessoryColor.Red,
+	AccessoryColor.Gold,
+	AccessoryColor.Green,
+]
+const VALID_BRIGHTNESS_CHOICES = [
+	AccessoryColorBrightness.Bright,
+	AccessoryColorBrightness.Dark,
 ]
 const VALID_MATERIALS = [
 	AccessoryMaterial.Metal,

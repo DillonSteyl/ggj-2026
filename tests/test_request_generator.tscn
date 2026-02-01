@@ -7,6 +7,7 @@
 script = ExtResource("2_llsfs")
 min_accessory_requests = 1
 max_accessory_requests = 1
+allow_color = true
 allow_size = true
 allow_material = true
 allow_placement = true
