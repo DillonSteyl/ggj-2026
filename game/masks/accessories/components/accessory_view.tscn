@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dld30h730c8vf" path="res://game/masks/accessories/components/accessory_view.gd" id="1_bwhjf"]
 [ext_resource type="Texture2D" uid="uid://wo5cyqjytb4k" path="res://game/masks/assets/accessories/Accessory5_GlassMed.png" id="2_xc6ci"]
 [ext_resource type="Script" uid="uid://bg4e6whvbjhem" path="res://game/components/accessory_area.gd" id="3_f4moc"]
+[ext_resource type="Script" uid="uid://c8or7nqwlxe2s" path="res://game/masks/accessories/components/accessory_audio.gd" id="6_ovk4w"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f4moc"]
 radius = 8.0
@@ -389,5 +390,8 @@ unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_v3bh0")
 playback_default_blend_time = 0.1
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1429642303]
+[node name="AccessoryAudio" type="AudioStreamPlayer" parent="." unique_id=134234334]
 unique_name_in_owner = true
+volume_db = -6.0
+script = ExtResource("6_ovk4w")
+metadata/_custom_type_script = "uid://c8or7nqwlxe2s"

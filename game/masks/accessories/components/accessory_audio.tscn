@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bhylanx23smns"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=931035510]
+volume_db = -6.0

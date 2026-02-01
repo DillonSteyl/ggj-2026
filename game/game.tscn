@@ -43,6 +43,7 @@
 [ext_resource type="PackedScene" uid="uid://j30dwrql6lmf" path="res://game/characters/stickbug.tscn" id="24_64wtb"]
 [ext_resource type="Texture2D" uid="uid://ckbui6r3myskp" path="res://game/ui/cheat_sheet/cheat_sheet_icon.png" id="38_vkvnp"]
 [ext_resource type="PackedScene" uid="uid://em7g0ukw1oaw" path="res://game/ui/cheat_sheet/cheat_sheet.tscn" id="39_urpib"]
+[ext_resource type="AudioStream" uid="uid://cror7k615l6k" path="res://game/assets/SFX/interactions/acc-sounds book-page-turn.wav" id="41_281ou"]
 
 [sub_resource type="Animation" id="Animation_u5opy"]
 length = 0.001
@@ -421,6 +422,9 @@ stretch_mode = 5
 [node name="AnimationPlayer" type="AnimationPlayer" parent="UILayer/CheatSheetButton" unique_id=358801037]
 libraries/ = SubResource("AnimationLibrary_urpib")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UILayer/CheatSheetButton" unique_id=819617985]
+stream = ExtResource("41_281ou")
+
 [node name="CheatSheet" parent="UILayer" unique_id=892352111 instance=ExtResource("39_urpib")]
 unique_name_in_owner = true
 visible = false
@@ -444,3 +448,5 @@ offset_right = 51.0
 offset_bottom = 51.0
 mouse_filter = 2
 texture = ExtResource("14_leid8")
+
+[connection signal="pressed" from="UILayer/CheatSheetButton" to="UILayer/CheatSheetButton/AudioStreamPlayer" method="play"]

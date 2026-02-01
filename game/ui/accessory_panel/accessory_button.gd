@@ -11,6 +11,7 @@ const TEXTURE_SCALE = {
 
 @onready var texture_rect: TextureRect = $TextureRect
 @onready var debug_label: Label = $DebugLabel
+@onready var audio: AccessoryAudio = $%AccessoryAudio
 
 
 func _ready() -> void:
@@ -21,3 +22,4 @@ func _ready() -> void:
 
 	mouse_entered.connect(CursorManager.set_hovering.bind(true))
 	mouse_exited.connect(CursorManager.set_hovering.bind(false))
+	button_down.connect(audio.play_material_sound.bind(accessory))

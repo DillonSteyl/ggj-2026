@@ -1,6 +1,5 @@
 class_name AccessoryView
 extends Node2D
-
 const SPRITE_SCALE = {
 	Types.AccessorySize.Small: 0.15,
 	Types.AccessorySize.Medium: 0.25,
@@ -16,7 +15,7 @@ const ACCESSORY_VIEW_SCENE = preload("uid://e1e3t1v6v2vy")
 @onready var animation_player: AnimationPlayer = $%AnimationPlayer
 @onready var drag_zone: DragZone = $%DragZone
 @onready var debug_label: Label = $%DebugLabel
-@onready var audio_stream_player: AudioStreamPlayer = $%AudioStreamPlayer
+@onready var audio: AccessoryAudio = $%AccessoryAudio
 
 var attached_drop_zone: AccessoryDropZone
 
@@ -57,16 +56,14 @@ func _can_attach() -> bool:
 func _on_started_drag() -> void:
 	if attached_drop_zone:
 		attached_drop_zone.detatch_accessory(self)
-	animation_player.play("pickup")
 
-	# TODO: based on the value of `accessory.material`, choose a audio stream to play 'pickup' sound
-	# Use a "dictionary" to map from material type to audio stream - lookup 'gdscript dictionaries'
-	# Set the .stream attribute on the audio_stream_player
-	# Look at CharacterAudioManager for reference
+	animation_player.play("pickup")
+	audio.play_material_sound(accessory)
 
 
 func _on_stopped_drag() -> void:
 	if _can_attach():
 		animation_player.play("attach")
+		audio.play_material_sound(accessory)
 	else:
 		animation_player.play("drop")
