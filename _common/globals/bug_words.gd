@@ -22,6 +22,6 @@ const BRIGHTNESS = {
 	Types.MaskBrightness.Dark: "Doo-doo",
 }
 const PLACEMENT = {
-	Types.AccessoryPlacement.Left: "a Weee~",
-	Types.AccessoryPlacement.Right: "a Laaa~",
+	Types.AccessoryPlacement.Left: "a Laaa~",
+	Types.AccessoryPlacement.Right: "a Weee~",
 }

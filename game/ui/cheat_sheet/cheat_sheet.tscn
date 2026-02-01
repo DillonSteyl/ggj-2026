@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://em7g0ukw1oaw"]
 
 [ext_resource type="Script" uid="uid://dqonedqjwy4hu" path="res://game/cheat_sheet.gd" id="1_166w8"]
-[ext_resource type="Texture2D" uid="uid://bl42i55dy6wgs" path="res://game/ui/cheat_sheet/cheat_sheet.png" id="2_msx0q"]
+[ext_resource type="Texture2D" uid="uid://bnybvl7yrbdpc" path="res://game/ui/cheat_sheet/cheat_sheet.png" id="2_166w8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_166w8"]
 
@@ -33,7 +33,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_msx0q")
+texture = ExtResource("2_166w8")
 expand_mode = 1
 stretch_mode = 5
 
