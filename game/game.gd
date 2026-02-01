@@ -40,21 +40,30 @@ func _ready() -> void:
 
 
 func _on_submit() -> void:
-	submit_button.disabled = true
 	var built_mask = _current_mask.to_definition()
-	if character_queue_manager.current_request.is_satisfied_by(built_mask):
+	var result = character_queue_manager.handle_submit(built_mask)
+
+	if result == CharacterQueueManager.CheckResult.PASS:
 		_on_success()
-	else:
+		return
+	if result == CharacterQueueManager.CheckResult.TRY_AGAIN:
+		_current_mask.animation_player.play("failed_submit")
+		character_queue_manager.character_base.animate_speech()
+
+	if result == CharacterQueueManager.CheckResult.FAIL:
 		_on_failure()
+		return
 
 
 func _on_success() -> void:
+	submit_button.disabled = true
 	_wear_mask()
 	character_queue_manager.character_base.audio_manager.happy()
 	character_queue_manager.dismiss(true)
 
 
 func _on_failure() -> void:
+	submit_button.disabled = true
 	_current_mask.animation_player.play("destroy")
 	character_queue_manager.character_base.audio_manager.disgruntled()
 	character_queue_manager.dismiss(false)

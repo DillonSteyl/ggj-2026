@@ -6,6 +6,10 @@ signal stage_progressed(stage: Stage)
 signal character_entered
 signal character_exited
 
+enum CheckResult { PASS, TRY_AGAIN, FAIL }
+
+const MAX_FAILS = 1
+
 @export var stages: Array[Stage] = []
 @export var character_types: Array[PackedScene]
 
@@ -16,6 +20,7 @@ var character_base: CharacterBase
 var current_request: MaskRequest
 var _current_stage: Stage
 var _current_stage_index: int = 0
+var _num_fails: int = 0
 
 var _stage_success_history: Array[bool] = []
 
@@ -45,6 +50,8 @@ func dismiss(success: bool) -> void:
 
 
 func next() -> void:
+	_num_fails = 0
+
 	for child in character_position.get_children():
 		child.queue_free()
 
@@ -59,6 +66,18 @@ func next() -> void:
 	current_request = _current_stage.request_generator.generate()
 	character_base.mask_request = current_request
 	animation_player.play("enter")
+
+
+func handle_submit(mask: BuiltMask):
+	var satisfied = current_request.is_satisfied_by(mask)
+	if satisfied:
+		return CheckResult.PASS
+
+	_num_fails += 1
+	if _num_fails > MAX_FAILS:
+		return CheckResult.FAIL
+
+	return CheckResult.TRY_AGAIN
 
 
 func _next_stage() -> void:

@@ -28,21 +28,21 @@ func _ready() -> void:
 
 func hello() -> void:
 	speech_label.text = "Hee!"
-	_animate_speech(0.7, true)
+	animate_speech(0.7, true)
 	_speech_tween.finished.connect(_make_request)
 
 
 func goodbye_thankyou() -> void:
 	face_sprite.texture = happy
 	speech_label.text = "Tee!"
-	_animate_speech(0.7, true)
+	animate_speech(0.7, true)
 	_speech_tween.finished.connect(_clear_speech)
 
 
 func goodbye_curse() -> void:
 	face_sprite.texture = sad
 	speech_label.text = "Ereeeee!"
-	_animate_speech(0.7, true)
+	animate_speech(0.7, true)
 	_speech_tween.finished.connect(_clear_speech)
 
 
@@ -56,10 +56,10 @@ func _clear_speech() -> void:
 
 func _make_request() -> void:
 	speech_label.text = mask_request.to_bug_language()
-	_animate_speech()
+	animate_speech()
 
 
-func _animate_speech(interval: float = 1.0, clear_speech: bool = false) -> void:
+func animate_speech(interval: float = 1.0, clear_speech: bool = false) -> void:
 	speech_label.visible_ratio = 0.0
 	if _speech_tween:
 		_speech_tween.kill()
