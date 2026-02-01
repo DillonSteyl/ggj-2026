@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://5u4hts306d8s"]
+
+[ext_resource type="PackedScene" uid="uid://dwe17ww3exlwm" path="res://game/characters/components/character_base.tscn" id="1_5eo7j"]
+[ext_resource type="Texture2D" uid="uid://c66pqbfaaivyw" path="res://game/characters/assets/images/cicada/cicada_body1.png" id="2_ubje2"]
+[ext_resource type="Texture2D" uid="uid://lh8secyp4hxq" path="res://game/characters/assets/images/cicada/cicada_body2.png" id="3_v5kwk"]
+[ext_resource type="Texture2D" uid="uid://b4g1tor41ksim" path="res://game/characters/assets/images/cicada/cicada_body3.png" id="4_lxw75"]
+[ext_resource type="Texture2D" uid="uid://dnpsnseky4hs1" path="res://game/characters/assets/images/cicada/cicada_eyes_happy.png" id="5_0a7tg"]
+[ext_resource type="Texture2D" uid="uid://ctdoxw5s3gqnf" path="res://game/characters/assets/images/cicada/cicada_eyes_normal.png" id="6_hjlxx"]
+[ext_resource type="Texture2D" uid="uid://qm2awfwiff1v" path="res://game/characters/assets/images/cicada/cicada_eyes_sad.png" id="7_87c8r"]
+
+[node name="Cicada" unique_id=1606950594 instance=ExtResource("1_5eo7j")]
+body_textures = Array[Texture]([ExtResource("2_ubje2"), ExtResource("3_v5kwk"), ExtResource("4_lxw75")])
+happy = ExtResource("5_0a7tg")
+sad = ExtResource("7_87c8r")
+normal = ExtResource("6_hjlxx")
+
+[node name="Visuals" parent="." index="0" unique_id=1375046192]
+scale = Vector2(0.53, 0.53)
+
+[node name="BodySprite" parent="Visuals" index="0" unique_id=1889108149]
+texture = ExtResource("2_ubje2")
+
+[node name="FaceSprite" parent="Visuals" index="1" unique_id=1737856947]
+position = Vector2(-4.6153793, -903.07697)
+texture = ExtResource("6_hjlxx")
+
+[node name="FaceTransform" parent="." index="2" unique_id=419019751]
+position = Vector2(-8, -474)
+scale = Vector2(0.75, 0.335)

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://j30dwrql6lmf"]
+
+[ext_resource type="PackedScene" uid="uid://dwe17ww3exlwm" path="res://game/characters/components/character_base.tscn" id="1_ejssm"]
+[ext_resource type="Texture2D" uid="uid://dmnie601ii2ll" path="res://game/characters/assets/images/stickbug/Stickbug_Body1.png" id="2_lq60w"]
+[ext_resource type="Texture2D" uid="uid://3624aufy44u8" path="res://game/characters/assets/images/stickbug/Stickbug_Body2.png" id="3_37vn1"]
+[ext_resource type="Texture2D" uid="uid://dc4vncx6mrunb" path="res://game/characters/assets/images/stickbug/Stickbug_Body3.png" id="4_pjufk"]
+[ext_resource type="Texture2D" uid="uid://bi1016yfoex1a" path="res://game/characters/assets/images/stickbug/Stickbug_eye_happy1.png" id="5_37vn1"]
+[ext_resource type="Texture2D" uid="uid://dq4dcohihc8bw" path="res://game/characters/assets/images/stickbug/Stickbug_eye_normal1.png" id="5_abwpc"]
+[ext_resource type="Texture2D" uid="uid://bh4c5twjhbpbj" path="res://game/characters/assets/images/stickbug/Stickbug_eye_sad1.png" id="6_pjufk"]
+
+[node name="Stickbug" unique_id=1606950594 instance=ExtResource("1_ejssm")]
+body_textures = Array[Texture]([ExtResource("2_lq60w"), ExtResource("3_37vn1"), ExtResource("4_pjufk")])
+happy = ExtResource("5_37vn1")
+sad = ExtResource("6_pjufk")
+normal = ExtResource("5_abwpc")
+
+[node name="BodySprite" parent="Visuals" parent_id_path=PackedInt32Array(1375046192) index="0" unique_id=1889108149]
+position = Vector2(-11.076942, -461.84616)
+texture = ExtResource("2_lq60w")
+
+[node name="FaceSprite" parent="Visuals" parent_id_path=PackedInt32Array(1375046192) index="1" unique_id=1737856947]
+position = Vector2(-94.15387, -784.5385)
+texture = ExtResource("5_abwpc")
+
+[node name="FaceTransform" parent="." index="2" unique_id=419019751]
+position = Vector2(-62, -499.00003)
+rotation = 0.19967979
+scale = Vector2(0.23, 0.23)

@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://jow2nruv50ns"]
+
+[ext_resource type="PackedScene" uid="uid://dwe17ww3exlwm" path="res://game/characters/components/character_base.tscn" id="1_us0yg"]
+[ext_resource type="Texture2D" uid="uid://bamqc0bavnr6l" path="res://game/characters/assets/images/butterfly/Butterfly_Body1.png" id="2_ur3r2"]
+[ext_resource type="Texture2D" uid="uid://ddv88yehqqd3b" path="res://game/characters/assets/images/butterfly/Butterfly_Body2.png" id="3_286dy"]
+[ext_resource type="Texture2D" uid="uid://dt1k7srn62s7t" path="res://game/characters/assets/images/butterfly/Butterfly_Body3.png" id="4_41m28"]
+[ext_resource type="Texture2D" uid="uid://blhenvryfrb7" path="res://game/characters/assets/images/butterfly/Butterfly_Eye_Happy.png" id="5_kimtr"]
+[ext_resource type="Texture2D" uid="uid://sid6cjgsc7gk" path="res://game/characters/assets/images/butterfly/Butterfly_Eye_Sad1.png" id="6_fp2pm"]
+[ext_resource type="Texture2D" uid="uid://c4bf3als0fgnm" path="res://game/characters/assets/images/butterfly/Butterfly_Eye_Normal1.png" id="7_mwy32"]
+
+[node name="Butterfly" unique_id=1606950594 instance=ExtResource("1_us0yg")]
+body_textures = Array[Texture]([ExtResource("2_ur3r2"), ExtResource("3_286dy"), ExtResource("4_41m28")])
+happy = ExtResource("5_kimtr")
+sad = ExtResource("6_fp2pm")
+normal = ExtResource("7_mwy32")
+
+[node name="BodySprite" parent="Visuals" parent_id_path=PackedInt32Array(1375046192) index="0" unique_id=1889108149]
+position = Vector2(-29.230772, -455.3846)
+texture = ExtResource("2_ur3r2")
+
+[node name="FaceSprite" parent="Visuals" parent_id_path=PackedInt32Array(1375046192) index="1" unique_id=1737856947]
+position = Vector2(-23.07692, -675.38464)
+texture = ExtResource("7_mwy32")
+
+[node name="FaceTransform" parent="." index="2" unique_id=419019751]
+position = Vector2(-14, -431)
+scale = Vector2(0.495, 0.495)

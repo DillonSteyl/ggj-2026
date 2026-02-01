@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cuawn7pxspdy2"]
+
+[ext_resource type="PackedScene" uid="uid://dwe17ww3exlwm" path="res://game/characters/components/character_base.tscn" id="1_77lem"]
+[ext_resource type="Texture2D" uid="uid://nradj8vbv02k" path="res://game/characters/assets/images/beeble/Beeble_Body1.png" id="2_anwlc"]
+[ext_resource type="Texture2D" uid="uid://bog4v8lb33nwi" path="res://game/characters/assets/images/beeble/Beeble_Body2.png" id="3_iqhrk"]
+[ext_resource type="Texture2D" uid="uid://bxpqvh380osd0" path="res://game/characters/assets/images/beeble/Beeble_Body3.png" id="4_0ggfw"]
+[ext_resource type="Texture2D" uid="uid://bib1670pnblo2" path="res://game/characters/assets/images/beeble/Beeble_Eye_Happy1.png" id="5_r1p38"]
+[ext_resource type="Texture2D" uid="uid://b7htr35ngkcwj" path="res://game/characters/assets/images/beeble/Beeble_Eye_Sad1.png" id="6_ay28o"]
+[ext_resource type="Texture2D" uid="uid://qf31ihgivfu1" path="res://game/characters/assets/images/beeble/Beeble_Eye_Normal1.png" id="7_36aba"]
+
+[node name="Beeble" unique_id=1606950594 instance=ExtResource("1_77lem")]
+body_textures = Array[Texture]([ExtResource("2_anwlc"), ExtResource("3_iqhrk"), ExtResource("4_0ggfw")])
+happy = ExtResource("5_r1p38")
+sad = ExtResource("6_ay28o")
+normal = ExtResource("7_36aba")
+
+[node name="Visuals" parent="." index="0" unique_id=1375046192]
+scale = Vector2(0.76, 0.76)
+
+[node name="BodySprite" parent="Visuals" index="0" unique_id=1889108149]
+position = Vector2(0, -450.80768)
+texture = ExtResource("2_anwlc")
+
+[node name="FaceSprite" parent="Visuals" index="1" unique_id=1737856947]
+position = Vector2(-10.769226, -550.7692)
+texture = ExtResource("5_r1p38")
+
+[node name="FaceTransform" parent="." index="2" unique_id=419019751]
+position = Vector2(-6, -417)

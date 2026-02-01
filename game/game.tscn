@@ -35,8 +35,12 @@
 [ext_resource type="Texture2D" uid="uid://dvlh28wx2f02k" path="res://game/masks/assets/ink/yellow.png" id="19_pxxsx"]
 [ext_resource type="Texture2D" uid="uid://4e4uy75hjtkw" path="res://game/masks/assets/ink/light_green.png" id="20_u8s88"]
 [ext_resource type="Texture2D" uid="uid://dmf158db4uwof" path="res://game/masks/assets/ink/dark_green.png" id="21_dxwpq"]
+[ext_resource type="PackedScene" uid="uid://cuawn7pxspdy2" path="res://game/characters/beeble.tscn" id="21_urpib"]
+[ext_resource type="PackedScene" uid="uid://jow2nruv50ns" path="res://game/characters/butterfly.tscn" id="22_cieqw"]
 [ext_resource type="PackedScene" uid="uid://d0t4t0xom874x" path="res://game/characters/locust.tscn" id="22_gvtgv"]
 [ext_resource type="PackedScene" uid="uid://cuvai56kokio7" path="res://game/characters/ant.tscn" id="23_5ywmu"]
+[ext_resource type="PackedScene" uid="uid://5u4hts306d8s" path="res://game/characters/cicada.tscn" id="23_ta815"]
+[ext_resource type="PackedScene" uid="uid://j30dwrql6lmf" path="res://game/characters/stickbug.tscn" id="24_64wtb"]
 [ext_resource type="Texture2D" uid="uid://ckbui6r3myskp" path="res://game/ui/cheat_sheet/cheat_sheet_icon.png" id="38_vkvnp"]
 [ext_resource type="PackedScene" uid="uid://em7g0ukw1oaw" path="res://game/ui/cheat_sheet/cheat_sheet.tscn" id="39_urpib"]
 
@@ -148,7 +152,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0.8, 1.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(639, 681), Vector2(1540.0001, 645.00006)]
+"values": [Vector2(639, 681), Vector2(1700, 645)]
 }
 tracks/2/type = "method"
 tracks/2/imported = false
@@ -296,7 +300,7 @@ expand_mode = 1
 unique_name_in_owner = true
 script = ExtResource("4_u5opy")
 stages = Array[ExtResource("4_y36n6")]([ExtResource("5_q52ks"), ExtResource("6_jucfl"), ExtResource("5_l8g03"), ExtResource("6_j8tme"), ExtResource("7_3vho3"), ExtResource("8_qf6n1"), ExtResource("9_vsp63")])
-character_types = Array[PackedScene]([ExtResource("23_5ywmu"), ExtResource("10_vsp63"), ExtResource("22_gvtgv"), ExtResource("11_hb504")])
+character_types = Array[PackedScene]([ExtResource("23_5ywmu"), ExtResource("21_urpib"), ExtResource("22_cieqw"), ExtResource("23_ta815"), ExtResource("10_vsp63"), ExtResource("22_gvtgv"), ExtResource("11_hb504"), ExtResource("24_64wtb")])
 
 [node name="CharacterPosition" type="Marker2D" parent="CharacterQueueManager" unique_id=960232246]
 unique_name_in_owner = true
