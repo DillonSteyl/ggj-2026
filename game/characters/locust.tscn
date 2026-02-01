@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://d0t4t0xom874x"]
+
+[ext_resource type="PackedScene" uid="uid://dwe17ww3exlwm" path="res://game/characters/components/character_base.tscn" id="1_xfscm"]
+[ext_resource type="Texture2D" uid="uid://b6jkcpsmljr52" path="res://game/characters/assets/images/locust/locust_body1.png" id="2_6lek0"]
+[ext_resource type="Texture2D" uid="uid://bt4fp5dg6otq7" path="res://game/characters/assets/images/locust/locust_eyes_normal.png" id="3_t0b36"]
+[ext_resource type="Texture2D" uid="uid://m4dt6ul17ayv" path="res://game/characters/assets/images/locust/locust_body2.png" id="3_v40ru"]
+[ext_resource type="Texture2D" uid="uid://bqd5ifwljrf4a" path="res://game/characters/assets/images/locust/locust_body3.png" id="4_gbo5w"]
+[ext_resource type="Texture2D" uid="uid://cx0i6jf7pmjjm" path="res://game/characters/assets/images/locust/locust_eyes_happy.png" id="5_gbo5w"]
+[ext_resource type="Texture2D" uid="uid://dlfsgecc8bjpm" path="res://game/characters/assets/images/locust/locust_eyes_sad.png" id="6_b7xy0"]
+
+[node name="Locust" unique_id=1606950594 instance=ExtResource("1_xfscm")]
+body_textures = Array[Texture]([ExtResource("2_6lek0"), ExtResource("3_v40ru"), ExtResource("4_gbo5w")])
+happy = ExtResource("5_gbo5w")
+sad = ExtResource("6_b7xy0")
+normal = ExtResource("3_t0b36")
+
+[node name="Visuals" parent="." index="0" unique_id=1375046192]
+scale = Vector2(0.62, 0.62)
+
+[node name="BodySprite" parent="Visuals" index="0" unique_id=1889108149]
+position = Vector2(16.923079, -496.9231)
+texture = ExtResource("2_6lek0")
+
+[node name="FaceSprite" parent="Visuals" index="1" unique_id=1737856947]
+position = Vector2(64.61539, -760.00006)
+texture = ExtResource("3_t0b36")
+
+[node name="FaceTransform" parent="." index="2" unique_id=419019751]
+position = Vector2(42, -471)
+rotation = -0.14796627
+scale = Vector2(0.33, 0.33)

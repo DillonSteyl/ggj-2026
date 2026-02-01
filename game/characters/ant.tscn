@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cuvai56kokio7"]
+
+[ext_resource type="PackedScene" uid="uid://dwe17ww3exlwm" path="res://game/characters/components/character_base.tscn" id="1_lc4os"]
+[ext_resource type="Texture2D" uid="uid://cwoacqi50q0nt" path="res://game/characters/assets/images/ant/ant_body1.png" id="2_iv6a7"]
+[ext_resource type="Texture2D" uid="uid://crh2ky0momdk0" path="res://game/characters/assets/images/ant/ant_body2.png" id="3_hhrav"]
+[ext_resource type="Texture2D" uid="uid://c87g4oy46px26" path="res://game/characters/assets/images/ant/ant_eye_normal.png" id="3_rrcm5"]
+[ext_resource type="Texture2D" uid="uid://dm6321q02nghm" path="res://game/characters/assets/images/ant/ant_body3.png" id="4_tfqge"]
+[ext_resource type="Texture2D" uid="uid://cmckfcvaf66rw" path="res://game/characters/assets/images/ant/ant_eye_happy.png" id="5_imovf"]
+[ext_resource type="Texture2D" uid="uid://b5abtucogtbbq" path="res://game/characters/assets/images/ant/ant_eye_sad.png" id="6_mibu8"]
+
+[node name="Ant" unique_id=1606950594 instance=ExtResource("1_lc4os")]
+body_textures = Array[Texture]([ExtResource("2_iv6a7"), ExtResource("3_hhrav"), ExtResource("4_tfqge")])
+happy = ExtResource("5_imovf")
+sad = ExtResource("6_mibu8")
+normal = ExtResource("3_rrcm5")
+
+[node name="Visuals" parent="." index="0" unique_id=1375046192]
+scale = Vector2(0.8, 0.8)
+
+[node name="BodySprite" parent="Visuals" index="0" unique_id=1889108149]
+position = Vector2(0, -207.69229)
+texture = ExtResource("2_iv6a7")
+
+[node name="FaceSprite" parent="Visuals" index="1" unique_id=1737856947]
+position = Vector2(10.769231, -298.46152)
+texture = ExtResource("3_rrcm5")
+
+[node name="FaceTransform" parent="." index="2" unique_id=419019751]
+position = Vector2(8, -236)
+rotation = -0.29077917
+scale = Vector2(0.515, 0.515)
