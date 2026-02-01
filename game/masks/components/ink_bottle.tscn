@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bcv0gdxaln2o3"]
+
+[ext_resource type="Script" uid="uid://c27tcgtbkvao8" path="res://game/masks/components/ink_bottle.gd" id="1_8s84u"]
+[ext_resource type="Texture2D" uid="uid://dqcfcmnhlim3t" path="res://game/masks/assets/ink/brown.png" id="1_p5g2e"]
+
+[node name="InkBottle" type="TextureButton" unique_id=612589746]
+custom_minimum_size = Vector2(0, 75)
+offset_right = 206.0
+offset_bottom = 60.0
+texture_normal = ExtResource("1_p5g2e")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("1_8s84u")

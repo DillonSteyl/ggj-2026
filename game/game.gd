@@ -8,6 +8,8 @@ const MASK_SCENE = preload("uid://cbk5j0wuklma4")
 @onready var accessories_layer: CanvasLayer = $%AccessoriesLayer
 @onready var character_queue_manager: CharacterQueueManager = $%CharacterQueueManager
 @onready var mask_spawn_point: Node2D = $%MaskSpawnPoint
+@onready var ink_bottles_vbox: VBoxContainer = $%InkBottlesBox
+@onready var paint_manager: PaintManager = $%PaintManager
 
 var _mask_transform_tween: Tween
 var _current_mask: MaskBase
@@ -20,6 +22,13 @@ func _ready() -> void:
 
 	character_queue_manager.character_entered.connect(_on_character_entered)
 	character_queue_manager.character_exited.connect(_on_character_exited)
+
+	for child in ink_bottles_vbox.get_children():
+		if not child is InkBottle:
+			continue
+
+		var bottle = child as InkBottle
+		bottle.selected.connect(paint_manager.set_color)
 
 
 func _on_submit() -> void:
@@ -45,8 +54,13 @@ func _on_failure() -> void:
 
 func _on_character_entered() -> void:
 	submit_button.disabled = false
+	_add_mask()
+
+
+func _add_mask() -> void:
 	_current_mask = MASK_SCENE.instantiate()
 	mask_spawn_point.add_child(_current_mask)
+	_current_mask.paint_button.pressed.connect(paint_manager.paint_mask.bind(_current_mask))
 
 
 func _on_character_exited() -> void:

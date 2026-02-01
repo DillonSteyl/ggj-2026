@@ -16,6 +16,16 @@ fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0, 0)
 metadata/_snap_enabled = true
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xrf22"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vmldf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_brjd5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m3dp5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kmsi0"]
+
 [sub_resource type="Animation" id="Animation_avml8"]
 length = 0.001
 tracks/0/type = "value"
@@ -195,6 +205,7 @@ modulate = Color(1, 1, 1, 0)
 script = ExtResource("1_o078o")
 
 [node name="Visuals" type="Node2D" parent="." unique_id=1865690899]
+unique_name_in_owner = true
 
 [node name="ShadowSprite2D" type="Sprite2D" parent="Visuals" unique_id=118419894]
 modulate = Color(0, 0, 0, 0.6666667)
@@ -203,6 +214,23 @@ texture = SubResource("GradientTexture2D_avml8")
 
 [node name="Sprite2D" type="Sprite2D" parent="Visuals" unique_id=591623825]
 texture = SubResource("GradientTexture2D_avml8")
+
+[node name="PaintButton" type="Button" parent="Visuals/Sprite2D" unique_id=1174889524]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -128.0
+offset_right = -128.0
+offset_bottom = -128.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xrf22")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vmldf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_brjd5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_m3dp5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kmsi0")
 
 [node name="LeftDropZone" type="Area2D" parent="." unique_id=2067922764]
 unique_name_in_owner = true

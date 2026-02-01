@@ -14,6 +14,12 @@ texture = ExtResource("2_jckoo")
 [node name="Sprite2D" parent="Visuals" index="1" unique_id=591623825]
 texture = ExtResource("2_jckoo")
 
+[node name="PaintButton" parent="Visuals/Sprite2D" index="0" unique_id=1174889524]
+offset_left = -488.0
+offset_top = -378.0
+offset_right = -536.0
+offset_bottom = -646.0
+
 [node name="CollisionPolygon2D" parent="LeftDropZone" parent_id_path=PackedInt32Array(2067922764) index="0" unique_id=571200008]
 polygon = PackedVector2Array(-17, -83, -61, -118, -158, -182, -218, -197, -251, -159, -204, -50, -191, 2, -137, 15, -166, 40, -173, 81, -169, 130, -139, 150, -83, 194, -32, 188, -12, 141, -11, 71, -15, -80, -39, -54, -28, -3, -29, 59, -78, 58, -106, -31, -95, -57, -41, -56)
 

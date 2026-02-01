@@ -15,6 +15,14 @@
 [ext_resource type="PackedScene" uid="uid://bd6idmkspm6x8" path="res://game/characters/snail.tscn" id="11_hb504"]
 [ext_resource type="Texture2D" uid="uid://lhiqfqs36tk5" path="res://ui/_common/assets/images/buttons/Button_SubmitMask.png" id="11_vsp63"]
 [ext_resource type="Texture2D" uid="uid://dx6o8bj3i1ng2" path="res://ui/_common/assets/images/buttons/Button_SubmitMask_Pressed.png" id="12_b686c"]
+[ext_resource type="Script" uid="uid://ccg0oiblx16e3" path="res://game/paint_manager.gd" id="13_mhvfb"]
+[ext_resource type="PackedScene" uid="uid://bcv0gdxaln2o3" path="res://game/masks/components/ink_bottle.tscn" id="16_ee6o4"]
+[ext_resource type="Texture2D" uid="uid://c24mc2h65fd7e" path="res://game/masks/assets/ink/pink.png" id="17_4cobl"]
+[ext_resource type="Texture2D" uid="uid://dha6mnifhosub" path="res://game/masks/assets/ink/red.png" id="18_ln7ps"]
+[ext_resource type="Script" uid="uid://d25kp15rqvlby" path="res://game/masks/components/bottle_color.gd" id="19_5e03w"]
+[ext_resource type="Texture2D" uid="uid://dvlh28wx2f02k" path="res://game/masks/assets/ink/yellow.png" id="19_pxxsx"]
+[ext_resource type="Texture2D" uid="uid://4e4uy75hjtkw" path="res://game/masks/assets/ink/light_green.png" id="20_u8s88"]
+[ext_resource type="Texture2D" uid="uid://dmf158db4uwof" path="res://game/masks/assets/ink/dark_green.png" id="21_dxwpq"]
 
 [sub_resource type="Animation" id="Animation_u5opy"]
 length = 0.001
@@ -148,6 +156,48 @@ _data = {
 &"exit": SubResource("Animation_y36n6")
 }
 
+[sub_resource type="Resource" id="Resource_leid8"]
+script = ExtResource("19_5e03w")
+color = 1
+brightness = 1
+mask_modulate = Color(0.9490196, 0.45882353, 0.7607843, 1)
+metadata/_custom_type_script = "uid://d25kp15rqvlby"
+
+[sub_resource type="Resource" id="Resource_5e03w"]
+script = ExtResource("19_5e03w")
+color = 1
+brightness = 2
+mask_modulate = Color(0.67058825, 0.16470589, 0.3529412, 1)
+metadata/_custom_type_script = "uid://d25kp15rqvlby"
+
+[sub_resource type="Resource" id="Resource_8bboj"]
+script = ExtResource("19_5e03w")
+color = 2
+brightness = 1
+mask_modulate = Color(1, 0.88235295, 0.25882354, 1)
+metadata/_custom_type_script = "uid://d25kp15rqvlby"
+
+[sub_resource type="Resource" id="Resource_q52ks"]
+script = ExtResource("19_5e03w")
+color = 2
+brightness = 2
+mask_modulate = Color(0.7058824, 0.4745098, 0.36078432, 1)
+metadata/_custom_type_script = "uid://d25kp15rqvlby"
+
+[sub_resource type="Resource" id="Resource_jucfl"]
+script = ExtResource("19_5e03w")
+color = 3
+brightness = 1
+mask_modulate = Color(0.73333335, 0.9254902, 0.39215687, 1)
+metadata/_custom_type_script = "uid://d25kp15rqvlby"
+
+[sub_resource type="Resource" id="Resource_jdpby"]
+script = ExtResource("19_5e03w")
+color = 3
+brightness = 2
+mask_modulate = Color(0.19607843, 0.5568628, 0.36862746, 1)
+metadata/_custom_type_script = "uid://d25kp15rqvlby"
+
 [node name="Game" type="Node2D" unique_id=1553240865]
 script = ExtResource("1_u5opy")
 
@@ -179,6 +229,10 @@ scale = Vector2(0.99999994, 0.99999994)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterQueueManager" unique_id=912538051]
 libraries/ = SubResource("AnimationLibrary_u5opy")
+
+[node name="PaintManager" type="Node" parent="." unique_id=323852003]
+unique_name_in_owner = true
+script = ExtResource("13_mhvfb")
 
 [node name="MaskSpawnPoint" type="Marker2D" parent="." unique_id=1308977677]
 unique_name_in_owner = true
@@ -214,3 +268,45 @@ offset_left = -369.0
 offset_top = 780.0
 offset_right = -47.0
 offset_bottom = -179.0
+
+[node name="InkBottlesBox" type="VBoxContainer" parent="UILayer" unique_id=1222867925]
+unique_name_in_owner = true
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 52.0
+offset_top = -512.0
+offset_right = 238.0
+offset_bottom = -51.0
+grow_vertical = 0
+theme_override_constants/separation = -1
+alignment = 1
+
+[node name="InkBottle" parent="UILayer/InkBottlesBox" unique_id=612589746 instance=ExtResource("16_ee6o4")]
+layout_mode = 2
+texture_normal = ExtResource("17_4cobl")
+bottle_color = SubResource("Resource_leid8")
+
+[node name="InkBottle2" parent="UILayer/InkBottlesBox" unique_id=1919271403 instance=ExtResource("16_ee6o4")]
+layout_mode = 2
+texture_normal = ExtResource("18_ln7ps")
+bottle_color = SubResource("Resource_5e03w")
+
+[node name="InkBottle3" parent="UILayer/InkBottlesBox" unique_id=246507535 instance=ExtResource("16_ee6o4")]
+layout_mode = 2
+texture_normal = ExtResource("19_pxxsx")
+bottle_color = SubResource("Resource_8bboj")
+
+[node name="InkBottle4" parent="UILayer/InkBottlesBox" unique_id=1725174672 instance=ExtResource("16_ee6o4")]
+layout_mode = 2
+bottle_color = SubResource("Resource_q52ks")
+
+[node name="InkBottle5" parent="UILayer/InkBottlesBox" unique_id=168882924 instance=ExtResource("16_ee6o4")]
+layout_mode = 2
+texture_normal = ExtResource("20_u8s88")
+bottle_color = SubResource("Resource_jucfl")
+
+[node name="InkBottle6" parent="UILayer/InkBottlesBox" unique_id=175144225 instance=ExtResource("16_ee6o4")]
+layout_mode = 2
+texture_normal = ExtResource("21_dxwpq")
+bottle_color = SubResource("Resource_jdpby")
