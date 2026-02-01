@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="Accessory" format=3 uid="uid://wunlglbyfa5p"]
 
 [ext_resource type="Script" uid="uid://dn5tlx64qicuq" path="res://game/components/resources/accessory.gd" id="1_36hpp"]
-[ext_resource type="Texture2D" uid="uid://dwh5yloxtoph6" path="res://game/masks/assets/accessories/glass_small.png" id="2_sw4bc"]
+[ext_resource type="Texture2D" uid="uid://dtd7nsxdqom11" path="res://game/masks/assets/accessories/Accessory6_GlassSmall.png" id="2_36hpp"]
 
 [resource]
 script = ExtResource("1_36hpp")
-texture = ExtResource("2_sw4bc")
+texture = ExtResource("2_36hpp")
 debug_text = "small
 glass"
 size = 1

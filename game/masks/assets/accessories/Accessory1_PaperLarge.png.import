@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w03ygixyc55y"
-path="res://.godot/imported/paper_large.png-0154980078029718ede8e3b89f4d71e4.ctex"
+uid="uid://1caj18plntih"
+path="res://.godot/imported/Accessory1_PaperLarge.png-b6d4941b081f132647095b6a3d2bcdaa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/masks/assets/accessories/paper_large.png"
-dest_files=["res://.godot/imported/paper_large.png-0154980078029718ede8e3b89f4d71e4.ctex"]
+source_file="res://game/masks/assets/accessories/Accessory1_PaperLarge.png"
+dest_files=["res://.godot/imported/Accessory1_PaperLarge.png-b6d4941b081f132647095b6a3d2bcdaa.ctex"]
 
 [params]
 

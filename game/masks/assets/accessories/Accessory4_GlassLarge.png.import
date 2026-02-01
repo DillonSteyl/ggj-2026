@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b36ty0rxlym1m"
-path="res://.godot/imported/metal_large.png-c1f2559c002be72e7add3ded011ca0fa.ctex"
+uid="uid://dbqxi34lxhsj0"
+path="res://.godot/imported/Accessory4_GlassLarge.png-47c51fa1ba0dc8bbb0d9785eb2c291d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/masks/assets/accessories/metal_large.png"
-dest_files=["res://.godot/imported/metal_large.png-c1f2559c002be72e7add3ded011ca0fa.ctex"]
+source_file="res://game/masks/assets/accessories/Accessory4_GlassLarge.png"
+dest_files=["res://.godot/imported/Accessory4_GlassLarge.png-47c51fa1ba0dc8bbb0d9785eb2c291d4.ctex"]
 
 [params]
 

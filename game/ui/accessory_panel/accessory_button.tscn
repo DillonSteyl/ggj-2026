@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://4ayima5qwaa8" path="res://game/ui/accessory_panel/accessory_button.gd" id="1_jo6ra"]
 [ext_resource type="Resource" uid="uid://7yoxn6076x16" path="res://game/masks/accessories/paper_sm.tres" id="2_knn6y"]
-[ext_resource type="Texture2D" uid="uid://esmv2rtcstns" path="res://game/masks/assets/accessories/splat12.png" id="3_knn6y"]
+[ext_resource type="Texture2D" uid="uid://c5n4erapqcyr5" path="res://game/masks/assets/accessories/Accessory9_MetalSmall.png" id="3_knn6y"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jo6ra"]
 content_margin_left = 4.0

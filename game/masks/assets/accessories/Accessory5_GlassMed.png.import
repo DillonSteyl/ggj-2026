@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dubf1aolc7thu"
-path="res://.godot/imported/paper_med.png-1091507e7fc5680703b06452af84927f.ctex"
+uid="uid://wo5cyqjytb4k"
+path="res://.godot/imported/Accessory5_GlassMed.png-f2d7120cd34ebb8c2c64052812f72e63.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/masks/assets/accessories/paper_med.png"
-dest_files=["res://.godot/imported/paper_med.png-1091507e7fc5680703b06452af84927f.ctex"]
+source_file="res://game/masks/assets/accessories/Accessory5_GlassMed.png"
+dest_files=["res://.godot/imported/Accessory5_GlassMed.png-f2d7120cd34ebb8c2c64052812f72e63.ctex"]
 
 [params]
 

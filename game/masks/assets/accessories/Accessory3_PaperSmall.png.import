@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ds82hont0eae5"
-path="res://.godot/imported/metal_med.png-2b176a08a68890c5ed8f2251cca98d97.ctex"
+uid="uid://c5h4x1gfrj5wv"
+path="res://.godot/imported/Accessory3_PaperSmall.png-a4d02bc18f5bb10c9bd4ea2eb7e4edac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/masks/assets/accessories/metal_med.png"
-dest_files=["res://.godot/imported/metal_med.png-2b176a08a68890c5ed8f2251cca98d97.ctex"]
+source_file="res://game/masks/assets/accessories/Accessory3_PaperSmall.png"
+dest_files=["res://.godot/imported/Accessory3_PaperSmall.png-a4d02bc18f5bb10c9bd4ea2eb7e4edac.ctex"]
 
 [params]
 

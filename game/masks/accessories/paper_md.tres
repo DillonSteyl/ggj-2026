@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Accessory" format=3 uid="uid://bntlnt60elb5q"]
 
 [ext_resource type="Script" uid="uid://dn5tlx64qicuq" path="res://game/components/resources/accessory.gd" id="1_886ud"]
-[ext_resource type="Texture2D" uid="uid://dubf1aolc7thu" path="res://game/masks/assets/accessories/paper_med.png" id="2_886ud"]
+[ext_resource type="Texture2D" uid="uid://dhil5u084m2e5" path="res://game/masks/assets/accessories/Accessory2_PaperMed.png" id="2_886ud"]
 
 [resource]
 script = ExtResource("1_886ud")

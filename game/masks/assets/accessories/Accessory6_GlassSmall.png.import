@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://esmv2rtcstns"
-path="res://.godot/imported/splat12.png-806f81acac595f44d4ee3c97f72c4fd8.ctex"
+uid="uid://dtd7nsxdqom11"
+path="res://.godot/imported/Accessory6_GlassSmall.png-020da445d4d7a81c9f7d64ff08b9c773.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/masks/assets/accessories/splat12.png"
-dest_files=["res://.godot/imported/splat12.png-806f81acac595f44d4ee3c97f72c4fd8.ctex"]
+source_file="res://game/masks/assets/accessories/Accessory6_GlassSmall.png"
+dest_files=["res://.godot/imported/Accessory6_GlassSmall.png-020da445d4d7a81c9f7d64ff08b9c773.ctex"]
 
 [params]
 

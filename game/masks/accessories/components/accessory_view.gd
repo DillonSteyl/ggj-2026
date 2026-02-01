@@ -3,8 +3,8 @@ extends Node2D
 
 const SPRITE_SCALE = {
 	Types.AccessorySize.Small: 0.15,
-	Types.AccessorySize.Medium: 0.2,
-	Types.AccessorySize.Large: 0.3,
+	Types.AccessorySize.Medium: 0.25,
+	Types.AccessorySize.Large: 0.35,
 }
 const ACCESSORY_VIEW_SCENE = preload("uid://e1e3t1v6v2vy")
 
