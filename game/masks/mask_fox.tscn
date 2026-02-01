@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bfsg62raovjba"]
+
+[ext_resource type="PackedScene" uid="uid://c7qk1burg7skj" path="res://game/masks/components/mask_base.tscn" id="1_01t2h"]
+[ext_resource type="Texture2D" uid="uid://ba7xdcjrcmnq8" path="res://game/masks/assets/bases/mask_fox.png" id="2_6fcvl"]
+
+[node name="MaskFox" unique_id=478821619 instance=ExtResource("1_01t2h")]
+
+[node name="ShadowSprite2D" parent="Visuals" parent_id_path=PackedInt32Array(1865690899) index="0" unique_id=118419894]
+texture = ExtResource("2_6fcvl")
+
+[node name="Sprite2D" parent="Visuals" parent_id_path=PackedInt32Array(1865690899) index="1" unique_id=591623825]
+texture = ExtResource("2_6fcvl")
+
+[node name="PaintButton" parent="Visuals/Sprite2D" index="0" unique_id=1174889524]
+offset_left = -486.0
+offset_top = -478.0
+offset_right = -538.0
+offset_bottom = -546.0
+
+[node name="CollisionPolygon2D" parent="LeftDropZone" parent_id_path=PackedInt32Array(2067922764) index="0" unique_id=571200008]
+polygon = PackedVector2Array(-10, -143, -49, -160, -79, -215, -103, -244, -135, -222, -174, -160, -206, -106, -242, -79, -195, 84, -127, 93, -54, 143, -25, 187, -8, 225, -9, 1, -46, 0, -38, 36, -74, 20, -126, 1, -144, -66, -102, -67, -70, -53, -46, -1, -9, 0)
+
+[node name="CollisionPolygon2D" parent="RightDropZone" parent_id_path=PackedInt32Array(1456605540) index="0" unique_id=657294330]
+polygon = PackedVector2Array(-10, -143, -49, -160, -79, -215, -103, -244, -135, -222, -174, -160, -206, -106, -242, -79, -195, 84, -127, 93, -54, 143, -25, 187, -8, 225, -9, 1, -46, 0, -38, 36, -74, 20, -126, 1, -144, -66, -102, -67, -70, -53, -46, -1, -9, 0)
+
+[node name="EyePlacement" parent="." index="4" unique_id=325185704]
+position = Vector2(0, -18)

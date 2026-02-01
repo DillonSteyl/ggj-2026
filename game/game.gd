@@ -1,7 +1,7 @@
 class_name Game
 extends Node2D
 
-const MASK_SCENE = preload("uid://cbk5j0wuklma4")
+@export var mask_scenes: Array[PackedScene]
 
 @onready var submit_button: TextureButton = $%SubmitButton
 @onready var accessory_panel: AccessoryPanel = $%AccessoryPanel
@@ -60,7 +60,7 @@ func _on_character_entered() -> void:
 
 
 func _add_mask() -> void:
-	_current_mask = MASK_SCENE.instantiate()
+	_current_mask = mask_scenes.pick_random().instantiate()
 	mask_spawn_point.add_child(_current_mask)
 	_current_mask.paint_button.pressed.connect(paint_manager.paint_mask.bind(_current_mask))
 
@@ -79,7 +79,9 @@ func _wear_mask() -> void:
 	_mask_transform_tween.tween_property(
 		_current_mask,
 		"global_transform",
-		character_queue_manager.character_base.face_transform.global_transform,
+		character_queue_manager.character_base.face_transform.global_transform.translated_local(
+			-1 * _current_mask.eye_placement.position
+		),
 		0.5
 	)
 	_current_mask.reparent(character_queue_manager.character_base)

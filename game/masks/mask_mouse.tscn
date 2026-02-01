@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://ds22pwvjvjlg7"]
+
+[ext_resource type="PackedScene" uid="uid://c7qk1burg7skj" path="res://game/masks/components/mask_base.tscn" id="1_s5drq"]
+[ext_resource type="Texture2D" uid="uid://ckionwdikm8dy" path="res://game/masks/assets/bases/mask_mouse.png" id="2_chwbc"]
+
+[node name="MaskMouse" unique_id=478821619 instance=ExtResource("1_s5drq")]
+
+[node name="ShadowSprite2D" parent="Visuals" parent_id_path=PackedInt32Array(1865690899) index="0" unique_id=118419894]
+texture = ExtResource("2_chwbc")
+
+[node name="Sprite2D" parent="Visuals" parent_id_path=PackedInt32Array(1865690899) index="1" unique_id=591623825]
+texture = ExtResource("2_chwbc")
+
+[node name="PaintButton" parent="Visuals/Sprite2D" index="0" unique_id=1174889524]
+offset_left = -422.0
+offset_top = -498.0
+offset_right = -602.0
+offset_bottom = -526.0
+
+[node name="CollisionPolygon2D" parent="LeftDropZone" parent_id_path=PackedInt32Array(2067922764) index="0" unique_id=571200008]
+polygon = PackedVector2Array(-7, -98, -29, -95, -40, -182, -40, -249, -115, -224, -169, -180, -191, -146, -201, -103, -199, -67, -184, -33, -160, -1, -129, 18, -217, 62, -214, 68, -116, 38, -177, 113, -172, 121, -98, 61, -84, 99, -28, 238, -7, 246, -7, 0, -29, -1, -29, 59, -38, 59, -46, 37, -61, 23, -76, 12, -93, 6, -106, -1, -90, -55, -66, -65, -35, -33, -29, -1, -7.002777, 0.15007019)
+
+[node name="CollisionPolygon2D" parent="RightDropZone" parent_id_path=PackedInt32Array(1456605540) index="0" unique_id=657294330]
+polygon = PackedVector2Array(-7, -98, -29, -95, -40, -182, -40, -249, -115, -224, -169, -180, -191, -146, -201, -103, -199, -67, -184, -33, -160, -1, -129, 18, -217, 62, -214, 68, -116, 38, -177, 113, -172, 121, -98, 61, -84, 99, -28, 238, -7, 246, -7, 0, -29, -1, -29, 59, -38, 59, -46, 37, -61, 23, -76, 12, -93, 6, -106, -1, -90, -55, -66, -65, -35, -33, -29, -1, -7.002777, 0.15007019)

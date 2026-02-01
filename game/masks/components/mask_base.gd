@@ -7,6 +7,7 @@ extends Node2D
 
 @onready var visuals: Node2D = $%Visuals
 @onready var paint_button: Button = $%PaintButton
+@onready var eye_placement: Marker2D = $%EyePlacement
 
 var painted_color: BottleColor:
 	set = _set_painted_color

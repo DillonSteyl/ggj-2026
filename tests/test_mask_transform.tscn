@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cdlhgrlwuo62k"]
+
+[ext_resource type="PackedScene" uid="uid://drvvcpe0u3cw6" path="res://game/characters/cricket.tscn" id="1_0ss4y"]
+[ext_resource type="Script" uid="uid://c2kygyrei17lv" path="res://tests/test_mask_transform.gd" id="1_ct00m"]
+[ext_resource type="PackedScene" uid="uid://bpiqrwap1b1dp" path="res://game/masks/mask_peenor.tscn" id="2_gb5qg"]
+
+[node name="TestMaskTransform" type="Node2D" unique_id=1803128893]
+script = ExtResource("1_ct00m")
+
+[node name="Cricket" parent="." unique_id=1606950594 instance=ExtResource("1_0ss4y")]
+position = Vector2(603, 745)
+
+[node name="MaskPeenor" parent="." unique_id=478821619 instance=ExtResource("2_gb5qg")]
+position = Vector2(262, 592)

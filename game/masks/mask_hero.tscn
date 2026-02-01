@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bktei7csw5ctm"]
+
+[ext_resource type="PackedScene" uid="uid://c7qk1burg7skj" path="res://game/masks/components/mask_base.tscn" id="1_e7pal"]
+[ext_resource type="Texture2D" uid="uid://cqbblvsylqnfh" path="res://game/masks/assets/bases/mask_hero.png" id="2_2wpqx"]
+
+[node name="MaskHero" unique_id=478821619 instance=ExtResource("1_e7pal")]
+
+[node name="ShadowSprite2D" parent="Visuals" parent_id_path=PackedInt32Array(1865690899) index="0" unique_id=118419894]
+texture = ExtResource("2_2wpqx")
+
+[node name="Sprite2D" parent="Visuals" parent_id_path=PackedInt32Array(1865690899) index="1" unique_id=591623825]
+texture = ExtResource("2_2wpqx")
+
+[node name="PaintButton" parent="Visuals/Sprite2D" index="0" unique_id=1174889524]
+offset_left = -512.0
+offset_top = -182.0
+offset_right = -512.0
+offset_bottom = -842.0
+
+[node name="CollisionPolygon2D" parent="LeftDropZone" parent_id_path=PackedInt32Array(2067922764) index="0" unique_id=571200008]
+polygon = PackedVector2Array(-8, -58, -34, -89, -242, -51, -238, 28, -217, 83, -22, 38, -7, 1, -42, -14, -176, 13, -181, -4, -45, -33, -42, -16, -7.002777, 0.15007019)
+
+[node name="CollisionPolygon2D" parent="RightDropZone" parent_id_path=PackedInt32Array(1456605540) index="0" unique_id=657294330]
+polygon = PackedVector2Array(-8, -58, -34, -89, -242, -51, -238, 28, -217, 83, -22, 38, -7, 1, -42, -14, -176, 13, -181, -4, -45, -33, -42, -16, -7.002777, 0.15007019)
+
+[node name="EyePlacement" parent="." index="4" unique_id=325185704]
+position = Vector2(0, -25)

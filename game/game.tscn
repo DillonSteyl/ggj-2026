@@ -2,17 +2,26 @@
 
 [ext_resource type="Script" uid="uid://lrcvssxkdpp5" path="res://game/game.gd" id="1_u5opy"]
 [ext_resource type="Texture2D" uid="uid://cur83g0crpv67" path="res://game/assets/background.png" id="2_3vho3"]
+[ext_resource type="PackedScene" uid="uid://cbk5j0wuklma4" path="res://game/masks/mask_butterfly.tscn" id="2_jdpby"]
+[ext_resource type="PackedScene" uid="uid://1uhqpprgfa8d" path="res://game/masks/mask_cat.tscn" id="3_58yx1"]
+[ext_resource type="PackedScene" uid="uid://bfsg62raovjba" path="res://game/masks/mask_fox.tscn" id="4_58yx1"]
 [ext_resource type="Script" uid="uid://cobmik6m7tjyy" path="res://game/character_queue_manager.gd" id="4_u5opy"]
 [ext_resource type="Script" uid="uid://debqx1ugtjyvo" path="res://game/requests/resources/stage.gd" id="4_y36n6"]
+[ext_resource type="PackedScene" uid="uid://bktei7csw5ctm" path="res://game/masks/mask_hero.tscn" id="5_hbvmx"]
 [ext_resource type="Resource" uid="uid://vratl0j18iwy" path="res://game/requests/stages/stage_material_a.tres" id="5_l8g03"]
 [ext_resource type="Resource" uid="uid://d2ovgx4gnii5j" path="res://game/requests/stages/stage_color_a.tres" id="5_q52ks"]
 [ext_resource type="PackedScene" uid="uid://dwe17ww3exlwm" path="res://game/characters/components/character_base.tscn" id="6_dakft"]
+[ext_resource type="PackedScene" uid="uid://ds22pwvjvjlg7" path="res://game/masks/mask_mouse.tscn" id="6_gvtgv"]
 [ext_resource type="Resource" uid="uid://dssek2ytadd1w" path="res://game/requests/stages/stage_size_material_a.tres" id="6_j8tme"]
 [ext_resource type="Resource" uid="uid://bdncs2k1a6jtu" path="res://game/requests/stages/stage_color_b.tres" id="6_jucfl"]
 [ext_resource type="Resource" uid="uid://bjtpmooalf0s6" path="res://game/requests/stages/stage_size_material_b.tres" id="7_3vho3"]
+[ext_resource type="PackedScene" uid="uid://bpiqrwap1b1dp" path="res://game/masks/mask_peenor.tscn" id="7_5ywmu"]
+[ext_resource type="PackedScene" uid="uid://ufa3m62tpn4o" path="res://game/masks/mask_spike.tscn" id="8_mhp6k"]
 [ext_resource type="Resource" uid="uid://f15rcpy8s43g" path="res://game/requests/stages/stage_size_material_placement_a.tres" id="8_qf6n1"]
 [ext_resource type="PackedScene" uid="uid://cqhep31505fri" path="res://game/ui/accessory_panel/accessory_panel.tscn" id="9_l8g03"]
+[ext_resource type="PackedScene" uid="uid://cyn52fnw2yegt" path="res://game/masks/mask_star.tscn" id="9_vkvnp"]
 [ext_resource type="Resource" uid="uid://cs7sm4burp0g3" path="res://game/requests/stages/stage_size_material_placement_b.tres" id="9_vsp63"]
+[ext_resource type="PackedScene" uid="uid://casapdbfhm6ip" path="res://game/masks/mask_wolf.tscn" id="10_urpib"]
 [ext_resource type="PackedScene" uid="uid://drvvcpe0u3cw6" path="res://game/characters/cricket.tscn" id="10_vsp63"]
 [ext_resource type="PackedScene" uid="uid://bd6idmkspm6x8" path="res://game/characters/snail.tscn" id="11_hb504"]
 [ext_resource type="Texture2D" uid="uid://lhiqfqs36tk5" path="res://ui/_common/assets/images/buttons/Button_SubmitMask.png" id="11_vsp63"]
@@ -203,6 +212,7 @@ metadata/_custom_type_script = "uid://d25kp15rqvlby"
 
 [node name="Game" type="Node2D" unique_id=1553240865]
 script = ExtResource("1_u5opy")
+mask_scenes = Array[PackedScene]([ExtResource("2_jdpby"), ExtResource("3_58yx1"), ExtResource("4_58yx1"), ExtResource("5_hbvmx"), ExtResource("6_gvtgv"), ExtResource("7_5ywmu"), ExtResource("8_mhp6k"), ExtResource("9_vkvnp"), ExtResource("10_urpib")])
 
 [node name="BG" type="CanvasLayer" parent="." unique_id=78054403]
 layer = -10
