@@ -1,7 +1,7 @@
 class_name CheatSheet
 extends Control
 
-@onready var close_button = $%CloseButton
+@onready var close_button := $%CloseButton
 
 
 func _ready() -> void:
