@@ -4,12 +4,18 @@
 [ext_resource type="PackedScene" uid="uid://ci3o7i2gjwc4n" path="res://ui/settings/settings_menu.tscn" id="2_mu8pm"]
 
 [sub_resource type="Gradient" id="Gradient_mu8pm"]
-offsets = PackedFloat32Array(0.06887755, 0.75765306, 1)
-colors = PackedColorArray(0.46666667, 0.53333336, 0.4509804, 1, 0.6313726, 0.7372549, 0.59607846, 1, 0.8235294, 0.8627451, 0.7137255, 1)
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.13981043, 0.921801)
+colors = PackedColorArray(0.6313726, 0.7372549, 0.59607846, 1, 0.46666667, 0.53333336, 0.4509804, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_omy8q"]
 gradient = SubResource("Gradient_mu8pm")
-fill_from = Vector2(0, 1)
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.7, 0.3)
+metadata/_snap_enabled = true
 
 [sub_resource type="Animation" id="Animation_omy8q"]
 length = 0.001
@@ -78,12 +84,13 @@ alignment = 1
 
 [node name="Title" type="RichTextLabel" parent="VBoxContainer" unique_id=1994176588]
 layout_mode = 2
+theme_override_colors/default_color = Color(1, 0.972549, 0.83137256, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0.39215687)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.39215687)
 theme_override_constants/shadow_offset_x = 8
 theme_override_constants/shadow_offset_y = 8
 theme_override_constants/outline_size = 14
-theme_override_font_sizes/normal_font_size = 200
+theme_override_font_sizes/normal_font_size = 120
 bbcode_enabled = true
 text = "[wave amp=40.0 freq=4.0 connected=0]Maku Poku[/wave]"
 fit_content = true
