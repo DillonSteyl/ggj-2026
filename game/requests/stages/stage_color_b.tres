@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Stage" format=3 uid="uid://bdncs2k1a6jtu"]
+
+[ext_resource type="Script" uid="uid://s6rkisicbu5x" path="res://game/requests/resources/request_generator.gd" id="1_8eytm"]
+[ext_resource type="Script" uid="uid://debqx1ugtjyvo" path="res://game/requests/resources/stage.gd" id="2_app6q"]
+
+[sub_resource type="Resource" id="Resource_b33wv"]
+script = ExtResource("1_8eytm")
+allow_color = true
+allow_brightness = true
+metadata/_custom_type_script = "uid://s6rkisicbu5x"
+
+[resource]
+script = ExtResource("2_app6q")
+request_generator = SubResource("Resource_b33wv")
+metadata/_custom_type_script = "uid://debqx1ugtjyvo"

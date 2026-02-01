@@ -7,6 +7,8 @@
 script = ExtResource("1_b33wv")
 min_accessory_requests = 1
 max_accessory_requests = 1
+allow_color = true
+allow_brightness = true
 allow_material = true
 metadata/_custom_type_script = "uid://s6rkisicbu5x"
 

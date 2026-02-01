@@ -16,10 +16,10 @@ func to_bug_language() -> String:
 
 func _get_mask_request_bug_language() -> String:
 	var req = BugWords.MASK
-	if color:
-		req += " {color_word}".format({"color_word": BugWords.COLOR[color]})
 	if brightness:
 		req += " {brightness_word}".format({"brightness_word": BugWords.BRIGHTNESS[brightness]})
+	if color:
+		req += " {color_word}".format({"color_word": BugWords.COLOR[color]})
 
 	return req + "."
 

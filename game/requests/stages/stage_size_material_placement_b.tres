@@ -7,6 +7,8 @@
 script = ExtResource("1_cwrd4")
 min_accessory_requests = 2
 max_accessory_requests = 3
+allow_color = true
+allow_brightness = true
 allow_size = true
 allow_material = true
 allow_placement = true
