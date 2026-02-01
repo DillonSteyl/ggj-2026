@@ -1,13 +1,17 @@
 class_name MaskBase
 extends Node2D
 
+signal mouse_released
+
 @onready var left_drop_zone: AccessoryDropZone = $%LeftDropZone
 @onready var right_drop_zone: AccessoryDropZone = $%RightDropZone
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 @onready var visuals: Node2D = $%Visuals
-@onready var paint_button: Button = $%PaintButton
+@onready var paint_zone: Control = $%PaintZone
 @onready var eye_placement: Marker2D = $%EyePlacement
+
+var _is_hovered: bool
 
 var painted_color: BottleColor:
 	set = _set_painted_color
@@ -15,6 +19,16 @@ var painted_color: BottleColor:
 
 func _ready() -> void:
 	animation_player.play("drop_in")
+	paint_zone.mouse_entered.connect(func(): _is_hovered = true)
+	paint_zone.mouse_exited.connect(func(): _is_hovered = false)
+
+
+func _input(event: InputEvent) -> void:
+	if not _is_hovered:
+		return
+
+	if event is InputEventMouseButton and event.is_released():
+		mouse_released.emit()
 
 
 func to_definition() -> BuiltMask:

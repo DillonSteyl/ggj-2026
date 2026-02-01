@@ -5,16 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://j6wdl08k638h" path="res://game/masks/assets/bases/mask_butterfly.png" id="2_vmldf"]
 [ext_resource type="AudioStream" uid="uid://r3crbvyis8lg" path="res://ui/_common/assets/sfx/error_001.ogg" id="4_brjd5"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xrf22"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vmldf"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_brjd5"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m3dp5"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kmsi0"]
-
 [sub_resource type="Animation" id="Animation_avml8"]
 length = 0.001
 tracks/0/type = "value"
@@ -296,22 +286,18 @@ texture = ExtResource("2_vmldf")
 [node name="Sprite2D" type="Sprite2D" parent="Visuals" unique_id=591623825]
 texture = ExtResource("2_vmldf")
 
-[node name="PaintButton" type="Button" parent="Visuals/Sprite2D" unique_id=1174889524]
+[node name="PaintZone" type="Control" parent="Visuals/Sprite2D" unique_id=857390252]
 unique_name_in_owner = true
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -128.0
-offset_top = -128.0
-offset_right = -128.0
-offset_bottom = -128.0
+offset_left = -512.0
+offset_top = -512.0
+offset_right = -512.0
+offset_bottom = -512.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxEmpty_xrf22")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_vmldf")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_brjd5")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_m3dp5")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_kmsi0")
 
 [node name="LeftDropZone" type="Area2D" parent="." unique_id=2067922764]
 unique_name_in_owner = true

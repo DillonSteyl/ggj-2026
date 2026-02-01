@@ -15,6 +15,13 @@ func _process(_delta: float) -> void:
 	brush.global_position = get_viewport().get_mouse_position()
 
 
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.is_released():
+		# HACKY:
+		await get_tree().create_timer(0.1).timeout
+		disable()
+
+
 func set_color(color: BottleColor):
 	is_painting = true
 	brush.visible = true
