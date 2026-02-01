@@ -344,44 +344,54 @@ offset_top = 765.0
 offset_right = -47.0
 offset_bottom = -179.0
 
-[node name="InkBottlesBox" type="VBoxContainer" parent="UILayer" unique_id=1222867925]
-unique_name_in_owner = true
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 52.0
-offset_top = -512.0
-offset_right = 238.0
-offset_bottom = -51.0
-grow_vertical = 0
-theme_override_constants/separation = -1
-alignment = 1
+[node name="CenterContainer" type="CenterContainer" parent="UILayer" unique_id=1818435903]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 48.0
+offset_top = 126.0
+offset_right = 241.0
+offset_bottom = 594.0
+grow_vertical = 2
 
-[node name="InkBottle" parent="UILayer/InkBottlesBox" unique_id=612589746 instance=ExtResource("16_ee6o4")]
+[node name="InkBottlesBox" type="GridContainer" parent="UILayer/CenterContainer" unique_id=1135454384]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 25
+columns = 2
+
+[node name="InkBottle" parent="UILayer/CenterContainer/InkBottlesBox" unique_id=612589746 instance=ExtResource("16_ee6o4")]
+custom_minimum_size = Vector2(90, 100)
 layout_mode = 2
 texture_normal = ExtResource("17_4cobl")
 bottle_color = SubResource("Resource_leid8")
 
-[node name="InkBottle2" parent="UILayer/InkBottlesBox" unique_id=1919271403 instance=ExtResource("16_ee6o4")]
+[node name="InkBottle2" parent="UILayer/CenterContainer/InkBottlesBox" unique_id=1919271403 instance=ExtResource("16_ee6o4")]
+custom_minimum_size = Vector2(90, 100)
 layout_mode = 2
 texture_normal = ExtResource("18_ln7ps")
 bottle_color = SubResource("Resource_5e03w")
 
-[node name="InkBottle3" parent="UILayer/InkBottlesBox" unique_id=246507535 instance=ExtResource("16_ee6o4")]
+[node name="InkBottle3" parent="UILayer/CenterContainer/InkBottlesBox" unique_id=246507535 instance=ExtResource("16_ee6o4")]
+custom_minimum_size = Vector2(90, 100)
 layout_mode = 2
 texture_normal = ExtResource("19_pxxsx")
 bottle_color = SubResource("Resource_8bboj")
 
-[node name="InkBottle4" parent="UILayer/InkBottlesBox" unique_id=1725174672 instance=ExtResource("16_ee6o4")]
+[node name="InkBottle4" parent="UILayer/CenterContainer/InkBottlesBox" unique_id=1725174672 instance=ExtResource("16_ee6o4")]
+custom_minimum_size = Vector2(90, 100)
 layout_mode = 2
 bottle_color = SubResource("Resource_q52ks")
 
-[node name="InkBottle5" parent="UILayer/InkBottlesBox" unique_id=168882924 instance=ExtResource("16_ee6o4")]
+[node name="InkBottle5" parent="UILayer/CenterContainer/InkBottlesBox" unique_id=168882924 instance=ExtResource("16_ee6o4")]
+custom_minimum_size = Vector2(90, 100)
 layout_mode = 2
 texture_normal = ExtResource("20_u8s88")
 bottle_color = SubResource("Resource_jucfl")
 
-[node name="InkBottle6" parent="UILayer/InkBottlesBox" unique_id=175144225 instance=ExtResource("16_ee6o4")]
+[node name="InkBottle6" parent="UILayer/CenterContainer/InkBottlesBox" unique_id=175144225 instance=ExtResource("16_ee6o4")]
+custom_minimum_size = Vector2(90, 100)
 layout_mode = 2
 texture_normal = ExtResource("21_dxwpq")
 bottle_color = SubResource("Resource_jdpby")

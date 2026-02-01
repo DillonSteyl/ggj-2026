@@ -8,7 +8,7 @@ extends Node2D
 @onready var accessories_layer: CanvasLayer = $%AccessoriesLayer
 @onready var character_queue_manager: CharacterQueueManager = $%CharacterQueueManager
 @onready var mask_spawn_point: Node2D = $%MaskSpawnPoint
-@onready var ink_bottles_vbox: VBoxContainer = $%InkBottlesBox
+@onready var ink_bottles_box: Container = $%InkBottlesBox
 @onready var paint_manager: PaintManager = $%PaintManager
 
 @onready var cheat_sheet_button: TextureButton = $%CheatSheetButton
@@ -29,7 +29,7 @@ func _ready() -> void:
 	cheat_sheet_button.pressed.connect(cheat_sheet.show)
 	cheat_sheet_button.get_node("AnimationPlayer").play("hover")
 
-	for child in ink_bottles_vbox.get_children():
+	for child in ink_bottles_box.get_children():
 		if not child is InkBottle:
 			continue
 
