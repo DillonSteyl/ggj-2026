@@ -32,7 +32,7 @@ func _get_accessory_bug_language() -> String:
 	for req in accessory_requests:
 		request_phrases.append(req.get_bug_phrase())
 	var combined_accessory_request = BugWords.AND.join(request_phrases)
-	return BugWords.ACCESSORY + " " + combined_accessory_request + "."
+	return combined_accessory_request + "."
 
 
 func is_satisfied_by(mask: BuiltMask) -> bool:
