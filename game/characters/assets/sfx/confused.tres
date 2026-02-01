@@ -1,23 +1,23 @@
-[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://jpeubxjnmtxq"]
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://dl1jsy1nt2dwg"]
 
-[ext_resource type="AudioStream" uid="uid://jpchlsbe1618" path="res://game/characters/assets/sfx/SFX_bug_vo_hee-003.wav" id="1_1vsem"]
-[ext_resource type="AudioStream" uid="uid://cnnmc5gppmc2h" path="res://game/characters/assets/sfx/SFX_bug_vo_hee-004.wav" id="2_453dt"]
-[ext_resource type="AudioStream" uid="uid://4557j1l6vunu" path="res://game/characters/assets/sfx/SFX_bug_vo_hee-005.wav" id="3_ig1a2"]
-[ext_resource type="AudioStream" uid="uid://yjpogqfhxara" path="res://game/characters/assets/sfx/SFX_bug_vo_hee-006.wav" id="4_wjclu"]
-[ext_resource type="AudioStream" uid="uid://b3hru5rj2mqxn" path="res://game/characters/assets/sfx/SFX_bug_vo_hee-007.wav" id="5_wj48q"]
-[ext_resource type="AudioStream" uid="uid://dw18ytxt6w2tx" path="res://game/characters/assets/sfx/SFX_bug_vo_hee-008.wav" id="6_yh2re"]
-[ext_resource type="AudioStream" uid="uid://t81mytygtg6j" path="res://game/characters/assets/sfx/SFX_bug_vo_hee-009.wav" id="7_vvmr3"]
-[ext_resource type="AudioStream" uid="uid://bpqhs8gi6h6a4" path="res://game/characters/assets/sfx/SFX_bug_vo_hee-010.wav" id="8_le0wb"]
-[ext_resource type="AudioStream" uid="uid://d4aq0k2s8w6v1" path="res://game/characters/assets/sfx/SFX_bug_vo_hee-011.wav" id="9_3kyuw"]
+[ext_resource type="AudioStream" uid="uid://wb8aubn61pdl" path="res://game/characters/assets/sfx/SFX_bug_vo_e-001.wav" id="1_pg2pe"]
+[ext_resource type="AudioStream" uid="uid://dqxwmrdl8hbdy" path="res://game/characters/assets/sfx/SFX_bug_vo_e-002.wav" id="2_kjpue"]
+[ext_resource type="AudioStream" uid="uid://cbkm3htpa1b8b" path="res://game/characters/assets/sfx/SFX_bug_vo_e-003.wav" id="3_yfi5e"]
+[ext_resource type="AudioStream" uid="uid://udah3x2dn7v" path="res://game/characters/assets/sfx/SFX_bug_vo_e-004.wav" id="4_n4oll"]
+[ext_resource type="AudioStream" uid="uid://cydfjvpqgqgss" path="res://game/characters/assets/sfx/SFX_bug_vo_e-005.wav" id="5_i13he"]
+[ext_resource type="AudioStream" uid="uid://cb5lsl5f8b6w5" path="res://game/characters/assets/sfx/SFX_bug_vo_e-006.wav" id="6_rwbvx"]
+[ext_resource type="AudioStream" uid="uid://bf72xg4h5dqel" path="res://game/characters/assets/sfx/SFX_bug_vo_e-007.wav" id="7_k3m8g"]
+[ext_resource type="AudioStream" uid="uid://4joproi2hram" path="res://game/characters/assets/sfx/SFX_bug_vo_e-008.wav" id="8_ybjkh"]
+[ext_resource type="AudioStream" uid="uid://ckxff3448i373" path="res://game/characters/assets/sfx/SFX_bug_vo_e-009.wav" id="9_kp0dh"]
 
 [resource]
 streams_count = 9
-stream_0/stream = ExtResource("1_1vsem")
-stream_1/stream = ExtResource("2_453dt")
-stream_2/stream = ExtResource("3_ig1a2")
-stream_3/stream = ExtResource("4_wjclu")
-stream_4/stream = ExtResource("5_wj48q")
-stream_5/stream = ExtResource("6_yh2re")
-stream_6/stream = ExtResource("7_vvmr3")
-stream_7/stream = ExtResource("8_le0wb")
-stream_8/stream = ExtResource("9_3kyuw")
+stream_0/stream = ExtResource("1_pg2pe")
+stream_1/stream = ExtResource("2_kjpue")
+stream_2/stream = ExtResource("3_yfi5e")
+stream_3/stream = ExtResource("4_n4oll")
+stream_4/stream = ExtResource("5_i13he")
+stream_5/stream = ExtResource("6_rwbvx")
+stream_6/stream = ExtResource("7_k3m8g")
+stream_7/stream = ExtResource("8_ybjkh")
+stream_8/stream = ExtResource("9_kp0dh")

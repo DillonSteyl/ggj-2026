@@ -48,6 +48,7 @@ func _on_submit() -> void:
 		return
 	if result == CharacterQueueManager.CheckResult.TRY_AGAIN:
 		_current_mask.animation_player.play("failed_submit")
+		character_queue_manager.character_base.audio_manager.confused()
 		character_queue_manager.character_base.animate_speech()
 
 	if result == CharacterQueueManager.CheckResult.FAIL:
@@ -71,6 +72,7 @@ func _on_failure() -> void:
 
 func _on_character_entered() -> void:
 	submit_button.disabled = false
+	character_queue_manager.character_base.audio_manager.greet()
 	_add_mask()
 
 
