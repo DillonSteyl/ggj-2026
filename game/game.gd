@@ -11,6 +11,9 @@ extends Node2D
 @onready var ink_bottles_vbox: VBoxContainer = $%InkBottlesBox
 @onready var paint_manager: PaintManager = $%PaintManager
 
+@onready var cheat_sheet_button: TextureButton = $%CheatSheetButton
+@onready var cheat_sheet: CheatSheet = $%CheatSheet
+
 var _mask_transform_tween: Tween
 var _current_mask: MaskBase
 
@@ -22,6 +25,9 @@ func _ready() -> void:
 
 	character_queue_manager.character_entered.connect(_on_character_entered)
 	character_queue_manager.character_exited.connect(_on_character_exited)
+
+	cheat_sheet_button.pressed.connect(cheat_sheet.show)
+	cheat_sheet_button.get_node("AnimationPlayer").play("hover")
 
 	for child in ink_bottles_vbox.get_children():
 		if not child is InkBottle:

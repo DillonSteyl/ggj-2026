@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c8fqt4q0jg1r6"]
 
-[ext_resource type="Script" uid="uid://lrcvssxkdpp5" path="res://game/game.gd" id="1_u5opy"]
+[ext_resource type="Script" uid="uid://c1mcjt07shc3j" path="res://game/game.gd" id="1_u5opy"]
 [ext_resource type="Texture2D" uid="uid://cur83g0crpv67" path="res://game/assets/background.png" id="2_3vho3"]
 [ext_resource type="PackedScene" uid="uid://cbk5j0wuklma4" path="res://game/masks/mask_butterfly.tscn" id="2_jdpby"]
 [ext_resource type="PackedScene" uid="uid://1uhqpprgfa8d" path="res://game/masks/mask_cat.tscn" id="3_58yx1"]
@@ -37,6 +37,8 @@
 [ext_resource type="Texture2D" uid="uid://dmf158db4uwof" path="res://game/masks/assets/ink/dark_green.png" id="21_dxwpq"]
 [ext_resource type="PackedScene" uid="uid://d0t4t0xom874x" path="res://game/characters/locust.tscn" id="22_gvtgv"]
 [ext_resource type="PackedScene" uid="uid://cuvai56kokio7" path="res://game/characters/ant.tscn" id="23_5ywmu"]
+[ext_resource type="Texture2D" uid="uid://ckbui6r3myskp" path="res://game/ui/cheat_sheet/cheat_sheet_icon.png" id="38_vkvnp"]
+[ext_resource type="PackedScene" uid="uid://em7g0ukw1oaw" path="res://game/ui/cheat_sheet/cheat_sheet.tscn" id="39_urpib"]
 
 [sub_resource type="Animation" id="Animation_u5opy"]
 length = 0.001
@@ -212,6 +214,68 @@ brightness = 2
 mask_modulate = Color(0.19607843, 0.5568628, 0.36862746, 1)
 metadata/_custom_type_script = "uid://d25kp15rqvlby"
 
+[sub_resource type="Animation" id="Animation_urpib"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(919, 462)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_vkvnp"]
+resource_name = "hover"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5000001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(919, 462), Vector2(917, 444)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.36666667, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.05235987755982989]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_urpib"]
+_data = {
+&"RESET": SubResource("Animation_urpib"),
+&"hover": SubResource("Animation_vkvnp")
+}
+
 [node name="Game" type="Node2D" unique_id=1553240865]
 script = ExtResource("1_u5opy")
 mask_scenes = Array[PackedScene]([ExtResource("2_jdpby"), ExtResource("3_58yx1"), ExtResource("4_58yx1"), ExtResource("5_hbvmx"), ExtResource("6_gvtgv"), ExtResource("7_5ywmu"), ExtResource("8_mhp6k"), ExtResource("9_vkvnp"), ExtResource("10_urpib")])
@@ -322,6 +386,27 @@ layout_mode = 2
 texture_normal = ExtResource("21_dxwpq")
 bottle_color = SubResource("Resource_jdpby")
 
+[node name="CheatSheetButton" type="TextureButton" parent="UILayer" unique_id=2010213141]
+unique_name_in_owner = true
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -361.0
+offset_top = -178.0
+offset_right = -60.003662
+offset_bottom = 39.00598
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture_normal = ExtResource("38_vkvnp")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UILayer/CheatSheetButton" unique_id=358801037]
+libraries/ = SubResource("AnimationLibrary_urpib")
+
 [node name="PaintManager" type="Control" parent="UILayer" unique_id=1861426213]
 unique_name_in_owner = true
 layout_mode = 3
@@ -341,3 +426,7 @@ offset_right = 51.0
 offset_bottom = 51.0
 mouse_filter = 2
 texture = ExtResource("14_leid8")
+
+[node name="CheatSheet" parent="UILayer" unique_id=892352111 instance=ExtResource("39_urpib")]
+unique_name_in_owner = true
+visible = false

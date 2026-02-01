@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://em7g0ukw1oaw"]
+
+[ext_resource type="Script" uid="uid://dqonedqjwy4hu" path="res://game/cheat_sheet.gd" id="1_166w8"]
+[ext_resource type="Texture2D" uid="uid://bl42i55dy6wgs" path="res://game/ui/cheat_sheet/cheat_sheet.png" id="2_msx0q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_166w8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_msx0q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8t4km"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_27ce8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2e5tx"]
+
+[node name="CheatSheet" type="Control" unique_id=892352111]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 116.0
+offset_top = 116.0
+offset_right = -116.0
+offset_bottom = -116.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_166w8")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1135679325]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_msx0q")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CloseButton" type="Button" parent="." unique_id=481100519]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -247.0
+offset_top = -11.0
+offset_right = -124.0
+offset_bottom = 112.0
+grow_horizontal = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_166w8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_msx0q")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8t4km")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_27ce8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2e5tx")
